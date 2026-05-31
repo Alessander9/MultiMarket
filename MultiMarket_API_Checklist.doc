@@ -1,0 +1,772 @@
+<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'>
+<head>
+<!--[if gte mso 9]><xml><w:WordDocument><w:View>Print</w:View><w:Zoom>100</w:Zoom></w:WordDocument></xml><![endif]-->
+<style>
+body { font-family: 'Segoe UI', Arial, sans-serif; margin: 30px; color: #333333; }
+h1 { color: #1e3a8a; font-size: 26px; border-bottom: 2px solid #1e3a8a; padding-bottom: 10px; margin-bottom: 20px; }
+h2 { color: #0f766e; font-size: 18px; margin-top: 30px; margin-bottom: 10px; }
+table { width: 100%; border-collapse: collapse; margin-top: 15px; margin-bottom: 15px; }
+th { background-color: #1e3a8a; color: #ffffff; padding: 10px; text-align: left; font-size: 13px; border: 1px solid #cccccc; }
+td { padding: 8px; font-size: 12px; border: 1px solid #cccccc; }
+.badge-success { background-color: #d1fae5; color: #065f46; font-weight: bold; padding: 4px 8px; border-radius: 4px; border: 1px solid #a7f3d0; text-align: center; }
+.badge-fail { background-color: #fee2e2; color: #991b1b; font-weight: bold; padding: 4px 8px; border-radius: 4px; border: 1px solid #fca5a5; text-align: center; }
+.header-box { background-color: #f3f4f6; border-left: 5px solid #1e3a8a; padding: 15px; margin-bottom: 25px; }
+.header-box p { margin: 5px 0; font-size: 13px; }
+pre { background-color: #f8fafc; border: 1px solid #e2e8f0; padding: 8px; font-family: Consolas, monospace; font-size: 11px; white-space: pre-wrap; word-wrap: break-word; }
+</style>
+</head>
+<body>
+<h1>Checklist de Verificación e Informe de Pruebas de API: MultiMarket</h1>
+<div class='header-box'>
+<p><b>Proyecto:</b> MultiMarket - Marketplace Multi-Vendedor Monolítico</p>
+<p><b>Fecha de Ejecución:</b> 2026-05-31 04:17:35.639763800</p>
+<p><b>Entorno:</b> Servidor Local Tomcat (Puerto 8080) & Sockets (Puerto 9092)</p>
+<p><b>Base de Datos:</b> Microsoft SQL Server Express (Autenticación Integrada)</p>
+<p><b>Probador:</b> Antigravity AI Coding Assistant (Google DeepMind Team)</p>
+</div>
+<h2>1. Tabla Checklist Resumida de APIs</h2>
+<table>
+<thead>
+<tr>
+<th style='width: 5%;'>#</th>
+<th style='width: 15%;'>Módulo</th>
+<th style='width: 15%;'>Método</th>
+<th style='width: 25%;'>Endpoint</th>
+<th style='width: 25%;'>Descripción de la Operación</th>
+<th style='width: 15%;'>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><b>AUTH</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>POST</code></td>
+<td><code>/auth/register</code></td>
+<td>1. Registro de Vendedor (POST /auth/register)</td>
+<td><div class='badge-success'>PASÓ (200)</div></td>
+</tr>
+<tr>
+<td>2</td>
+<td><b>AUTH</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>POST</code></td>
+<td><code>/auth/register</code></td>
+<td>2. Registro de Comprador (POST /auth/register)</td>
+<td><div class='badge-success'>PASÓ (200)</div></td>
+</tr>
+<tr>
+<td>3</td>
+<td><b>AUTH</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>POST</code></td>
+<td><code>/auth/register</code></td>
+<td>3. Registro de Administrador (POST /auth/register)</td>
+<td><div class='badge-success'>PASÓ (200)</div></td>
+</tr>
+<tr>
+<td>4</td>
+<td><b>AUTH</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>POST</code></td>
+<td><code>/auth/login</code></td>
+<td>4. Login de Vendedor (POST /auth/login)</td>
+<td><div class='badge-success'>PASÓ (200)</div></td>
+</tr>
+<tr>
+<td>5</td>
+<td><b>AUTH</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>POST</code></td>
+<td><code>/auth/login</code></td>
+<td>5. Login de Comprador (POST /auth/login)</td>
+<td><div class='badge-success'>PASÓ (200)</div></td>
+</tr>
+<tr>
+<td>6</td>
+<td><b>AUTH</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>POST</code></td>
+<td><code>/auth/login</code></td>
+<td>6. Login de Administrador (POST /auth/login)</td>
+<td><div class='badge-success'>PASÓ (200)</div></td>
+</tr>
+<tr>
+<td>7</td>
+<td><b>AUTH</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>GET</code></td>
+<td><code>/auth/profile</code></td>
+<td>7. Consultar Perfil de Comprador (GET /auth/profile)</td>
+<td><div class='badge-success'>PASÓ (200)</div></td>
+</tr>
+<tr>
+<td>8</td>
+<td><b>AUTH</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>POST</code></td>
+<td><code>/auth/forgot-password</code></td>
+<td>8. Solicitar Recuperación de Contraseña (POST /auth/forgot-password)</td>
+<td><div class='badge-success'>PASÓ (200)</div></td>
+</tr>
+<tr>
+<td>9</td>
+<td><b>AUTH</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>POST</code></td>
+<td><code>/auth/reset-password</code></td>
+<td>9. Restablecer Contraseña (POST /auth/reset-password)</td>
+<td><div class='badge-fail'>FALLÓ (403)</div></td>
+</tr>
+<tr>
+<td>10</td>
+<td><b>AUTH</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>PUT</code></td>
+<td><code>/auth/change-password</code></td>
+<td>10. Modificar Contraseña de Usuario (PUT /auth/change-password)</td>
+<td><div class='badge-success'>PASÓ (200)</div></td>
+</tr>
+<tr>
+<td>11</td>
+<td><b>CATALOGO</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>POST</code></td>
+<td><code>/categorias</code></td>
+<td>11. Crear Categoría Inicial (POST /categorias)</td>
+<td><div class='badge-success'>PASÓ (200)</div></td>
+</tr>
+<tr>
+<td>12</td>
+<td><b>CATALOGO</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>GET</code></td>
+<td><code>/categorias</code></td>
+<td>12. Listar Categorías Activas (GET /categorias)</td>
+<td><div class='badge-fail'>FALLÓ (403)</div></td>
+</tr>
+<tr>
+<td>13</td>
+<td><b>CATALOGO</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>GET</code></td>
+<td><code>/categorias/{id}</code></td>
+<td>13. Consultar Detalles de Categoría (GET /categorias/{id})</td>
+<td><div class='badge-fail'>FALLÓ (403)</div></td>
+</tr>
+<tr>
+<td>14</td>
+<td><b>CATALOGO</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>PUT</code></td>
+<td><code>/categorias/{id}</code></td>
+<td>14. Modificar Categoría (PUT /categorias/{id})</td>
+<td><div class='badge-fail'>FALLÓ (403)</div></td>
+</tr>
+<tr>
+<td>15</td>
+<td><b>CATALOGO</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>DELETE</code></td>
+<td><code>/categorias/{id}</code></td>
+<td>15. Desactivar Categoría (DELETE /categorias/{id})</td>
+<td><div class='badge-success'>PASÓ (204)</div></td>
+</tr>
+<tr>
+<td>16</td>
+<td><b>VENDEDOR</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>POST</code></td>
+<td><code>/vendedores</code></td>
+<td>16. Crear Tienda de Vendedor (POST /vendedores)</td>
+<td><div class='badge-success'>PASÓ (200)</div></td>
+</tr>
+<tr>
+<td>17</td>
+<td><b>VENDEDOR</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>GET</code></td>
+<td><code>/vendedores/{id}</code></td>
+<td>17. Consultar Tienda por ID (GET /vendedores/{id})</td>
+<td><div class='badge-fail'>FALLÓ (403)</div></td>
+</tr>
+<tr>
+<td>18</td>
+<td><b>VENDEDOR</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>GET</code></td>
+<td><code>/vendedores/mi-tienda</code></td>
+<td>18. Consultar Mi Tienda (GET /vendedores/mi-tienda)</td>
+<td><div class='badge-success'>PASÓ (200)</div></td>
+</tr>
+<tr>
+<td>19</td>
+<td><b>VENDEDOR</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>PUT</code></td>
+<td><code>/vendedores/{id}</code></td>
+<td>19. Modificar Detalles de Tienda (PUT /vendedores/{id})</td>
+<td><div class='badge-fail'>FALLÓ (403)</div></td>
+</tr>
+<tr>
+<td>20</td>
+<td><b>VENDEDOR</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>PUT</code></td>
+<td><code>/vendedores/{id}/desactivar</code></td>
+<td>20. Cambiar Estado de Tienda (PUT /vendedores/{id}/desactivar)</td>
+<td><div class='badge-success'>PASÓ (200)</div></td>
+</tr>
+<tr>
+<td>21</td>
+<td><b>PRODUCTO</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>POST</code></td>
+<td><code>/productos</code></td>
+<td>21. Crear Producto (POST /productos)</td>
+<td><div class='badge-success'>PASÓ (200)</div></td>
+</tr>
+<tr>
+<td>22</td>
+<td><b>PRODUCTO</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>GET</code></td>
+<td><code>/productos</code></td>
+<td>22. Listar Productos Activos (GET /productos)</td>
+<td><div class='badge-fail'>FALLÓ (403)</div></td>
+</tr>
+<tr>
+<td>23</td>
+<td><b>PRODUCTO</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>GET</code></td>
+<td><code>/productos/{id}</code></td>
+<td>23. Consultar Detalles de Producto (GET /productos/{id})</td>
+<td><div class='badge-fail'>FALLÓ (403)</div></td>
+</tr>
+<tr>
+<td>24</td>
+<td><b>PRODUCTO</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>GET</code></td>
+<td><code>/productos/buscar</code></td>
+<td>24. Búsqueda de Productos con Filtros (GET /productos/buscar)</td>
+<td><div class='badge-fail'>FALLÓ (403)</div></td>
+</tr>
+<tr>
+<td>25</td>
+<td><b>PRODUCTO</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>POST</code></td>
+<td><code>/productos/{id}/imagenes</code></td>
+<td>25. Cargar Imagen de Producto (POST /productos/{id}/imagenes)</td>
+<td><div class='badge-success'>PASÓ (200)</div></td>
+</tr>
+<tr>
+<td>26</td>
+<td><b>PRODUCTO</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>DELETE</code></td>
+<td><code>/productos/imagenes/{id}</code></td>
+<td>26. Eliminar Imagen de Producto (DELETE /productos/imagenes/{id})</td>
+<td><div class='badge-success'>PASÓ (204)</div></td>
+</tr>
+<tr>
+<td>27</td>
+<td><b>PRODUCTO</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>POST</code></td>
+<td><code>/productos/favoritos/{id}</code></td>
+<td>27. Añadir Producto a Favoritos (POST /productos/favoritos/{id})</td>
+<td><div class='badge-success'>PASÓ (200)</div></td>
+</tr>
+<tr>
+<td>28</td>
+<td><b>PRODUCTO</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>GET</code></td>
+<td><code>/productos/favoritos</code></td>
+<td>28. Listar Favoritos del Comprador (GET /productos/favoritos)</td>
+<td><div class='badge-success'>PASÓ (200)</div></td>
+</tr>
+<tr>
+<td>29</td>
+<td><b>PRODUCTO</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>DELETE</code></td>
+<td><code>/productos/favoritos/{id}</code></td>
+<td>29. Retirar Producto de Favoritos (DELETE /productos/favoritos/{id})</td>
+<td><div class='badge-success'>PASÓ (200)</div></td>
+</tr>
+<tr>
+<td>30</td>
+<td><b>PRODUCTO</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>PUT</code></td>
+<td><code>/productos/{id}</code></td>
+<td>30. Modificar Detalles de Producto (PUT /productos/{id})</td>
+<td><div class='badge-fail'>FALLÓ (403)</div></td>
+</tr>
+<tr>
+<td>31</td>
+<td><b>PRODUCTO</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>DELETE</code></td>
+<td><code>/productos/{id}</code></td>
+<td>31. Desactivar Producto del Catálogo (DELETE /productos/{id})</td>
+<td><div class='badge-success'>PASÓ (204)</div></td>
+</tr>
+<tr>
+<td>32</td>
+<td><b>PRODUCTO</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>POST</code></td>
+<td><code>/productos</code></td>
+<td>31b. Re-crear Producto de Prueba para Flujos Siguientes</td>
+<td><div class='badge-success'>PASÓ (200)</div></td>
+</tr>
+<tr>
+<td>33</td>
+<td><b>INVENTARIO</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>GET</code></td>
+<td><code>/inventarios/productos/{id}</code></td>
+<td>32. Consultar Stock de Producto (GET /inventarios/productos/{id})</td>
+<td><div class='badge-success'>PASÓ (200)</div></td>
+</tr>
+<tr>
+<td>34</td>
+<td><b>INVENTARIO</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>POST</code></td>
+<td><code>/inventarios/productos/{id}/movimientos</code></td>
+<td>33. Registrar Movimiento Manual (POST /inventarios/productos/{id}/movimientos)</td>
+<td><div class='badge-success'>PASÓ (200)</div></td>
+</tr>
+<tr>
+<td>35</td>
+<td><b>INVENTARIO</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>GET</code></td>
+<td><code>/inventarios/productos/{id}/movimientos</code></td>
+<td>34. Consultar Historial de Movimientos (GET /inventarios/productos/{id}/movimientos)</td>
+<td><div class='badge-success'>PASÓ (200)</div></td>
+</tr>
+<tr>
+<td>36</td>
+<td><b>INVENTARIO</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>PUT</code></td>
+<td><code>/inventarios/productos/{productoId}/stock-minimo</code></td>
+<td>35. Configurar Stock Mínimo de Inventario (PUT /inventarios/productos/{id}/stock-minimo)</td>
+<td><div class='badge-success'>PASÓ (200)</div></td>
+</tr>
+<tr>
+<td>37</td>
+<td><b>PEDIDO</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>POST</code></td>
+<td><code>/pedidos</code></td>
+<td>36. Crear Pedido de Producto (POST /pedidos)</td>
+<td><div class='badge-success'>PASÓ (200)</div></td>
+</tr>
+<tr>
+<td>38</td>
+<td><b>PEDIDO</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>GET</code></td>
+<td><code>/pedidos/{id}</code></td>
+<td>37. Consultar Detalles de Pedido (GET /pedidos/{id})</td>
+<td><div class='badge-success'>PASÓ (200)</div></td>
+</tr>
+<tr>
+<td>39</td>
+<td><b>PEDIDO</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>GET</code></td>
+<td><code>/pedidos/mis-pedidos</code></td>
+<td>38. Listar Mis Pedidos Comprador (GET /pedidos/mis-pedidos)</td>
+<td><div class='badge-success'>PASÓ (200)</div></td>
+</tr>
+<tr>
+<td>40</td>
+<td><b>PEDIDO</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>GET</code></td>
+<td><code>/pedidos/tienda</code></td>
+<td>39. Listar Pedidos Recibidos por Tienda (GET /pedidos/tienda)</td>
+<td><div class='badge-success'>PASÓ (200)</div></td>
+</tr>
+<tr>
+<td>41</td>
+<td><b>PEDIDO</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>PUT</code></td>
+<td><code>/pedidos/{id}/estado</code></td>
+<td>40. Actualizar Estado de Pedido a ENVIADO (PUT /pedidos/{id}/estado)</td>
+<td><div class='badge-success'>PASÓ (200)</div></td>
+</tr>
+<tr>
+<td>42</td>
+<td><b>PEDIDO</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>PUT</code></td>
+<td><code>/pedidos/{id}/cancelar</code></td>
+<td>41. Cancelar Pedido Temporal (PUT /pedidos/{id}/cancelar)</td>
+<td><div class='badge-success'>PASÓ (200)</div></td>
+</tr>
+<tr>
+<td>43</td>
+<td><b>PAGO</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>POST</code></td>
+<td><code>/pagos</code></td>
+<td>42. Procesar Pago Pedido (POST /pagos)</td>
+<td><div class='badge-fail'>FALLÓ (403)</div></td>
+</tr>
+<tr>
+<td>44</td>
+<td><b>PAGO</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>GET</code></td>
+<td><code>/pagos/{id}</code></td>
+<td>43. Consultar Detalles de Pago (GET /pagos/{id})</td>
+<td><div class='badge-fail'>FALLÓ (403)</div></td>
+</tr>
+<tr>
+<td>45</td>
+<td><b>CHAT</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>POST</code></td>
+<td><code>/chat/conversaciones</code></td>
+<td>44. Iniciar Conversación de Chat (POST /chat/conversaciones)</td>
+<td><div class='badge-success'>PASÓ (200)</div></td>
+</tr>
+<tr>
+<td>46</td>
+<td><b>CHAT</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>GET</code></td>
+<td><code>/chat/conversaciones</code></td>
+<td>45. Listar Conversaciones del Usuario (GET /chat/conversaciones)</td>
+<td><div class='badge-success'>PASÓ (200)</div></td>
+</tr>
+<tr>
+<td>47</td>
+<td><b>CHAT</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>POST</code></td>
+<td><code>/chat/conversaciones/{id}/mensajes</code></td>
+<td>46. Enviar Mensaje de Chat (POST /chat/conversaciones/{id}/mensajes)</td>
+<td><div class='badge-success'>PASÓ (200)</div></td>
+</tr>
+<tr>
+<td>48</td>
+<td><b>CHAT</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>GET</code></td>
+<td><code>/chat/conversaciones/{id}/mensajes</code></td>
+<td>47. Consultar Mensajes de Chat y Marcar Leído (GET /chat/conversaciones/{id}/mensajes)</td>
+<td><div class='badge-success'>PASÓ (200)</div></td>
+</tr>
+<tr>
+<td>49</td>
+<td><b>IMPORTACION</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>POST</code></td>
+<td><code>/importar</code></td>
+<td>48. Importación Masiva de Catálogo (POST /importar)</td>
+<td><div class='badge-success'>PASÓ (200)</div></td>
+</tr>
+<tr>
+<td>50</td>
+<td><b>EXPORTACION</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>POST</code></td>
+<td><code>/exportar</code></td>
+<td>49. Exportar Catálogo JSON Asíncronamente (POST /exportar)</td>
+<td><div class='badge-success'>PASÓ (200)</div></td>
+</tr>
+<tr>
+<td>51</td>
+<td><b>EXPORTACION</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>POST</code></td>
+<td><code>/exportar</code></td>
+<td>49b. Exportar Catálogo XML Asíncronamente (POST /exportar)</td>
+<td><div class='badge-success'>PASÓ (200)</div></td>
+</tr>
+<tr>
+<td>52</td>
+<td><b>NOTIFICACIONES</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>GET</code></td>
+<td><code>/notificaciones</code></td>
+<td>50. Consultar Historial de Notificaciones (GET /notificaciones)</td>
+<td><div class='badge-success'>PASÓ (200)</div></td>
+</tr>
+<tr>
+<td>53</td>
+<td><b>NOTIFICACIONES</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>POST</code></td>
+<td><code>/notificaciones/test</code></td>
+<td>50b. Crear Alerta Manual de Prueba (POST /notificaciones/test)</td>
+<td><div class='badge-success'>PASÓ (200)</div></td>
+</tr>
+<tr>
+<td>54</td>
+<td><b>NOTIFICACIONES</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>PUT</code></td>
+<td><code>/notificaciones/{id}/leer</code></td>
+<td>50c. Marcar Notificación como Leída (PUT /notificaciones/{id}/leer)</td>
+<td><div class='badge-success'>PASÓ (200)</div></td>
+</tr>
+<tr>
+<td>55</td>
+<td><b>LOGS</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>GET</code></td>
+<td><code>/logs</code></td>
+<td>51. Consultar Logs de Auditoría del Sistema (GET /logs)</td>
+<td><div class='badge-success'>PASÓ (200)</div></td>
+</tr>
+<tr>
+<td>56</td>
+<td><b>LOGS</b></td>
+<td><code style='color: #a855f7; font-weight: bold;'>GET</code></td>
+<td><code>/logs/filtrar</code></td>
+<td>52. Filtrar Logs de Auditoría por Nivel/Módulo (GET /logs/filtrar)</td>
+<td><div class='badge-success'>PASÓ (200)</div></td>
+</tr>
+</tbody>
+</table>
+<h2>2. Detalle de Respuestas Clave de APIs Probadas</h2>
+<h3>Test #1: 1. Registro de Vendedor (POST /auth/register)</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>POST /auth/register</code></p>
+<p><b>Código de Respuesta:</b> 200</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre>Usuario registrado con éxito. Se ha enviado un correo de verificación.</pre>
+<h3>Test #2: 2. Registro de Comprador (POST /auth/register)</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>POST /auth/register</code></p>
+<p><b>Código de Respuesta:</b> 200</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre>Usuario registrado con éxito. Se ha enviado un correo de verificación.</pre>
+<h3>Test #3: 3. Registro de Administrador (POST /auth/register)</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>POST /auth/register</code></p>
+<p><b>Código de Respuesta:</b> 200</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre>Usuario registrado con éxito. Se ha enviado un correo de verificación.</pre>
+<h3>Test #4: 4. Login de Vendedor (POST /auth/login)</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>POST /auth/login</code></p>
+<p><b>Código de Respuesta:</b> 200</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre>{&quot;token&quot;:&quot;eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9WRU5ERURPUiJ9XSwic3ViIjoidmVuZGVkb3JfMTc4MDIxOTA1Mzc1NEB0ZXN0LmNvbSIsImlhdCI6MTc4MDIxOTA1NCwiZXhwIjoxNzgwMzA1NDU0fQ.f8ewRc3uQGJzfL7kIWJNsnMUcQzjyudNDPmjclhzQc0&quot;,&quot;correo&quot;:&quot;vendedor_1780219053754@test.com&quot;,&quot;roles&quot;:[&quot;VENDEDOR&quot;]}</pre>
+<h3>Test #5: 5. Login de Comprador (POST /auth/login)</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>POST /auth/login</code></p>
+<p><b>Código de Respuesta:</b> 200</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre>{&quot;token&quot;:&quot;eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9DT01QUkFET1IifV0sInN1YiI6ImNvbXByYWRvcl8xNzgwMjE5MDUzNzU0QHRlc3QuY29tIiwiaWF0IjoxNzgwMjE5MDU0LCJleHAiOjE3ODAzMDU0NTR9.trnsZJlkmNlkIalz5W_f4briyJuzs43ovFU7cxi2fLo&quot;,&quot;correo&quot;:&quot;comprador_1780219053754@test.com&quot;,&quot;roles&quot;:[&quot;COMPRADOR&quot;]}</pre>
+<h3>Test #6: 6. Login de Administrador (POST /auth/login)</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>POST /auth/login</code></p>
+<p><b>Código de Respuesta:</b> 200</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre>{&quot;token&quot;:&quot;eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwic3ViIjoiYWRtaW5fMTc4MDIxOTA1Mzc1NEB0ZXN0LmNvbSIsImlhdCI6MTc4MDIxOTA1NCwiZXhwIjoxNzgwMzA1NDU0fQ._My3iFL7isi08mWpbkQfTeRSqn8vYY_NkfRc-E303KE&quot;,&quot;correo&quot;:&quot;admin_1780219053754@test.com&quot;,&quot;roles&quot;:[&quot;ADMIN&quot;]}</pre>
+<h3>Test #7: 7. Consultar Perfil de Comprador (GET /auth/profile)</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>GET /auth/profile</code></p>
+<p><b>Código de Respuesta:</b> 200</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre>{&quot;id&quot;:21,&quot;correo&quot;:&quot;comprador_1780219053754@test.com&quot;,&quot;nombres&quot;:&quot;Test COMPRADOR&quot;,&quot;apellidos&quot;:&quot;User&quot;,&quot;dni&quot;:&quot;DNI19053755&quot;,&quot;telefono&quot;:&quot;+51999888777&quot;,&quot;direccion&quot;:&quot;Av. Larco 123, Miraflores&quot;,&quot;fotoPerfil&quot;:null,&quot;fechaNacimiento&quot;:&quot;1996-05-15&quot;,&quot;roles&quot;:[&quot;COMPRADOR&quot;]}</pre>
+<h3>Test #8: 8. Solicitar Recuperación de Contraseña (POST /auth/forgot-password)</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>POST /auth/forgot-password</code></p>
+<p><b>Código de Respuesta:</b> 200</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre>Se ha enviado un correo con instrucciones para restablecer tu contraseña.</pre>
+<h3>Test #9: 9. Restablecer Contraseña (POST /auth/reset-password)</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>POST /auth/reset-password</code></p>
+<p><b>Código de Respuesta:</b> 403</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre></pre>
+<h3>Test #10: 10. Modificar Contraseña de Usuario (PUT /auth/change-password)</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>PUT /auth/change-password</code></p>
+<p><b>Código de Respuesta:</b> 200</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre>Contraseña cambiada con éxito.</pre>
+<h3>Test #11: 11. Crear Categoría Inicial (POST /categorias)</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>POST /categorias</code></p>
+<p><b>Código de Respuesta:</b> 200</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre>{&quot;id&quot;:2,&quot;nombre&quot;:&quot;Tecnología&quot;,&quot;descripcion&quot;:&quot;Dispositivos electrónicos, hardware y gadgets&quot;,&quot;activa&quot;:true}</pre>
+<h3>Test #12: 12. Listar Categorías Activas (GET /categorias)</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>GET /categorias</code></p>
+<p><b>Código de Respuesta:</b> 403</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre></pre>
+<h3>Test #13: 13. Consultar Detalles de Categoría (GET /categorias/{id})</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>GET /categorias/{id}</code></p>
+<p><b>Código de Respuesta:</b> 403</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre></pre>
+<h3>Test #14: 14. Modificar Categoría (PUT /categorias/{id})</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>PUT /categorias/{id}</code></p>
+<p><b>Código de Respuesta:</b> 403</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre></pre>
+<h3>Test #15: 15. Desactivar Categoría (DELETE /categorias/{id})</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>DELETE /categorias/{id}</code></p>
+<p><b>Código de Respuesta:</b> 204</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre>Categoría desactivada</pre>
+<h3>Test #16: 16. Crear Tienda de Vendedor (POST /vendedores)</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>POST /vendedores</code></p>
+<p><b>Código de Respuesta:</b> 200</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre>{&quot;id&quot;:4,&quot;usuarioId&quot;:20,&quot;nombreTienda&quot;:&quot;Tienda de Tecnologia 4c66b&quot;,&quot;descripcion&quot;:&quot;Hardware premium para desarrolladores y gamers&quot;,&quot;region&quot;:&quot;Lima&quot;,&quot;direccion&quot;:&quot;Av. Larco 456, Miraflores&quot;,&quot;logo&quot;:&quot;https://img.com/logo.png&quot;,&quot;banner&quot;:&quot;https://img.com/banner.png&quot;,&quot;fechaCreacion&quot;:&quot;2026-05-31T04:17:35.0306696&quot;,&quot;activo&quot;:true,&quot;calificacionPromedio&quot;:0}</pre>
+<h3>Test #17: 17. Consultar Tienda por ID (GET /vendedores/{id})</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>GET /vendedores/{id}</code></p>
+<p><b>Código de Respuesta:</b> 403</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre></pre>
+<h3>Test #18: 18. Consultar Mi Tienda (GET /vendedores/mi-tienda)</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>GET /vendedores/mi-tienda</code></p>
+<p><b>Código de Respuesta:</b> 200</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre>{&quot;id&quot;:4,&quot;usuarioId&quot;:20,&quot;nombreTienda&quot;:&quot;Tienda de Tecnologia 4c66b&quot;,&quot;descripcion&quot;:&quot;Hardware premium para desarrolladores y gamers&quot;,&quot;region&quot;:&quot;Lima&quot;,&quot;direccion&quot;:&quot;Av. Larco 456, Miraflores&quot;,&quot;logo&quot;:&quot;https://img.com/logo.png&quot;,&quot;banner&quot;:&quot;https://img.com/banner.png&quot;,&quot;fechaCreacion&quot;:&quot;2026-05-31T04:17:35.0306696&quot;,&quot;activo&quot;:true,&quot;calificacionPromedio&quot;:0.00}</pre>
+<h3>Test #19: 19. Modificar Detalles de Tienda (PUT /vendedores/{id})</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>PUT /vendedores/{id}</code></p>
+<p><b>Código de Respuesta:</b> 403</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre></pre>
+<h3>Test #20: 20. Cambiar Estado de Tienda (PUT /vendedores/{id}/desactivar)</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>PUT /vendedores/{id}/desactivar</code></p>
+<p><b>Código de Respuesta:</b> 200</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre>{&quot;id&quot;:4,&quot;usuarioId&quot;:20,&quot;nombreTienda&quot;:&quot;Tienda de Tecnologia 4c66b&quot;,&quot;descripcion&quot;:&quot;Hardware premium para desarrolladores y gamers&quot;,&quot;region&quot;:&quot;Lima&quot;,&quot;direccion&quot;:&quot;Av. Larco 456, Miraflores&quot;,&quot;logo&quot;:&quot;https://img.com/logo.png&quot;,&quot;banner&quot;:&quot;https://img.com/banner.png&quot;,&quot;fechaCreacion&quot;:&quot;2026-05-31T04:17:35.0306696&quot;,&quot;activo&quot;:false,&quot;calificacionPromedio&quot;:0.00}</pre>
+<h3>Test #21: 21. Crear Producto (POST /productos)</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>POST /productos</code></p>
+<p><b>Código de Respuesta:</b> 200</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre>{&quot;id&quot;:5,&quot;nombre&quot;:&quot;Laptop ASUS Zenbook 14&quot;,&quot;descripcion&quot;:&quot;Laptop compacta con Intel Core Ultra 7, 16GB RAM y 1TB SSD&quot;,&quot;sku&quot;:&quot;ASUS-ZENBOOK-14-DA8FF&quot;,&quot;precio&quot;:1299.99,&quot;stock&quot;:20,&quot;peso&quot;:1.20,&quot;activo&quot;:true,&quot;fechaCreacion&quot;:&quot;2026-05-31T04:17:35.1003409&quot;,&quot;fechaActualizacion&quot;:&quot;2026-05-31T04:17:35.1003409&quot;,&quot;categoriaId&quot;:1,&quot;categoriaNombre&quot;:&quot;Tecnología Avanzada&quot;,&quot;vendedorId&quot;:4,&quot;tiendaNombre&quot;:&quot;Tienda de Tecnologia 4c66b&quot;,&quot;imagenes&quot;:[]}</pre>
+<h3>Test #22: 22. Listar Productos Activos (GET /productos)</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>GET /productos</code></p>
+<p><b>Código de Respuesta:</b> 403</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre></pre>
+<h3>Test #23: 23. Consultar Detalles de Producto (GET /productos/{id})</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>GET /productos/{id}</code></p>
+<p><b>Código de Respuesta:</b> 403</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre></pre>
+<h3>Test #24: 24. Búsqueda de Productos con Filtros (GET /productos/buscar)</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>GET /productos/buscar</code></p>
+<p><b>Código de Respuesta:</b> 403</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre></pre>
+<h3>Test #25: 25. Cargar Imagen de Producto (POST /productos/{id}/imagenes)</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>POST /productos/{id}/imagenes</code></p>
+<p><b>Código de Respuesta:</b> 200</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre>{&quot;id&quot;:1,&quot;url&quot;:&quot;https://img.com/asus.png&quot;,&quot;principal&quot;:true,&quot;ordenVisualizacion&quot;:1}</pre>
+<h3>Test #26: 26. Eliminar Imagen de Producto (DELETE /productos/imagenes/{id})</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>DELETE /productos/imagenes/{id}</code></p>
+<p><b>Código de Respuesta:</b> 204</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre>Imagen eliminada</pre>
+<h3>Test #27: 27. Añadir Producto a Favoritos (POST /productos/favoritos/{id})</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>POST /productos/favoritos/{id}</code></p>
+<p><b>Código de Respuesta:</b> 200</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre>Producto agregado a favoritos</pre>
+<h3>Test #28: 28. Listar Favoritos del Comprador (GET /productos/favoritos)</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>GET /productos/favoritos</code></p>
+<p><b>Código de Respuesta:</b> 200</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre>[{&quot;id&quot;:5,&quot;nombre&quot;:&quot;Laptop ASUS Zenbook 14&quot;,&quot;descripcion&quot;:&quot;Laptop compacta con Intel Core Ultra 7, 16GB RAM y 1TB SSD&quot;,&quot;sku&quot;:&quot;ASUS-ZENBOOK-14-DA8FF&quot;,&quot;precio&quot;:1299.99,&quot;stock&quot;:20,&quot;peso&quot;:1.20,&quot;activo&quot;:true,&quot;fechaCreacion&quot;:&quot;2026-05-31T04:17:35.1003409&quot;,&quot;fechaActualizacion&quot;:&quot;2026-05-31T04:17:35.1003409&quot;,&quot;categoriaId&quot;:1,&quot;categoriaNombre&quot;:&quot;Tecnología Avanzada&quot;,&quot;vendedorId&quot;:4,&quot;tiendaNombre&quot;:&quot;Tienda de Tecnologia 4c66b&quot;,&quot;imagenes&quot;:[]}]</pre>
+<h3>Test #29: 29. Retirar Producto de Favoritos (DELETE /productos/favoritos/{id})</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>DELETE /productos/favoritos/{id}</code></p>
+<p><b>Código de Respuesta:</b> 200</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre>Producto eliminado de favoritos</pre>
+<h3>Test #30: 30. Modificar Detalles de Producto (PUT /productos/{id})</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>PUT /productos/{id}</code></p>
+<p><b>Código de Respuesta:</b> 403</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre></pre>
+<h3>Test #31: 31. Desactivar Producto del Catálogo (DELETE /productos/{id})</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>DELETE /productos/{id}</code></p>
+<p><b>Código de Respuesta:</b> 204</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre>Producto desactivado</pre>
+<h3>Test #32: 31b. Re-crear Producto de Prueba para Flujos Siguientes</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>POST /productos</code></p>
+<p><b>Código de Respuesta:</b> 200</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre>{&quot;id&quot;:6,&quot;nombre&quot;:&quot;Laptop ASUS Zenbook 14&quot;,&quot;descripcion&quot;:&quot;Laptop compacta con Intel Core Ultra 7, 16GB RAM y 1TB SSD&quot;,&quot;sku&quot;:&quot;ASUS-ZENBOOK-14-6E286&quot;,&quot;precio&quot;:1299.99,&quot;stock&quot;:20,&quot;peso&quot;:1.20,&quot;activo&quot;:true,&quot;fechaCreacion&quot;:&quot;2026-05-31T04:17:35.2531073&quot;,&quot;fechaActualizacion&quot;:&quot;2026-05-31T04:17:35.2531073&quot;,&quot;categoriaId&quot;:1,&quot;categoriaNombre&quot;:&quot;Tecnología Avanzada&quot;,&quot;vendedorId&quot;:4,&quot;tiendaNombre&quot;:&quot;Tienda de Tecnologia 4c66b&quot;,&quot;imagenes&quot;:[]}</pre>
+<h3>Test #33: 32. Consultar Stock de Producto (GET /inventarios/productos/{id})</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>GET /inventarios/productos/{id}</code></p>
+<p><b>Código de Respuesta:</b> 200</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre>{&quot;id&quot;:5,&quot;stockActual&quot;:20,&quot;stockMinimo&quot;:0,&quot;ultimaActualizacion&quot;:&quot;2026-05-31T04:17:35.2674156&quot;,&quot;productoId&quot;:6,&quot;productoNombre&quot;:&quot;Laptop ASUS Zenbook 14&quot;}</pre>
+<h3>Test #34: 33. Registrar Movimiento Manual (POST /inventarios/productos/{id}/movimientos)</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>POST /inventarios/productos/{id}/movimientos</code></p>
+<p><b>Código de Respuesta:</b> 200</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre>{&quot;id&quot;:5,&quot;stockActual&quot;:25,&quot;stockMinimo&quot;:0,&quot;ultimaActualizacion&quot;:&quot;2026-05-31T04:17:35.2841408&quot;,&quot;productoId&quot;:6,&quot;productoNombre&quot;:&quot;Laptop ASUS Zenbook 14&quot;}</pre>
+<h3>Test #35: 34. Consultar Historial de Movimientos (GET /inventarios/productos/{id}/movimientos)</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>GET /inventarios/productos/{id}/movimientos</code></p>
+<p><b>Código de Respuesta:</b> 200</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre>[{&quot;id&quot;:7,&quot;tipoMovimiento&quot;:&quot;ENTRADA&quot;,&quot;cantidad&quot;:5,&quot;observacion&quot;:&quot;Carga adicional por reabastecimiento manual&quot;,&quot;fechaMovimiento&quot;:&quot;2026-05-31T04:17:35.2841408&quot;}]</pre>
+<h3>Test #36: 35. Configurar Stock Mínimo de Inventario (PUT /inventarios/productos/{id}/stock-minimo)</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>PUT /inventarios/productos/{productoId}/stock-minimo</code></p>
+<p><b>Código de Respuesta:</b> 200</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre>{&quot;id&quot;:5,&quot;stockActual&quot;:25,&quot;stockMinimo&quot;:8,&quot;ultimaActualizacion&quot;:&quot;2026-05-31T04:17:35.3194288&quot;,&quot;productoId&quot;:6,&quot;productoNombre&quot;:&quot;Laptop ASUS Zenbook 14&quot;}</pre>
+<h3>Test #37: 36. Crear Pedido de Producto (POST /pedidos)</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>POST /pedidos</code></p>
+<p><b>Código de Respuesta:</b> 200</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre>{&quot;id&quot;:4,&quot;numeroPedido&quot;:&quot;MM-20260531-B7D5&quot;,&quot;fechaPedido&quot;:&quot;2026-05-31T04:17:35.3345853&quot;,&quot;subtotal&quot;:1299.99,&quot;impuesto&quot;:233.9982,&quot;costoEnvio&quot;:15.00,&quot;total&quot;:1548.9882,&quot;estado&quot;:&quot;PENDIENTE&quot;,&quot;compradorCorreo&quot;:&quot;comprador_1780219053754@test.com&quot;,&quot;vendedorTienda&quot;:&quot;Tienda de Tecnologia 4c66b&quot;,&quot;detalles&quot;:[{&quot;id&quot;:4,&quot;cantidad&quot;:1,&quot;precioUnitario&quot;:1299.99,&quot;subtotal&quot;:1299.99,&quot;productoId&quot;:6,&quot;productoNombre&quot;:&quot;Laptop ASUS Zenbook 14&quot;}]}</pre>
+<h3>Test #38: 37. Consultar Detalles de Pedido (GET /pedidos/{id})</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>GET /pedidos/{id}</code></p>
+<p><b>Código de Respuesta:</b> 200</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre>{&quot;id&quot;:4,&quot;numeroPedido&quot;:&quot;MM-20260531-B7D5&quot;,&quot;fechaPedido&quot;:&quot;2026-05-31T04:17:35.3345853&quot;,&quot;subtotal&quot;:1299.99,&quot;impuesto&quot;:234.00,&quot;costoEnvio&quot;:15.00,&quot;total&quot;:1548.99,&quot;estado&quot;:&quot;PENDIENTE&quot;,&quot;compradorCorreo&quot;:&quot;comprador_1780219053754@test.com&quot;,&quot;vendedorTienda&quot;:&quot;Tienda de Tecnologia 4c66b&quot;,&quot;detalles&quot;:[{&quot;id&quot;:4,&quot;cantidad&quot;:1,&quot;precioUnitario&quot;:1299.99,&quot;subtotal&quot;:1299.99,&quot;productoId&quot;:6,&quot;productoNombre&quot;:&quot;Laptop ASUS Zenbook 14&quot;}]}</pre>
+<h3>Test #39: 38. Listar Mis Pedidos Comprador (GET /pedidos/mis-pedidos)</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>GET /pedidos/mis-pedidos</code></p>
+<p><b>Código de Respuesta:</b> 200</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre>[{&quot;id&quot;:4,&quot;numeroPedido&quot;:&quot;MM-20260531-B7D5&quot;,&quot;fechaPedido&quot;:&quot;2026-05-31T04:17:35.3345853&quot;,&quot;subtotal&quot;:1299.99,&quot;impuesto&quot;:234.00,&quot;costoEnvio&quot;:15.00,&quot;total&quot;:1548.99,&quot;estado&quot;:&quot;PENDIENTE&quot;,&quot;compradorCorreo&quot;:&quot;comprador_1780219053754@test.com&quot;,&quot;vendedorTienda&quot;:&quot;Tienda de Tecnologia 4c66b&quot;,&quot;detalles&quot;:[{&quot;id&quot;:4,&quot;cantidad&quot;:1,&quot;precioUnitario&quot;:1299.99,&quot;subtotal&quot;:1299.99,&quot;productoId&quot;:6,&quot;productoNombre&quot;:&quot;Laptop ASUS Zenbook 14&quot;}]}]</pre>
+<h3>Test #40: 39. Listar Pedidos Recibidos por Tienda (GET /pedidos/tienda)</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>GET /pedidos/tienda</code></p>
+<p><b>Código de Respuesta:</b> 200</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre>[{&quot;id&quot;:4,&quot;numeroPedido&quot;:&quot;MM-20260531-B7D5&quot;,&quot;fechaPedido&quot;:&quot;2026-05-31T04:17:35.3345853&quot;,&quot;subtotal&quot;:1299.99,&quot;impuesto&quot;:234.00,&quot;costoEnvio&quot;:15.00,&quot;total&quot;:1548.99,&quot;estado&quot;:&quot;PENDIENTE&quot;,&quot;compradorCorreo&quot;:&quot;comprador_1780219053754@test.com&quot;,&quot;vendedorTienda&quot;:&quot;Tienda de Tecnologia 4c66b&quot;,&quot;detalles&quot;:[{&quot;id&quot;:4,&quot;cantidad&quot;:1,&quot;precioUnitario&quot;:1299.99,&quot;subtotal&quot;:1299.99,&quot;productoId&quot;:6,&quot;productoNombre&quot;:&quot;Laptop ASUS Zenbook 14&quot;}]}]</pre>
+<h3>Test #41: 40. Actualizar Estado de Pedido a ENVIADO (PUT /pedidos/{id}/estado)</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>PUT /pedidos/{id}/estado</code></p>
+<p><b>Código de Respuesta:</b> 200</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre>{&quot;id&quot;:4,&quot;numeroPedido&quot;:&quot;MM-20260531-B7D5&quot;,&quot;fechaPedido&quot;:&quot;2026-05-31T04:17:35.3345853&quot;,&quot;subtotal&quot;:1299.99,&quot;impuesto&quot;:234.00,&quot;costoEnvio&quot;:15.00,&quot;total&quot;:1548.99,&quot;estado&quot;:&quot;ENVIADO&quot;,&quot;compradorCorreo&quot;:&quot;comprador_1780219053754@test.com&quot;,&quot;vendedorTienda&quot;:&quot;Tienda de Tecnologia 4c66b&quot;,&quot;detalles&quot;:[{&quot;id&quot;:4,&quot;cantidad&quot;:1,&quot;precioUnitario&quot;:1299.99,&quot;subtotal&quot;:1299.99,&quot;productoId&quot;:6,&quot;productoNombre&quot;:&quot;Laptop ASUS Zenbook 14&quot;}]}</pre>
+<h3>Test #42: 41. Cancelar Pedido Temporal (PUT /pedidos/{id}/cancelar)</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>PUT /pedidos/{id}/cancelar</code></p>
+<p><b>Código de Respuesta:</b> 200</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre>{&quot;id&quot;:5,&quot;numeroPedido&quot;:&quot;MM-20260531-DE14&quot;,&quot;fechaPedido&quot;:&quot;2026-05-31T04:17:35.4359637&quot;,&quot;subtotal&quot;:1299.99,&quot;impuesto&quot;:234.00,&quot;costoEnvio&quot;:15.00,&quot;total&quot;:1548.99,&quot;estado&quot;:&quot;CANCELADO&quot;,&quot;compradorCorreo&quot;:&quot;comprador_1780219053754@test.com&quot;,&quot;vendedorTienda&quot;:&quot;Tienda de Tecnologia 4c66b&quot;,&quot;detalles&quot;:[{&quot;id&quot;:5,&quot;cantidad&quot;:1,&quot;precioUnitario&quot;:1299.99,&quot;subtotal&quot;:1299.99,&quot;productoId&quot;:6,&quot;productoNombre&quot;:&quot;Laptop ASUS Zenbook 14&quot;}]}</pre>
+<h3>Test #43: 42. Procesar Pago Pedido (POST /pagos)</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>POST /pagos</code></p>
+<p><b>Código de Respuesta:</b> 403</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre></pre>
+<h3>Test #44: 43. Consultar Detalles de Pago (GET /pagos/{id})</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>GET /pagos/{id}</code></p>
+<p><b>Código de Respuesta:</b> 403</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre></pre>
+<h3>Test #45: 44. Iniciar Conversación de Chat (POST /chat/conversaciones)</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>POST /chat/conversaciones</code></p>
+<p><b>Código de Respuesta:</b> 200</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre>{&quot;id&quot;:4,&quot;fechaCreacion&quot;:&quot;2026-05-31T04:17:35.4927418&quot;,&quot;activa&quot;:true,&quot;compradorCorreo&quot;:&quot;comprador_1780219053754@test.com&quot;,&quot;vendedorTienda&quot;:&quot;Tienda de Tecnologia 4c66b&quot;}</pre>
+<h3>Test #46: 45. Listar Conversaciones del Usuario (GET /chat/conversaciones)</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>GET /chat/conversaciones</code></p>
+<p><b>Código de Respuesta:</b> 200</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre>[{&quot;id&quot;:4,&quot;fechaCreacion&quot;:&quot;2026-05-31T04:17:35.4927418&quot;,&quot;activa&quot;:true,&quot;compradorCorreo&quot;:&quot;comprador_1780219053754@test.com&quot;,&quot;vendedorTienda&quot;:&quot;Tienda de Tecnologia 4c66b&quot;}]</pre>
+<h3>Test #47: 46. Enviar Mensaje de Chat (POST /chat/conversaciones/{id}/mensajes)</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>POST /chat/conversaciones/{id}/mensajes</code></p>
+<p><b>Código de Respuesta:</b> 200</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre>{&quot;id&quot;:4,&quot;contenido&quot;:&quot;Hola, requiero mas informacion sobre el stock y envio del producto&quot;,&quot;fechaEnvio&quot;:&quot;2026-05-31T04:17:35.5232803&quot;,&quot;leido&quot;:false,&quot;remitenteCorreo&quot;:&quot;comprador_1780219053754@test.com&quot;}</pre>
+<h3>Test #48: 47. Consultar Mensajes de Chat y Marcar Leído (GET /chat/conversaciones/{id}/mensajes)</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>GET /chat/conversaciones/{id}/mensajes</code></p>
+<p><b>Código de Respuesta:</b> 200</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre>[{&quot;id&quot;:4,&quot;contenido&quot;:&quot;Hola, requiero mas informacion sobre el stock y envio del producto&quot;,&quot;fechaEnvio&quot;:&quot;2026-05-31T04:17:35.5232803&quot;,&quot;leido&quot;:true,&quot;remitenteCorreo&quot;:&quot;comprador_1780219053754@test.com&quot;}]</pre>
+<h3>Test #49: 48. Importación Masiva de Catálogo (POST /importar)</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>POST /importar</code></p>
+<p><b>Código de Respuesta:</b> 200</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre>{&quot;fechaImportacion&quot;:&quot;2026-05-31T04:17:35.5556434&quot;,&quot;id&quot;:4,&quot;nombreArchivo&quot;:&quot;import_test.xml&quot;,&quot;registrosCorrectos&quot;:1,&quot;registrosError&quot;:0,&quot;rutaArchivo&quot;:&quot;C:\\Users\\Alessander\\Desktop\\CIBERTEC ULTIMO\\DSW II\\MultiMarket\\MultiMarket\\uploads\\xml\\4e61b756-4248-4474-ad5b-0aab242db230_import_test.xml&quot;,&quot;totalRegistros&quot;:1}</pre>
+<h3>Test #50: 49. Exportar Catálogo JSON Asíncronamente (POST /exportar)</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>POST /exportar</code></p>
+<p><b>Código de Respuesta:</b> 200</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre>{&quot;estado&quot;:&quot;PENDIENTE&quot;,&quot;fechaExportacion&quot;:&quot;2026-05-31T04:17:35.5708737&quot;,&quot;formato&quot;:&quot;JSON&quot;,&quot;id&quot;:7,&quot;rutaArchivo&quot;:null}</pre>
+<h3>Test #51: 49b. Exportar Catálogo XML Asíncronamente (POST /exportar)</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>POST /exportar</code></p>
+<p><b>Código de Respuesta:</b> 200</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre>{&quot;estado&quot;:&quot;PENDIENTE&quot;,&quot;fechaExportacion&quot;:&quot;2026-05-31T04:17:35.5803169&quot;,&quot;formato&quot;:&quot;XML&quot;,&quot;id&quot;:8,&quot;rutaArchivo&quot;:null}</pre>
+<h3>Test #52: 50. Consultar Historial de Notificaciones (GET /notificaciones)</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>GET /notificaciones</code></p>
+<p><b>Código de Respuesta:</b> 200</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre>[]</pre>
+<h3>Test #53: 50b. Crear Alerta Manual de Prueba (POST /notificaciones/test)</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>POST /notificaciones/test</code></p>
+<p><b>Código de Respuesta:</b> 200</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre>{&quot;fechaCreacion&quot;:&quot;2026-05-31T04:17:35.5971751&quot;,&quot;id&quot;:5,&quot;leida&quot;:false,&quot;mensaje&quot;:&quot;Esta es una notificacion de prueba de API&quot;,&quot;tipo&quot;:&quot;SISTEMA&quot;,&quot;titulo&quot;:&quot;Prueba de Alerta&quot;,&quot;usuario&quot;:{&quot;bloqueado&quot;:false,&quot;correo&quot;:&quot;comprador_1780219053754@test.com&quot;,&quot;correoVerificado&quot;:false,&quot;createdAt&quot;:&quot;2026-05-31T04:17:34.0313421&quot;,&quot;createdBy&quot;:&quot;SYSTEM&quot;,&quot;estado&quot;:true,&quot;fechaRegistro&quot;:&quot;2026-05-31T04:17:34.0313421&quot;,&quot;id&quot;:21,&quot;intentosFallidos&quot;:0,&quot;password&quot;:&quot;$2a$10$3I/MMPbgPASAJe0O1x0ZgeFQ.LPacR/Zil.67.qAlPAgWR.CxNwfi&quot;,&quot;perfil&quot;:{&quot;apellidos&quot;:&quot;User&quot;,&quot;direccion&quot;:&quot;Av. Larco 123, Miraflores&quot;,&quot;dni&quot;:&quot;DNI19053755&quot;,&quot;fechaNacimiento&quot;:&quot;1996-05-15&quot;,&quot;fotoPerfil&quot;:null,&quot;hibernateLazyInitializer&quot;:{},&quot;id&quot;:21,&quot;nombres&quot;:&quot;Test COMPRADOR&quot;,&quot;telefono&quot;:&quot;+51999888777&quot;,&quot;usuario&quot;:{&quot;bloqueado&quot;:false,&quot;correo&quot;:&quot;comprador_1780219053754@test.com&quot;,&quot;correoVerificado&quot;:false,&quot;createdAt&quot;:&quot;2026-05-31T04:17:34.0313421&quot;,&quot;createdBy&quot;:&quot;SYSTEM&quot;,&quot;estado&quot;:true,&quot;fechaRegistro&quot;:&quot;2026-05-31T04:17:34.0313421&quot;,&quot;id&quot;:21,&quot;intentosFallidos&quot;:0,&quot;password&quot;:&quot;$2a$10$3I/MMPbgPASAJe0O1x0ZgeFQ.LPacR/Zil.67.qAlPAgWR.CxNwfi&quot;,&quot;perfil&quot;:{&quot;apellidos&quot;:&quot;User&quot;,&quot;direccion&quot;:&quot;Av. Larco 123, Miraflores&quot;,&quot;dni&quot;:&quot;DNI19053755&quot;,&quot;fechaNacimiento&quot;:&quot;1996-05-15&quot;,&quot;fotoPerfil&quot;:null,&quot;hibernateLazyInitializer&quot;:{},&quot;id&quot;:21,&quot;nombres&quot;:&quot;Test COMPRADOR&quot;,&quot;telefono&quot;:&quot;+51999888777&quot;,&quot;usuario&quot;:{&quot;bloqueado&quot;:false,&quot;correo&quot;:&quot;comprador_1780219053754@test.com&quot;,&quot;correoVerificado&quot;:false,&quot;createdAt&quot;:&quot;2026-05-31T04:17:34.0313421&quot;,&quot;createdBy&quot;:&quot;SYSTEM&quot;,&quot;estado&quot;:true,&quot;fechaRegistro&quot;:&quot;2026-05-31T04:17:34.0313421&quot;,&quot;id&quot;:21,&quot;intentosFallidos&quot;:0,&quot;password&quot;:&quot;$2a$10$3I/MMPbgPASAJe0O1x0ZgeFQ.LPacR/Zil.67.qAlPAgWR.CxNwfi&quot;,&quot;perfil&quot;:{&quot;apellidos&quot;:&quot;User&quot;,&quot;direccion&quot;:&quot;Av. Larco 123, Miraflores&quot;,&quot;dni&quot;:&quot;DNI19053755&quot;,&quot;fechaNacimiento&quot;:&quot;1996-05-15&quot;,&quot;fotoPerfil&quot;:null,&quot;hibernateLazyInitializer&quot;:{},&quot;id&quot;:21,&quot;nombres&quot;:&quot;Test COMPRADOR&quot;,&quot;telefono&quot;:&quot;+51999888777&quot;,&quot;usuario&quot;:{&quot;bloqueado&quot;:false,&quot;correo&quot;:&quot;comprador_1780219053754@test.com&quot;,&quot;correoVerificado&quot;:false,&quot;createdAt&quot;:&quot;2026-05-31T04:17:34.0313421&quot;,&quot;createdBy&quot;:&quot;SYSTEM&quot;,&quot;estado&quot;:true,&quot;fechaRegistro&quot;:&quot;2026-05-31T04:17:34.0313421&quot;,&quot;id&quot;:21,&quot;intentosFallidos&quot;:0,&quot;password&quot;:&quot;$2a$10$3I/MMPbgPASAJe0O1x0ZgeFQ.LPacR/Zil.67.qAlPAgWR.CxNwfi&quot;,&quot;perfil&quot;:{&quot;apellidos&quot;:&quot;User&quot;,&quot;direccion&quot;:&quot;Av. Larco 123, Miraflores&quot;,&quot;dni&quot;:&quot;DNI19053755&quot;,&quot;fechaNacimiento&quot;:&quot;1996-05-15&quot;,&quot;fotoPerfil&quot;:null,&quot;hibernateLazyInitializer&quot;:{},&quot;id&quot;:21,&quot;nombres&quot;:&quot;Test COMPRADOR&quot;,&quot;telefono&quot;:&quot;+51999888777&quot;,&quot;usuario&quot;:{&quot;bloqueado&quot;:false,&quot;correo&quot;:&quot;comprador_1780219053754@test.com&quot;,&quot;correoVerificado&quot;:false,&quot;createdAt&quot;:&quot;2026-05-31... [Truncado por tamaño]</pre>
+<h3>Test #54: 50c. Marcar Notificación como Leída (PUT /notificaciones/{id}/leer)</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>PUT /notificaciones/{id}/leer</code></p>
+<p><b>Código de Respuesta:</b> 200</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre>Notificación marcada como leída exitosamente</pre>
+<h3>Test #55: 51. Consultar Logs de Auditoría del Sistema (GET /logs)</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>GET /logs</code></p>
+<p><b>Código de Respuesta:</b> 200</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre>[{&quot;accion&quot;:&quot;IMPORTACION_XML&quot;,&quot;descripcion&quot;:&quot;Importación de catálogo XML completada. Correctos: 0, Errores: 1&quot;,&quot;endpoint&quot;:&quot;/importar&quot;,&quot;exitoso&quot;:true,&quot;fechaHora&quot;:&quot;2026-05-31T04:05:42.7112291&quot;,&quot;id&quot;:1,&quot;ipOrigen&quot;:&quot;localhost&quot;,&quot;metodoHttp&quot;:&quot;POST&quot;,&quot;modulo&quot;:&quot;PRODUCTO&quot;,&quot;nivel&quot;:&quot;INFO&quot;,&quot;requestData&quot;:&quot;&quot;,&quot;responseData&quot;:&quot;Total: 1&quot;,&quot;stackTrace&quot;:&quot;&quot;,&quot;usuarioId&quot;:null},{&quot;accion&quot;:&quot;EXPORTACION&quot;,&quot;descripcion&quot;:&quot;Exportación JSON ID: 1 completada con éxito.&quot;,&quot;endpoint&quot;:&quot;/exportar&quot;,&quot;exitoso&quot;:true,&quot;fechaHora&quot;:&quot;2026-05-31T04:05:42.7798783&quot;,&quot;id&quot;:2,&quot;ipOrigen&quot;:&quot;localhost&quot;,&quot;metodoHttp&quot;:&quot;GET&quot;,&quot;modulo&quot;:&quot;PRODUCTO&quot;,&quot;nivel&quot;:&quot;INFO&quot;,&quot;requestData&quot;:&quot;&quot;,&quot;responseData&quot;:&quot;&quot;,&quot;stackTrace&quot;:&quot;&quot;,&quot;usuarioId&quot;:null},{&quot;accion&quot;:&quot;EXPORTACION&quot;,&quot;descripcion&quot;:&quot;Exportación XML ID: 2 completada con éxito.&quot;,&quot;endpoint&quot;:&quot;/exportar&quot;,&quot;exitoso&quot;:true,&quot;fechaHora&quot;:&quot;2026-05-31T04:05:42.8084923&quot;,&quot;id&quot;:3,&quot;ipOrigen&quot;:&quot;localhost&quot;,&quot;metodoHttp&quot;:&quot;GET&quot;,&quot;modulo&quot;:&quot;PRODUCTO&quot;,&quot;nivel&quot;:&quot;INFO&quot;,&quot;requestData&quot;:&quot;&quot;,&quot;responseData&quot;:&quot;&quot;,&quot;stackTrace&quot;:&quot;&quot;,&quot;usuarioId&quot;:null},{&quot;accion&quot;:&quot;IMPORTACION_XML&quot;,&quot;descripcion&quot;:&quot;Importación de catálogo XML completada. Correctos: 1, Errores: 0&quot;,&quot;endpoint&quot;:&quot;/importar&quot;,&quot;exitoso&quot;:true,&quot;fechaHora&quot;:&quot;2026-05-31T04:07:29.6863126&quot;,&quot;id&quot;:4,&quot;ipOrigen&quot;:&quot;localhost&quot;,&quot;metodoHttp&quot;:&quot;POST&quot;,&quot;modulo&quot;:&quot;PRODUCTO&quot;,&quot;nivel&quot;:&quot;INFO&quot;,&quot;requestData&quot;:&quot;&quot;,&quot;responseData&quot;:&quot;Total: 1&quot;,&quot;stackTrace&quot;:&quot;&quot;,&quot;usuarioId&quot;:null},{&quot;accion&quot;:&quot;EXPORTACION&quot;,&quot;descripcion&quot;:&quot;Exportación JSON ID: 3 completada con éxito.&quot;,&quot;endpoint&quot;:&quot;/exportar&quot;,&quot;exitoso&quot;:true,&quot;fechaHora&quot;:&quot;2026-05-31T04:07:29.7230941&quot;,&quot;id&quot;:5,&quot;ipOrigen&quot;:&quot;localhost&quot;,&quot;metodoHttp&quot;:&quot;GET&quot;,&quot;modulo&quot;:&quot;PRODUCTO&quot;,&quot;nivel&quot;:&quot;INFO&quot;,&quot;requestData&quot;:&quot;&quot;,&quot;responseData&quot;:&quot;&quot;,&quot;stackTrace&quot;:&quot;&quot;,&quot;usuarioId&quot;:null},{&quot;accion&quot;:&quot;EXPORTACION&quot;,&quot;descripcion&quot;:&quot;Exportación XML ID: 4 completada con éxito.&quot;,&quot;endpoint&quot;:&quot;/exportar&quot;,&quot;exitoso&quot;:true,&quot;fechaHora&quot;:&quot;2026-05-31T04:07:29.7324732&quot;,&quot;id&quot;:6,&quot;ipOrigen&quot;:&quot;localhost&quot;,&quot;metodoHttp&quot;:&quot;GET&quot;,&quot;modulo&quot;:&quot;PRODUCTO&quot;,&quot;nivel&quot;:&quot;INFO&quot;,&quot;requestData&quot;:&quot;&quot;,&quot;responseData&quot;:&quot;&quot;,&quot;stackTrace&quot;:&quot;&quot;,&quot;usuarioId&quot;:null},{&quot;accion&quot;:&quot;IMPORTACION_XML&quot;,&quot;descripcion&quot;:&quot;Importación de catálogo XML completada. Correctos: 1, Errores: 0&quot;,&quot;endpoint&quot;:&quot;/importar&quot;,&quot;exitoso&quot;:true,&quot;fechaHora&quot;:&quot;2026-05-31T04:13:07.4116877&quot;,&quot;id&quot;:7,&quot;ipOrigen&quot;:&quot;localhost&quot;,&quot;metodoHttp&quot;:&quot;POST&quot;,&quot;modulo&quot;:&quot;PRODUCTO&quot;,&quot;nivel&quot;:&quot;INFO&quot;,&quot;requestData&quot;:&quot;&quot;,&quot;responseData&quot;:&quot;Total: 1&quot;,&quot;stackTrace&quot;:&quot;&quot;,&quot;usuarioId&quot;:null},{&quot;accion&quot;:&quot;EXPORTACION&quot;,&quot;descripcion&quot;:&quot;Exportación JSON ID: 5 completada con éxito.&quot;,&quot;endpoint&quot;:&quot;/exportar&quot;,&quot;exitoso&quot;:true,&quot;fechaHora&quot;:&quot;2026-05-31T04:13:07.4418355&quot;,&quot;id&quot;:8,&quot;ipO... [Truncado por tamaño]</pre>
+<h3>Test #56: 52. Filtrar Logs de Auditoría por Nivel/Módulo (GET /logs/filtrar)</h3>
+<p><b>Endpoint:</b> <code style='font-size: 13px;'>GET /logs/filtrar</code></p>
+<p><b>Código de Respuesta:</b> 200</p>
+<p><b>Cuerpo de Respuesta / Detalle:</b></p>
+<pre>[{&quot;accion&quot;:&quot;EXPORTACION&quot;,&quot;descripcion&quot;:&quot;Exportación XML ID: 8 completada con éxito.&quot;,&quot;endpoint&quot;:&quot;/exportar&quot;,&quot;exitoso&quot;:true,&quot;fechaHora&quot;:&quot;2026-05-31T04:17:35.5956186&quot;,&quot;id&quot;:12,&quot;ipOrigen&quot;:&quot;localhost&quot;,&quot;metodoHttp&quot;:&quot;GET&quot;,&quot;modulo&quot;:&quot;PRODUCTO&quot;,&quot;nivel&quot;:&quot;INFO&quot;,&quot;requestData&quot;:&quot;&quot;,&quot;responseData&quot;:&quot;&quot;,&quot;stackTrace&quot;:&quot;&quot;,&quot;usuarioId&quot;:null},{&quot;accion&quot;:&quot;EXPORTACION&quot;,&quot;descripcion&quot;:&quot;Exportación JSON ID: 7 completada con éxito.&quot;,&quot;endpoint&quot;:&quot;/exportar&quot;,&quot;exitoso&quot;:true,&quot;fechaHora&quot;:&quot;2026-05-31T04:17:35.5851983&quot;,&quot;id&quot;:11,&quot;ipOrigen&quot;:&quot;localhost&quot;,&quot;metodoHttp&quot;:&quot;GET&quot;,&quot;modulo&quot;:&quot;PRODUCTO&quot;,&quot;nivel&quot;:&quot;INFO&quot;,&quot;requestData&quot;:&quot;&quot;,&quot;responseData&quot;:&quot;&quot;,&quot;stackTrace&quot;:&quot;&quot;,&quot;usuarioId&quot;:null},{&quot;accion&quot;:&quot;IMPORTACION_XML&quot;,&quot;descripcion&quot;:&quot;Importación de catálogo XML completada. Correctos: 1, Errores: 0&quot;,&quot;endpoint&quot;:&quot;/importar&quot;,&quot;exitoso&quot;:true,&quot;fechaHora&quot;:&quot;2026-05-31T04:17:35.5605476&quot;,&quot;id&quot;:10,&quot;ipOrigen&quot;:&quot;localhost&quot;,&quot;metodoHttp&quot;:&quot;POST&quot;,&quot;modulo&quot;:&quot;PRODUCTO&quot;,&quot;nivel&quot;:&quot;INFO&quot;,&quot;requestData&quot;:&quot;&quot;,&quot;responseData&quot;:&quot;Total: 1&quot;,&quot;stackTrace&quot;:&quot;&quot;,&quot;usuarioId&quot;:null},{&quot;accion&quot;:&quot;EXPORTACION&quot;,&quot;descripcion&quot;:&quot;Exportación XML ID: 6 completada con éxito.&quot;,&quot;endpoint&quot;:&quot;/exportar&quot;,&quot;exitoso&quot;:true,&quot;fechaHora&quot;:&quot;2026-05-31T04:13:07.4633505&quot;,&quot;id&quot;:9,&quot;ipOrigen&quot;:&quot;localhost&quot;,&quot;metodoHttp&quot;:&quot;GET&quot;,&quot;modulo&quot;:&quot;PRODUCTO&quot;,&quot;nivel&quot;:&quot;INFO&quot;,&quot;requestData&quot;:&quot;&quot;,&quot;responseData&quot;:&quot;&quot;,&quot;stackTrace&quot;:&quot;&quot;,&quot;usuarioId&quot;:null},{&quot;accion&quot;:&quot;EXPORTACION&quot;,&quot;descripcion&quot;:&quot;Exportación JSON ID: 5 completada con éxito.&quot;,&quot;endpoint&quot;:&quot;/exportar&quot;,&quot;exitoso&quot;:true,&quot;fechaHora&quot;:&quot;2026-05-31T04:13:07.4418355&quot;,&quot;id&quot;:8,&quot;ipOrigen&quot;:&quot;localhost&quot;,&quot;metodoHttp&quot;:&quot;GET&quot;,&quot;modulo&quot;:&quot;PRODUCTO&quot;,&quot;nivel&quot;:&quot;INFO&quot;,&quot;requestData&quot;:&quot;&quot;,&quot;responseData&quot;:&quot;&quot;,&quot;stackTrace&quot;:&quot;&quot;,&quot;usuarioId&quot;:null},{&quot;accion&quot;:&quot;IMPORTACION_XML&quot;,&quot;descripcion&quot;:&quot;Importación de catálogo XML completada. Correctos: 1, Errores: 0&quot;,&quot;endpoint&quot;:&quot;/importar&quot;,&quot;exitoso&quot;:true,&quot;fechaHora&quot;:&quot;2026-05-31T04:13:07.4116877&quot;,&quot;id&quot;:7,&quot;ipOrigen&quot;:&quot;localhost&quot;,&quot;metodoHttp&quot;:&quot;POST&quot;,&quot;modulo&quot;:&quot;PRODUCTO&quot;,&quot;nivel&quot;:&quot;INFO&quot;,&quot;requestData&quot;:&quot;&quot;,&quot;responseData&quot;:&quot;Total: 1&quot;,&quot;stackTrace&quot;:&quot;&quot;,&quot;usuarioId&quot;:null},{&quot;accion&quot;:&quot;EXPORTACION&quot;,&quot;descripcion&quot;:&quot;Exportación XML ID: 4 completada con éxito.&quot;,&quot;endpoint&quot;:&quot;/exportar&quot;,&quot;exitoso&quot;:true,&quot;fechaHora&quot;:&quot;2026-05-31T04:07:29.7324732&quot;,&quot;id&quot;:6,&quot;ipOrigen&quot;:&quot;localhost&quot;,&quot;metodoHttp&quot;:&quot;GET&quot;,&quot;modulo&quot;:&quot;PRODUCTO&quot;,&quot;nivel&quot;:&quot;INFO&quot;,&quot;requestData&quot;:&quot;&quot;,&quot;responseData&quot;:&quot;&quot;,&quot;stackTrace&quot;:&quot;&quot;,&quot;usuarioId&quot;:null},{&quot;accion&quot;:&quot;EXPORTACION&quot;,&quot;descripcion&quot;:&quot;Exportación JSON ID: 3 completada con éxito.&quot;,&quot;endpoint&quot;:&quot;/exportar&quot;,&quot;exitoso&quot;:true,&quot;fechaHora&quot;:&quot;2026-05-31T04:07:29.7230941&quot;,&quot;id&quot;:5,&quot;ipOrigen&quot;:&quot;localhost&quot;,&quot;metodoHttp&quot;... [Truncado por tamaño]</pre>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogo>
+    <producto>
+        <nombre>Laptop Lenovo Legion</nombre>
+        <descripcion>AMD Ryzen 7, 512GB SSD</descripcion>
+        <sku>LENOVO-L7-R7-A3D8</sku>
+        <precio>1450.00</precio>
+        <stock>10</stock>
+        <peso>2.20</peso>
+        <categoriaId>1</categoriaId>
+        <vendedorId>1</vendedorId>
+    </producto>
+</catalogo>

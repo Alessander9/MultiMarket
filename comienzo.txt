@@ -1,0 +1,578 @@
+# PROYECTO MULTIMARKET
+
+Actúa como un Arquitecto de Software Senior especializado en Java, Spring Boot 3, PostgreSQL, Hibernate, JPA, Microservicios, Arquitectura DDD y sistemas Marketplace.
+
+Tu tarea es diseñar y generar el modelo de dominio completo para el proyecto llamado MultiMarket.
+
+## CONTEXTO DEL NEGOCIO
+
+MultiMarket es una plataforma Marketplace Multi-Vendedor.
+
+No es un e-commerce tradicional.
+
+MultiMarket permite que múltiples vendedores independientes creen sus propias tiendas dentro de una misma plataforma, publiquen productos, administren inventario, reciban pedidos, interactúen con compradores mediante chat en tiempo real y procesen pagos.
+
+El objetivo es conectar productores regionales y pequeños comerciantes con compradores a través de una única plataforma digital.
+
+Conceptualmente
+
+Marketplace
+├── Tienda Vendedor A
+├── Tienda Vendedor B
+├── Tienda Vendedor C
+└── Tienda Vendedor D
+
+Cada vendedor administra
+
+ Productos
+ Inventario
+ Pedidos
+ Imágenes
+ Conversaciones
+ Importaciones XML
+ Exportaciones JSONXML
+
+## ARQUITECTURA TECNOLÓGICA
+
+Backend
+
+ Java 21
+ Spring Boot 3
+ Spring Data JPA
+ Hibernate
+ PostgreSQL
+ Lombok
+ Jakarta Validation
+
+Frontend
+
+ Angular
+
+Mensajería
+
+ Apache Kafka
+
+Chat
+
+ Java Sockets
+
+Pagos
+
+ SOAP (JAX-WS)
+
+Importación
+
+ XML + JAXB
+
+Exportación
+
+ JSON
+ XML
+
+Autenticación
+
+ JWT
+
+## OBJETIVO
+
+Generar todas las entidades JPA necesarias para soportar el dominio completo de MultiMarket.
+
+## REGLAS OBLIGATORIAS
+
+1. Utilizar nomenclatura empresarial.
+2. Utilizar relaciones JPA correctas.
+3. Aplicar normalización de base de datos.
+4. No duplicar información.
+5. Utilizar LocalDateTime para fechas.
+6. Utilizar LocalDate cuando corresponda.
+7. Utilizar BigDecimal para montos monetarios.
+8. Utilizar UUID para tokens.
+9. Preparar las entidades para PostgreSQL.
+10. Incluir auditoría básica.
+11. Incluir buenas prácticas de Hibernate.
+12. Incluir restricciones de negocio.
+13. Definir correctamente cardinalidades.
+14. Generar documentación de relaciones.
+15. Considerar que el proyecto evolucionará a microservicios.
+
+---
+
+## MÓDULO 1 SEGURIDAD Y AUTENTICACIÓN
+
+Responsabilidades
+
+ Registro
+ Login
+ JWT
+ Recuperación de contraseña
+ Verificación de correo
+ Gestión de roles
+ Auditoría de sesiones
+
+ENTIDAD Usuario
+
+Atributos
+
+ id
+ correo
+ password
+ estado
+ correoVerificado
+ intentosFallidos
+ bloqueado
+ fechaRegistro
+ ultimoAcceso
+
+Relaciones
+
+ OneToOne Perfil
+ ManyToMany Rol
+ OneToMany RecuperacionPassword
+ OneToMany VerificacionCorreo
+ OneToMany SesionUsuario
+ OneToOne Vendedor (opcional)
+
+---
+
+ENTIDAD Rol
+
+Atributos
+
+ id
+ nombre
+ descripcion
+
+Valores
+
+ ADMIN
+ VENDEDOR
+ COMPRADOR
+
+---
+
+ENTIDAD UsuarioRol
+
+Atributos
+
+ id
+ usuarioId
+ rolId
+
+---
+
+ENTIDAD Perfil
+
+Atributos
+
+ id
+ nombres
+ apellidos
+ dni
+ telefono
+ direccion
+ fotoPerfil
+ fechaNacimiento
+
+---
+
+ENTIDAD RecuperacionPassword
+
+Atributos
+
+ id
+ token
+ fechaCreacion
+ fechaExpiracion
+ utilizado
+
+---
+
+ENTIDAD VerificacionCorreo
+
+Atributos
+
+ id
+ token
+ fechaCreacion
+ fechaExpiracion
+ verificado
+
+---
+
+ENTIDAD SesionUsuario
+
+Atributos
+
+ id
+ ip
+ navegador
+ fechaInicio
+ fechaFin
+ activa
+
+---
+
+## MÓDULO 2 VENDEDORES
+
+ENTIDAD Vendedor
+
+Representa una tienda dentro del marketplace.
+
+Atributos
+
+ id
+ nombreTienda
+ descripcion
+ region
+ direccion
+ logo
+ banner
+ fechaCreacion
+ activo
+ calificacionPromedio
+
+Relaciones
+
+ OneToOne Usuario
+ OneToMany Producto
+
+---
+
+## MÓDULO 3 CATÁLOGO
+
+ENTIDAD Categoria
+
+Atributos
+
+ id
+ nombre
+ descripcion
+ activa
+
+---
+
+ENTIDAD Producto
+
+Atributos
+
+ id
+ nombre
+ descripcion
+ sku
+ precio
+ stock
+ peso
+ activo
+ fechaCreacion
+ fechaActualizacion
+
+Relaciones
+
+ ManyToOne Categoria
+ ManyToOne Vendedor
+ OneToMany ImagenProducto
+ OneToOne Inventario
+
+---
+
+ENTIDAD ImagenProducto
+
+Atributos
+
+ id
+ url
+ principal
+ ordenVisualizacion
+
+---
+
+ENTIDAD ProductoFavorito
+
+Atributos
+
+ id
+ fechaAgregado
+
+Relaciones
+
+ ManyToOne Usuario
+ ManyToOne Producto
+
+---
+
+## MÓDULO 4 INVENTARIO
+
+ENTIDAD Inventario
+
+Atributos
+
+ id
+ stockActual
+ stockMinimo
+ ultimaActualizacion
+
+---
+
+ENTIDAD MovimientoInventario
+
+Atributos
+
+ id
+ tipoMovimiento
+ cantidad
+ observacion
+ fechaMovimiento
+
+Valores
+
+ ENTRADA
+ SALIDA
+ DEVOLUCION
+ AJUSTE
+
+---
+
+## MÓDULO 5 PEDIDOS
+
+ENTIDAD Pedido
+
+Atributos
+
+ id
+ numeroPedido
+ fechaPedido
+ subtotal
+ impuesto
+ costoEnvio
+ total
+ estado
+
+Estados
+
+ PENDIENTE
+ PAGADO
+ ENVIADO
+ ENTREGADO
+ CANCELADO
+
+Relaciones
+
+ ManyToOne Usuario
+ ManyToOne Vendedor
+ OneToMany DetallePedido
+ OneToOne Pago
+
+---
+
+ENTIDAD DetallePedido
+
+Atributos
+
+ id
+ cantidad
+ precioUnitario
+ subtotal
+
+Relaciones
+
+ ManyToOne Pedido
+ ManyToOne Producto
+
+---
+
+## MÓDULO 6 PAGOS
+
+ENTIDAD Pago
+
+Atributos
+
+ id
+ monto
+ metodoPago
+ estadoPago
+ fechaPago
+ codigoOperacion
+
+Métodos
+
+ VISA
+ MASTERCARD
+ YAPE
+ PLIN
+ TRANSFERENCIA
+
+---
+
+ENTIDAD TransaccionSOAP
+
+Atributos
+
+ id
+ requestXml
+ responseXml
+ fecha
+ estado
+
+---
+
+## MÓDULO 7 CHAT
+
+ENTIDAD Conversacion
+
+Atributos
+
+ id
+ fechaCreacion
+ activa
+
+Relaciones
+
+ ManyToOne Usuario (comprador)
+ ManyToOne Vendedor
+
+---
+
+ENTIDAD Mensaje
+
+Atributos
+
+ id
+ contenido
+ fechaEnvio
+ leido
+
+Relaciones
+
+ ManyToOne Conversacion
+ ManyToOne Usuario (remitente)
+
+---
+
+## MÓDULO 8 IMPORTACIÓN XML
+
+ENTIDAD ImportacionCatalogo
+
+Atributos
+
+ id
+ nombreArchivo
+ rutaArchivo
+ fechaImportacion
+ totalRegistros
+ registrosCorrectos
+ registrosError
+
+---
+
+## MÓDULO 9 EXPORTACIÓN
+
+ENTIDAD ExportacionCatalogo
+
+Atributos
+
+ id
+ formato
+ fechaExportacion
+ rutaArchivo
+ estado
+
+Formatos
+
+ JSON
+ XML
+
+Estados
+
+ PENDIENTE
+ PROCESANDO
+ COMPLETADO
+ ERROR
+
+---
+
+## MÓDULO 10 NOTIFICACIONES
+
+ENTIDAD Notificacion
+
+Atributos
+
+ id
+ titulo
+ mensaje
+ tipo
+ leida
+ fechaCreacion
+
+Tipos
+
+ PEDIDO
+ PAGO
+ CHAT
+ SISTEMA
+
+---
+
+## MÓDULO 11 AUDITORÍA Y LOGS
+
+ENTIDAD LogSistema
+
+Atributos
+
+ id
+ nivel
+ modulo
+ accion
+ descripcion
+ fechaHora
+ ipOrigen
+ endpoint
+ metodoHttp
+ usuarioId
+ requestData
+ responseData
+ stackTrace
+ exitoso
+
+Niveles
+
+ INFO
+ WARN
+ ERROR
+ DEBUG
+ FATAL
+
+Módulos
+
+ AUTH
+ PRODUCTO
+ PEDIDO
+ PAGO
+ INVENTARIO
+ CHAT
+ SOAP
+ KAFKA
+ SISTEMA
+
+---
+
+## RESULTADO ESPERADO
+
+Generar
+
+1. Diagrama conceptual de entidades.
+2. Diagrama lógico relacional.
+3. Cardinalidades completas.
+4. Tablas SQL PostgreSQL.
+5. Entidades JPA completas.
+6. Enumeraciones necesarias.
+7. Restricciones de integridad.
+8. Índices recomendados.
+9. Convenciones de nombres.
+10. Relaciones optimizadas para Hibernate.
+11. Explicación detallada de cada entidad.
+12. Justificación de diseño.
+13. Preparación para arquitectura de microservicios.
+14. Estrategia de partición futura por bounded contexts.
+15. Recomendaciones de escalabilidad y rendimiento.
+
+El resultado debe ser profesional, empresarial y listo para una implementación real de producción.

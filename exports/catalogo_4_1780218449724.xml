@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogo>
+    <producto>
+        <nombre>Laptop ASUS Zenbook 14</nombre>
+        <descripcion>Laptop compacta con Intel Core Ultra 7, 16GB RAM y 1TB SSD</descripcion>
+        <sku>ASUS-ZENBOOK-14-DE20E</sku>
+        <precio>1299.99</precio>
+        <stock>24</stock>
+        <peso>1.20</peso>
+        <categoriaId>1</categoriaId>
+        <vendedorId>2</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Laptop Lenovo Legion</nombre>
+        <descripcion>AMD Ryzen 7, 512GB SSD</descripcion>
+        <sku>LENOVO-L7-R7-4DB7</sku>
+        <precio>1450.00</precio>
+        <stock>10</stock>
+        <peso>2.20</peso>
+        <categoriaId>1</categoriaId>
+        <vendedorId>1</vendedorId>
+    </producto>
+</catalogo>
