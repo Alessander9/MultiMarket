@@ -2,6 +2,7 @@ package com.multimarket.controllers;
 
 import com.multimarket.models.Notificacion;
 import com.multimarket.models.TipoNotificacion;
+import com.multimarket.dto.NotificacionResponse;
 import com.multimarket.services.Interfaces.NotificacionService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -20,8 +21,8 @@ public class NotificacionController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Notificacion>> getHistorial(@AuthenticationPrincipal UserDetails userDetails) {
-        List<Notificacion> result = notificacionService.consultarHistorial(userDetails.getUsername());
+    public ResponseEntity<List<NotificacionResponse>> getHistorial(@AuthenticationPrincipal UserDetails userDetails) {
+        List<NotificacionResponse> result = notificacionService.consultarHistorial(userDetails.getUsername());
         return ResponseEntity.ok(result);
     }
 

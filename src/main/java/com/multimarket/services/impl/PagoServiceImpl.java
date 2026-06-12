@@ -2,6 +2,7 @@ package com.multimarket.services.impl;
 
 import com.multimarket.dto.PagoRequest;
 import com.multimarket.dto.PagoResponse;
+import com.multimarket.dto.SoapTransactionResponse;
 import com.multimarket.models.*;
 import com.multimarket.repositories.PagoRepository;
 import com.multimarket.repositories.PedidoRepository;
@@ -11,7 +12,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 @Service
 @Transactional
@@ -96,6 +99,28 @@ public class PagoServiceImpl implements PagoService {
         }
 
         return mapToResponse(pago);
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public List<PagoResponse> listarPagos() {
+        return pagoRepository.findAll().stream()
+                .map(this::mapToResponse)
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public List<SoapTransactionResponse> listarTransaccionesSOAP() {
+        return transaccionSOAPRepository.findAll().stream()
+                .map(tx -> new SoapTransactionResponse(
+                        tx.getId(),
+                        tx.getRequestXml(),
+                        tx.getResponseXml(),
+                        tx.getFecha(),
+                        tx.getEstado()
+                ))
+                .collect(Collectors.toList());
     }
 
     // ==========================================

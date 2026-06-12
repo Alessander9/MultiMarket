@@ -3,6 +3,7 @@ package com.multimarket.services.impl;
 import com.multimarket.models.Notificacion;
 import com.multimarket.models.TipoNotificacion;
 import com.multimarket.models.Usuario;
+import com.multimarket.dto.NotificacionResponse;
 import com.multimarket.repositories.NotificacionRepository;
 import com.multimarket.repositories.UsuarioRepository;
 import com.multimarket.services.Interfaces.NotificacionService;
@@ -71,7 +72,17 @@ public class NotificacionServiceImpl implements NotificacionService {
 
     @Override
     @Transactional(readOnly = true)
-    public List<Notificacion> consultarHistorial(String usuarioCorreo) {
-        return notificacionRepository.findByUsuarioCorreoOrderByFechaCreacionDesc(usuarioCorreo);
+    public List<NotificacionResponse> consultarHistorial(String usuarioCorreo) {
+        return notificacionRepository.findByUsuarioCorreoOrderByFechaCreacionDesc(usuarioCorreo).stream()
+                .map(notif -> new NotificacionResponse(
+                        notif.getId(),
+                        notif.getTitulo(),
+                        notif.getMensaje(),
+                        notif.getTipo().name(),
+                        notif.getLeida(),
+                        notif.getFechaCreacion(),
+                        notif.getUsuario() != null ? notif.getUsuario().getCorreo() : null
+                ))
+                .toList();
     }
 }
