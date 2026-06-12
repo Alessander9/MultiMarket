@@ -4,14 +4,13 @@ import com.multimarket.dto.ActualizarStockRequest;
 import com.multimarket.dto.InventarioResponse;
 import com.multimarket.dto.MovimientoInventarioRequest;
 import com.multimarket.dto.MovimientoInventarioResponse;
-import com.multimarket.models.Producto;
 import com.multimarket.repositories.ProductoRepository;
 import com.multimarket.services.Interfaces.InventarioService;
+import com.multimarket.utils.CustomUserDetails;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
@@ -31,11 +30,11 @@ public class InventarioController {
     @PreAuthorize("hasAnyRole('VENDEDOR', 'ADMIN')")
     public ResponseEntity<InventarioResponse> consultarStock(
             @PathVariable Long productoId,
-            @AuthenticationPrincipal UserDetails userDetails) {
+            @AuthenticationPrincipal CustomUserDetails userDetails) {
         
         // Si el usuario es un Vendedor, validar que el producto sea suyo
         if (userDetails.getAuthorities().stream().anyMatch(a -> a.getAuthority().equals("ROLE_VENDEDOR"))) {
-            validarPropiedadProducto(productoId, userDetails.getUsername());
+            validarPropiedadProducto(productoId, userDetails.getUsuario().getId());
         }
         
         InventarioResponse response = inventarioService.consultarStock(productoId);
@@ -47,9 +46,9 @@ public class InventarioController {
     public ResponseEntity<InventarioResponse> actualizarStockMinimo(
             @PathVariable Long productoId,
             @Valid @RequestBody ActualizarStockRequest request,
-            @AuthenticationPrincipal UserDetails userDetails) {
+            @AuthenticationPrincipal CustomUserDetails userDetails) {
         
-        validarPropiedadProducto(productoId, userDetails.getUsername());
+        validarPropiedadProducto(productoId, userDetails.getUsuario().getId());
         
         InventarioResponse response = inventarioService.actualizarStockMinimo(productoId, request);
         return ResponseEntity.ok(response);
@@ -60,9 +59,9 @@ public class InventarioController {
     public ResponseEntity<InventarioResponse> registrarMovimiento(
             @PathVariable Long productoId,
             @Valid @RequestBody MovimientoInventarioRequest request,
-            @AuthenticationPrincipal UserDetails userDetails) {
+            @AuthenticationPrincipal CustomUserDetails userDetails) {
         
-        validarPropiedadProducto(productoId, userDetails.getUsername());
+        validarPropiedadProducto(productoId, userDetails.getUsuario().getId());
         
         InventarioResponse response = inventarioService.registrarMovimiento(productoId, request);
         return ResponseEntity.ok(response);
@@ -72,10 +71,10 @@ public class InventarioController {
     @PreAuthorize("hasAnyRole('VENDEDOR', 'ADMIN')")
     public ResponseEntity<List<MovimientoInventarioResponse>> obtenerHistorial(
             @PathVariable Long productoId,
-            @AuthenticationPrincipal UserDetails userDetails) {
+            @AuthenticationPrincipal CustomUserDetails userDetails) {
         
         if (userDetails.getAuthorities().stream().anyMatch(a -> a.getAuthority().equals("ROLE_VENDEDOR"))) {
-            validarPropiedadProducto(productoId, userDetails.getUsername());
+            validarPropiedadProducto(productoId, userDetails.getUsuario().getId());
         }
         
         List<MovimientoInventarioResponse> response = inventarioService.obtenerHistorial(productoId);
@@ -83,11 +82,10 @@ public class InventarioController {
     }
 
     // Método utilitario para validar propiedad del producto
-    private void validarPropiedadProducto(Long productoId, String correo) {
-        Producto producto = productoRepository.findById(productoId)
-                .orElseThrow(() -> new IllegalArgumentException("Producto no encontrado con el ID: " + productoId));
-        
-        if (!producto.getVendedor().getUsuario().getCorreo().equals(correo)) {
+    private void validarPropiedadProducto(Long productoId, Long usuarioId) {
+        boolean propio = productoRepository.findByIdAndVendedorUsuarioId(productoId, usuarioId).isPresent();
+
+        if (!propio) {
             throw new SecurityException("Acceso Denegado: No tienes permisos para gestionar el inventario de un producto que no pertenece a tu tienda.");
         }
     }

@@ -1,0 +1,628 @@
+{
+  "total": 69,
+  "ok": 69,
+  "fail": 0,
+  "results": [
+    {
+      "modulo": "AUTH",
+      "metodo": "POST",
+      "endpoint": "/auth/register",
+      "desc": "Registro usuario ADMIN",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": ""
+    },
+    {
+      "modulo": "AUTH",
+      "metodo": "POST",
+      "endpoint": "/auth/login",
+      "desc": "Login usuario ADMIN",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": "Token obtenido (eyJhbGciOiJIUzI1NiJ9...)"
+    },
+    {
+      "modulo": "AUTH",
+      "metodo": "POST",
+      "endpoint": "/auth/register",
+      "desc": "Registro usuario VENDEDOR",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": ""
+    },
+    {
+      "modulo": "AUTH",
+      "metodo": "POST",
+      "endpoint": "/auth/login",
+      "desc": "Login usuario VENDEDOR",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": "Token obtenido (eyJhbGciOiJIUzI1NiJ9...)"
+    },
+    {
+      "modulo": "AUTH",
+      "metodo": "POST",
+      "endpoint": "/auth/register",
+      "desc": "Registro usuario COMPRADOR",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": ""
+    },
+    {
+      "modulo": "AUTH",
+      "metodo": "POST",
+      "endpoint": "/auth/login",
+      "desc": "Login usuario COMPRADOR",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": "Token obtenido (eyJhbGciOiJIUzI1NiJ9...)"
+    },
+    {
+      "modulo": "AUTH",
+      "metodo": "GET",
+      "endpoint": "/auth/profile",
+      "desc": "Perfil ADMIN",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": "correo: admin_qa_1781254925387@test.com"
+    },
+    {
+      "modulo": "AUTH",
+      "metodo": "GET",
+      "endpoint": "/auth/profile",
+      "desc": "Perfil VENDEDOR",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": "correo: vendedor_qa_1781254925387@test.com"
+    },
+    {
+      "modulo": "AUTH",
+      "metodo": "GET",
+      "endpoint": "/auth/profile",
+      "desc": "Perfil COMPRADOR",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": "correo: comprador_qa_1781254925387@test.com"
+    },
+    {
+      "modulo": "AUTH",
+      "metodo": "PUT",
+      "endpoint": "/auth/change-password",
+      "desc": "Cambiar contraseña COMPRADOR",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": ""
+    },
+    {
+      "modulo": "AUTH",
+      "metodo": "POST",
+      "endpoint": "/auth/login",
+      "desc": "Re-login COMPRADOR con nueva password",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": ""
+    },
+    {
+      "modulo": "AUTH",
+      "metodo": "POST",
+      "endpoint": "/auth/forgot-password",
+      "desc": "Recuperar contraseña",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": ""
+    },
+    {
+      "modulo": "AUTH",
+      "metodo": "POST",
+      "endpoint": "/auth/reset-password",
+      "desc": "Reset password (token inválido → error esperado)",
+      "status": 400,
+      "estado": "✅ OK",
+      "detalle": "Esperado error: 400"
+    },
+    {
+      "modulo": "AUTH",
+      "metodo": "GET",
+      "endpoint": "/auth/profile",
+      "desc": "Sin token (debe ser 401/403)",
+      "status": 403,
+      "estado": "✅ OK",
+      "detalle": "Esperado rechazo: 403"
+    },
+    {
+      "modulo": "CATEGORÍA",
+      "metodo": "POST",
+      "endpoint": "/categorias",
+      "desc": "Crear categoría (ADMIN)",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": "id: 28"
+    },
+    {
+      "modulo": "CATEGORÍA",
+      "metodo": "POST",
+      "endpoint": "/categorias",
+      "desc": "Crear categoría (VENDEDOR → debe fallar)",
+      "status": 500,
+      "estado": "✅ OK",
+      "detalle": "Esperado 403: 500"
+    },
+    {
+      "modulo": "CATEGORÍA",
+      "metodo": "GET",
+      "endpoint": "/categorias",
+      "desc": "Listar categorías activas",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": "Total: 18"
+    },
+    {
+      "modulo": "CATEGORÍA",
+      "metodo": "GET",
+      "endpoint": "/categorias/28",
+      "desc": "Consultar categoría por ID",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": "nombre: Cat QA 1781254925387"
+    },
+    {
+      "modulo": "CATEGORÍA",
+      "metodo": "PUT",
+      "endpoint": "/categorias/28",
+      "desc": "Editar categoría (ADMIN)",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": ""
+    },
+    {
+      "modulo": "CATEGORÍA",
+      "metodo": "DELETE",
+      "endpoint": "/categorias/28",
+      "desc": "Desactivar categoría (ADMIN)",
+      "status": 204,
+      "estado": "✅ OK",
+      "detalle": ""
+    },
+    {
+      "modulo": "VENDEDOR",
+      "metodo": "POST",
+      "endpoint": "/vendedores",
+      "desc": "Crear tienda (VENDEDOR)",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": "id: 37, nombre: Tienda QA 1781254925387"
+    },
+    {
+      "modulo": "VENDEDOR",
+      "metodo": "GET",
+      "endpoint": "/vendedores/mi-tienda",
+      "desc": "Consultar mi tienda (VENDEDOR)",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": "Nombre: Tienda QA 1781254925387"
+    },
+    {
+      "modulo": "VENDEDOR",
+      "metodo": "GET",
+      "endpoint": "/vendedores/37",
+      "desc": "Consultar tienda por ID (COMPRADOR)",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": ""
+    },
+    {
+      "modulo": "VENDEDOR",
+      "metodo": "PUT",
+      "endpoint": "/vendedores/37",
+      "desc": "Editar tienda (VENDEDOR)",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": ""
+    },
+    {
+      "modulo": "PRODUCTO",
+      "metodo": "POST",
+      "endpoint": "/productos",
+      "desc": "Crear producto (VENDEDOR)",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": "id: 428"
+    },
+    {
+      "modulo": "PRODUCTO",
+      "metodo": "POST",
+      "endpoint": "/productos",
+      "desc": "Crear producto (COMPRADOR → debe fallar)",
+      "status": 500,
+      "estado": "✅ OK",
+      "detalle": "Esperado 403: 500"
+    },
+    {
+      "modulo": "PRODUCTO",
+      "metodo": "GET",
+      "endpoint": "/productos",
+      "desc": "Listar productos activos",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": "Total: 418"
+    },
+    {
+      "modulo": "PRODUCTO",
+      "metodo": "GET",
+      "endpoint": "/productos/428",
+      "desc": "Consultar producto por ID",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": "nombre: Producto QA 1781254925387"
+    },
+    {
+      "modulo": "PRODUCTO",
+      "metodo": "GET",
+      "endpoint": "/productos/buscar?nombre=QA",
+      "desc": "Búsqueda por nombre",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": "Resultados: 1"
+    },
+    {
+      "modulo": "PRODUCTO",
+      "metodo": "GET",
+      "endpoint": "/productos/buscar?categoriaId=29",
+      "desc": "Búsqueda por categoría",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": ""
+    },
+    {
+      "modulo": "PRODUCTO",
+      "metodo": "PUT",
+      "endpoint": "/productos/428",
+      "desc": "Editar producto (VENDEDOR)",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": ""
+    },
+    {
+      "modulo": "PRODUCTO",
+      "metodo": "POST",
+      "endpoint": "/productos/428/imagenes",
+      "desc": "Agregar imagen al producto",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": "imagenId: 416"
+    },
+    {
+      "modulo": "PRODUCTO",
+      "metodo": "POST",
+      "endpoint": "/productos/favoritos/428",
+      "desc": "Agregar producto a favoritos (COMPRADOR)",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": ""
+    },
+    {
+      "modulo": "PRODUCTO",
+      "metodo": "GET",
+      "endpoint": "/productos/favoritos",
+      "desc": "Listar favoritos (COMPRADOR)",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": "Total: 1"
+    },
+    {
+      "modulo": "PRODUCTO",
+      "metodo": "DELETE",
+      "endpoint": "/productos/favoritos/428",
+      "desc": "Eliminar favorito (COMPRADOR)",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": ""
+    },
+    {
+      "modulo": "INVENTARIO",
+      "metodo": "GET",
+      "endpoint": "/inventarios/productos/428",
+      "desc": "Consultar stock (VENDEDOR)",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": "stockActual: 100, stockMinimo: 0"
+    },
+    {
+      "modulo": "INVENTARIO",
+      "metodo": "PUT",
+      "endpoint": "/inventarios/productos/428/stock-minimo",
+      "desc": "Actualizar stock mínimo",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": "stockMinimo: 5"
+    },
+    {
+      "modulo": "INVENTARIO",
+      "metodo": "POST",
+      "endpoint": "/inventarios/productos/428/movimientos",
+      "desc": "Movimiento ENTRADA",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": "stockActual: 120"
+    },
+    {
+      "modulo": "INVENTARIO",
+      "metodo": "POST",
+      "endpoint": "/inventarios/productos/428/movimientos",
+      "desc": "Movimiento SALIDA",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": "stockActual: 115"
+    },
+    {
+      "modulo": "INVENTARIO",
+      "metodo": "POST",
+      "endpoint": "/inventarios/productos/428/movimientos",
+      "desc": "Movimiento AJUSTE",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": "stockActual: 10"
+    },
+    {
+      "modulo": "INVENTARIO",
+      "metodo": "GET",
+      "endpoint": "/inventarios/productos/428/movimientos",
+      "desc": "Historial movimientos",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": "Total movimientos: 3"
+    },
+    {
+      "modulo": "INVENTARIO",
+      "metodo": "GET",
+      "endpoint": "/inventarios/productos/428",
+      "desc": "Consultar stock (COMPRADOR → debe fallar)",
+      "status": 500,
+      "estado": "✅ OK",
+      "detalle": "Esperado 403: 500"
+    },
+    {
+      "modulo": "PEDIDO",
+      "metodo": "POST",
+      "endpoint": "/pedidos",
+      "desc": "Crear pedido (COMPRADOR)",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": "pedidoId: 36, total: 363.9764"
+    },
+    {
+      "modulo": "PEDIDO",
+      "metodo": "GET",
+      "endpoint": "/pedidos/mis-pedidos",
+      "desc": "Listar mis pedidos (COMPRADOR)",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": "Total: 1"
+    },
+    {
+      "modulo": "PEDIDO",
+      "metodo": "GET",
+      "endpoint": "/pedidos/36",
+      "desc": "Consultar pedido por ID (COMPRADOR)",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": "estado: PENDIENTE"
+    },
+    {
+      "modulo": "PEDIDO",
+      "metodo": "GET",
+      "endpoint": "/pedidos/tienda",
+      "desc": "Listar pedidos de tienda (VENDEDOR)",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": "Total: 1"
+    },
+    {
+      "modulo": "PEDIDO",
+      "metodo": "PUT",
+      "endpoint": "/pedidos/37/estado",
+      "desc": "Actualizar estado a PAGADO (VENDEDOR)",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": "nuevoEstado: PAGADO"
+    },
+    {
+      "modulo": "PEDIDO",
+      "metodo": "PUT",
+      "endpoint": "/pedidos/38/cancelar",
+      "desc": "Cancelar pedido (COMPRADOR)",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": "estado: CANCELADO"
+    },
+    {
+      "modulo": "PAGO",
+      "metodo": "POST",
+      "endpoint": "/pagos",
+      "desc": "Procesar pago VISA (COMPRADOR)",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": "pagoId: 14, estado: APROBADO"
+    },
+    {
+      "modulo": "PAGO",
+      "metodo": "GET",
+      "endpoint": "/pagos/14",
+      "desc": "Consultar pago por ID",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": "monto: 363.98, metodo: VISA"
+    },
+    {
+      "modulo": "CHAT",
+      "metodo": "POST",
+      "endpoint": "/chat/conversaciones",
+      "desc": "Crear conversación (COMPRADOR)",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": "convId: 14"
+    },
+    {
+      "modulo": "CHAT",
+      "metodo": "GET",
+      "endpoint": "/chat/conversaciones",
+      "desc": "Listar conversaciones (COMPRADOR)",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": "Total: 1"
+    },
+    {
+      "modulo": "CHAT",
+      "metodo": "GET",
+      "endpoint": "/chat/conversaciones",
+      "desc": "Listar conversaciones (VENDEDOR)",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": "Total: 1"
+    },
+    {
+      "modulo": "CHAT",
+      "metodo": "POST",
+      "endpoint": "/chat/conversaciones/14/mensajes",
+      "desc": "Enviar mensaje (COMPRADOR)",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": "msgId: 23"
+    },
+    {
+      "modulo": "CHAT",
+      "metodo": "POST",
+      "endpoint": "/chat/conversaciones/14/mensajes",
+      "desc": "Enviar mensaje (VENDEDOR)",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": ""
+    },
+    {
+      "modulo": "CHAT",
+      "metodo": "GET",
+      "endpoint": "/chat/conversaciones/14/mensajes",
+      "desc": "Obtener historial de mensajes",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": "Total mensajes: 2"
+    },
+    {
+      "modulo": "NOTIFICACIÓN",
+      "metodo": "GET",
+      "endpoint": "/notificaciones",
+      "desc": "Historial notificaciones (COMPRADOR)",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": "Total: 0"
+    },
+    {
+      "modulo": "NOTIFICACIÓN",
+      "metodo": "GET",
+      "endpoint": "/notificaciones",
+      "desc": "Historial notificaciones (VENDEDOR)",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": "Total: 0"
+    },
+    {
+      "modulo": "NOTIFICACIÓN",
+      "metodo": "POST",
+      "endpoint": "/notificaciones/test",
+      "desc": "Crear notificación test",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": "id: undefined"
+    },
+    {
+      "modulo": "LOG",
+      "metodo": "GET",
+      "endpoint": "/logs",
+      "desc": "Listar logs (ADMIN)",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": "Total: 30"
+    },
+    {
+      "modulo": "LOG",
+      "metodo": "GET",
+      "endpoint": "/logs",
+      "desc": "Listar logs (VENDEDOR → debe fallar)",
+      "status": 500,
+      "estado": "✅ OK",
+      "detalle": "Esperado 403: 500"
+    },
+    {
+      "modulo": "LOG",
+      "metodo": "GET",
+      "endpoint": "/logs/filtrar?nivel=INFO",
+      "desc": "Filtrar logs por nivel INFO (ADMIN)",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": "Total: 30"
+    },
+    {
+      "modulo": "LOG",
+      "metodo": "GET",
+      "endpoint": "/logs/filtrar?modulo=AUTH",
+      "desc": "Filtrar logs por módulo AUTH (ADMIN)",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": ""
+    },
+    {
+      "modulo": "EXPORTACIÓN",
+      "metodo": "POST",
+      "endpoint": "/exportar?formato=JSON",
+      "desc": "Exportar catálogo JSON (VENDEDOR)",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": "id: 27, estado: PENDIENTE"
+    },
+    {
+      "modulo": "EXPORTACIÓN",
+      "metodo": "POST",
+      "endpoint": "/exportar?formato=XML",
+      "desc": "Exportar catálogo XML (ADMIN)",
+      "status": 200,
+      "estado": "✅ OK",
+      "detalle": "id: 28, estado: PENDIENTE"
+    },
+    {
+      "modulo": "EXPORTACIÓN",
+      "metodo": "POST",
+      "endpoint": "/exportar?formato=JSON",
+      "desc": "Exportar catálogo (COMPRADOR → debe fallar)",
+      "status": 500,
+      "estado": "✅ OK",
+      "detalle": "Esperado 403: 500"
+    },
+    {
+      "modulo": "IMPORTACIÓN",
+      "metodo": "POST",
+      "endpoint": "/importar",
+      "desc": "Importar sin archivo (error esperado)",
+      "status": 500,
+      "estado": "✅ OK",
+      "detalle": "Error esperado: 500"
+    },
+    {
+      "modulo": "PRODUCTO",
+      "metodo": "DELETE",
+      "endpoint": "/productos/428",
+      "desc": "Desactivar producto (VENDEDOR)",
+      "status": 204,
+      "estado": "✅ OK",
+      "detalle": ""
+    },
+    {
+      "modulo": "PRODUCTO",
+      "metodo": "DELETE",
+      "endpoint": "/productos/428",
+      "desc": "Desactivar producto (COMPRADOR → debe fallar)",
+      "status": 500,
+      "estado": "✅ OK",
+      "detalle": "Esperado 403: 500"
+    }
+  ]
+}

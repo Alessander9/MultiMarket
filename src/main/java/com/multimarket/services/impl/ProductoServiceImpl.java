@@ -41,8 +41,19 @@ public class ProductoServiceImpl implements ProductoService {
         Usuario usuario = usuarioRepository.findByCorreo(correoUsuario)
                 .orElseThrow(() -> new IllegalArgumentException("Usuario no encontrado"));
 
-        Vendedor tienda = vendedorRepository.findByUsuarioId(usuario.getId())
-                .orElseThrow(() -> new IllegalStateException("Debes registrar una tienda antes de publicar productos."));
+        boolean esAdmin = usuario.getRoles().stream().anyMatch(r -> r.getNombre() == RolNombre.ADMIN);
+
+        Vendedor tienda;
+        if (esAdmin) {
+            if (request.getVendedorId() == null) {
+                throw new IllegalArgumentException("El ID del vendedor es obligatorio para el administrador.");
+            }
+            tienda = vendedorRepository.findById(request.getVendedorId())
+                    .orElseThrow(() -> new IllegalArgumentException("Vendedor no encontrado"));
+        } else {
+            tienda = vendedorRepository.findByUsuarioId(usuario.getId())
+                    .orElseThrow(() -> new IllegalStateException("Debes registrar una tienda antes de publicar productos."));
+        }
 
         Categoria categoria = categoriaRepository.findById(request.getCategoriaId())
                 .orElseThrow(() -> new IllegalArgumentException("Categoría no encontrada"));
@@ -76,11 +87,16 @@ public class ProductoServiceImpl implements ProductoService {
     @Override
     @Transactional
     public ProductoResponse editarProducto(Long id, String correoUsuario, ProductoRequest request) {
+        Usuario usuario = usuarioRepository.findByCorreo(correoUsuario)
+                .orElseThrow(() -> new IllegalArgumentException("Usuario no encontrado"));
+
         Producto producto = productoRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Producto no encontrado"));
 
+        boolean esAdmin = usuario.getRoles().stream().anyMatch(r -> r.getNombre() == RolNombre.ADMIN);
+
         // Validar propietario
-        if (!producto.getVendedor().getUsuario().getCorreo().equals(correoUsuario)) {
+        if (!esAdmin && !producto.getVendedor().getUsuario().getId().equals(usuario.getId())) {
             throw new SecurityException("No estás autorizado para modificar este producto.");
         }
 
@@ -129,12 +145,39 @@ public class ProductoServiceImpl implements ProductoService {
     }
 
     @Override
+    @Transactional(readOnly = true)
+    public List<ProductoResponse> listarMisProductos(String correoUsuario) {
+        Usuario usuario = usuarioRepository.findByCorreo(correoUsuario)
+                .orElseThrow(() -> new IllegalArgumentException("Usuario no encontrado"));
+
+        Vendedor tienda = vendedorRepository.findByUsuarioId(usuario.getId())
+                .orElseThrow(() -> new IllegalArgumentException("Aún no tienes una tienda registrada."));
+
+        return productoRepository.findByVendedorUsuarioIdOrderByIdDesc(tienda.getUsuario().getId()).stream()
+                .map(this::convertToResponse)
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public List<ProductoResponse> listarProductosPorTienda(Long vendedorId) {
+        return productoRepository.findByVendedorIdOrderByIdDesc(vendedorId).stream()
+                .map(this::convertToResponse)
+                .collect(Collectors.toList());
+    }
+
+    @Override
     @Transactional
     public void desactivarProducto(Long id, String correoUsuario) {
+        Usuario usuario = usuarioRepository.findByCorreo(correoUsuario)
+                .orElseThrow(() -> new IllegalArgumentException("Usuario no encontrado"));
+
         Producto producto = productoRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Producto no encontrado"));
 
-        if (!producto.getVendedor().getUsuario().getCorreo().equals(correoUsuario)) {
+        boolean esAdmin = usuario.getRoles().stream().anyMatch(r -> r.getNombre() == RolNombre.ADMIN);
+
+        if (!esAdmin && !producto.getVendedor().getUsuario().getId().equals(usuario.getId())) {
             throw new SecurityException("No estás autorizado para desactivar este producto.");
         }
 
@@ -154,10 +197,15 @@ public class ProductoServiceImpl implements ProductoService {
     @Override
     @Transactional
     public ImagenProductoResponse agregarImagen(Long productoId, String correoUsuario, String url, boolean principal, int orden) {
+        Usuario usuario = usuarioRepository.findByCorreo(correoUsuario)
+                .orElseThrow(() -> new IllegalArgumentException("Usuario no encontrado"));
+
         Producto producto = productoRepository.findById(productoId)
                 .orElseThrow(() -> new IllegalArgumentException("Producto no encontrado"));
 
-        if (!producto.getVendedor().getUsuario().getCorreo().equals(correoUsuario)) {
+        boolean esAdmin = usuario.getRoles().stream().anyMatch(r -> r.getNombre() == RolNombre.ADMIN);
+
+        if (!esAdmin && !producto.getVendedor().getUsuario().getId().equals(usuario.getId())) {
             throw new SecurityException("No estás autorizado para modificar las imágenes de este producto.");
         }
 
@@ -184,10 +232,15 @@ public class ProductoServiceImpl implements ProductoService {
     @Override
     @Transactional
     public void eliminarImagen(Long imagenId, String correoUsuario) {
+        Usuario usuario = usuarioRepository.findByCorreo(correoUsuario)
+                .orElseThrow(() -> new IllegalArgumentException("Usuario no encontrado"));
+
         ImagenProducto imagen = imagenRepository.findById(imagenId)
                 .orElseThrow(() -> new IllegalArgumentException("Imagen no encontrada"));
 
-        if (!imagen.getProducto().getVendedor().getUsuario().getCorreo().equals(correoUsuario)) {
+        boolean esAdmin = usuario.getRoles().stream().anyMatch(r -> r.getNombre() == RolNombre.ADMIN);
+
+        if (!esAdmin && !imagen.getProducto().getVendedor().getUsuario().getId().equals(usuario.getId())) {
             throw new SecurityException("No estás autorizado para eliminar imágenes de este producto.");
         }
 

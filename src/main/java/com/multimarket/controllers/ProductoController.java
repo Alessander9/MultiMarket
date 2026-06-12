@@ -25,7 +25,7 @@ public class ProductoController {
     }
 
     @PostMapping
-    @PreAuthorize("hasRole('VENDEDOR')")
+    @PreAuthorize("hasAnyRole('VENDEDOR', 'ADMIN')")
     public ResponseEntity<ProductoResponse> crearProducto(
             @Valid @RequestBody ProductoRequest request,
             @AuthenticationPrincipal UserDetails userDetails) {
@@ -34,7 +34,7 @@ public class ProductoController {
     }
 
     @PutMapping("/{id}")
-    @PreAuthorize("hasRole('VENDEDOR')")
+    @PreAuthorize("hasAnyRole('VENDEDOR', 'ADMIN')")
     public ResponseEntity<ProductoResponse> editarProducto(
             @PathVariable Long id,
             @Valid @RequestBody ProductoRequest request,
@@ -55,8 +55,16 @@ public class ProductoController {
         return ResponseEntity.ok(response);
     }
 
-    @DeleteMapping("/{id}")
+    @GetMapping("/mis-productos")
     @PreAuthorize("hasRole('VENDEDOR')")
+    public ResponseEntity<List<ProductoResponse>> listarMisProductos(
+            @AuthenticationPrincipal UserDetails userDetails) {
+        List<ProductoResponse> response = productoService.listarMisProductos(userDetails.getUsername());
+        return ResponseEntity.ok(response);
+    }
+
+    @DeleteMapping("/{id}")
+    @PreAuthorize("hasAnyRole('VENDEDOR', 'ADMIN')")
     public ResponseEntity<Void> desactivarProducto(
             @PathVariable Long id,
             @AuthenticationPrincipal UserDetails userDetails) {
@@ -78,7 +86,7 @@ public class ProductoController {
 
     // CRUD Imágenes
     @PostMapping("/{id}/imagenes")
-    @PreAuthorize("hasRole('VENDEDOR')")
+    @PreAuthorize("hasAnyRole('VENDEDOR', 'ADMIN')")
     public ResponseEntity<ImagenProductoResponse> agregarImagen(
             @PathVariable Long id,
             @RequestParam String url,
@@ -90,7 +98,7 @@ public class ProductoController {
     }
 
     @DeleteMapping("/imagenes/{imagenId}")
-    @PreAuthorize("hasRole('VENDEDOR')")
+    @PreAuthorize("hasAnyRole('VENDEDOR', 'ADMIN')")
     public ResponseEntity<Void> eliminarImagen(
             @PathVariable Long imagenId,
             @AuthenticationPrincipal UserDetails userDetails) {

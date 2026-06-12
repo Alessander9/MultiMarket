@@ -13,6 +13,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class VendedorServiceImpl implements VendedorService {
@@ -131,6 +133,14 @@ public class VendedorServiceImpl implements VendedorService {
         tienda.setActivo(activo);
         Vendedor actualizada = vendedorRepository.save(tienda);
         return convertToResponse(actualizada);
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public List<VendedorResponse> listarTodos() {
+        return vendedorRepository.findAll().stream()
+                .map(this::convertToResponse)
+                .collect(Collectors.toList());
     }
 
     private VendedorResponse convertToResponse(Vendedor v) {

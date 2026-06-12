@@ -2,6 +2,7 @@ package com.multimarket.services.Interfaces;
 
 import com.multimarket.dto.VendedorRequest;
 import com.multimarket.dto.VendedorResponse;
+import java.util.List;
 
 public interface VendedorService {
     VendedorResponse crearTienda(String correoUsuario, VendedorRequest request);
@@ -9,4 +10,5 @@ public interface VendedorService {
     VendedorResponse consultarTienda(Long id);
     VendedorResponse consultarMiTienda(String correoUsuario);
     VendedorResponse desactivarTienda(Long id, String correoUsuario, boolean activo);
+    List<VendedorResponse> listarTodos();
 }

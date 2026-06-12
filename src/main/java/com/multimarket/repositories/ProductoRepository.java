@@ -15,6 +15,9 @@ public interface ProductoRepository extends JpaRepository<Producto, Long> {
 
     Optional<Producto> findBySku(String sku);
     List<Producto> findByActivoTrue();
+    List<Producto> findByVendedorUsuarioIdOrderByIdDesc(Long usuarioId);
+    List<Producto> findByVendedorIdOrderByIdDesc(Long vendedorId);
+    Optional<Producto> findByIdAndVendedorUsuarioId(Long id, Long usuarioId);
 
     @Query("SELECT p FROM Producto p WHERE p.activo = true " +
            "AND (:nombre IS NULL OR LOWER(p.nombre) LIKE LOWER(CONCAT('%', :nombre, '%'))) " +

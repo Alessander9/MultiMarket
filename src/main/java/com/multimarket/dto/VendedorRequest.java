@@ -22,7 +22,18 @@ public class VendedorRequest {
 
     private String banner;
 
+    private String correoUsuario;
+
     public VendedorRequest() {}
+
+    // Getters y Setters
+    public String getCorreoUsuario() {
+        return correoUsuario;
+    }
+
+    public void setCorreoUsuario(String correoUsuario) {
+        this.correoUsuario = correoUsuario;
+    }
 
     // Getters y Setters
     public String getNombreTienda() {

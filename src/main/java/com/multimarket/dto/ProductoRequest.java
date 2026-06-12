@@ -33,7 +33,18 @@ public class ProductoRequest {
     @NotNull(message = "La categoría es obligatoria")
     private Long categoriaId;
 
+    private Long vendedorId;
+
     public ProductoRequest() {}
+
+    public Long getVendedorId() {
+        return vendedorId;
+    }
+
+    public void setVendedorId(Long vendedorId) {
+        this.vendedorId = vendedorId;
+    }
+
 
     // Getters y Setters
     public String getNombre() {

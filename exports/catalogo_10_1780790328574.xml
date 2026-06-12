@@ -1,0 +1,4083 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogo>
+    <producto>
+        <nombre>Laptop ASUS Zenbook 14</nombre>
+        <descripcion>Laptop compacta con Intel Core Ultra 7, 16GB RAM y 1TB SSD</descripcion>
+        <sku>ASUS-ZENBOOK-14-DE20E</sku>
+        <precio>1299.99</precio>
+        <stock>15</stock>
+        <peso>1.20</peso>
+        <categoriaId>1</categoriaId>
+        <vendedorId>2</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Laptop Lenovo Legion</nombre>
+        <descripcion>AMD Ryzen 7, 512GB SSD</descripcion>
+        <sku>LENOVO-L7-R7-4DB7</sku>
+        <precio>1450.00</precio>
+        <stock>10</stock>
+        <peso>2.20</peso>
+        <categoriaId>1</categoriaId>
+        <vendedorId>1</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Laptop ASUS Zenbook 14 OLED</nombre>
+        <descripcion>Laptop compacta con Intel Core Ultra 7, Pantalla OLED 3K, 16GB RAM y 1TB SSD</descripcion>
+        <sku>ASUS-ZENBOOK-14-OLED</sku>
+        <precio>1349.99</precio>
+        <stock>24</stock>
+        <peso>1.22</peso>
+        <categoriaId>1</categoriaId>
+        <vendedorId>3</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Laptop Lenovo Legion</nombre>
+        <descripcion>AMD Ryzen 7, 512GB SSD</descripcion>
+        <sku>LENOVO-L7-R7-898B</sku>
+        <precio>1450.00</precio>
+        <stock>10</stock>
+        <peso>2.20</peso>
+        <categoriaId>1</categoriaId>
+        <vendedorId>1</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Laptop ASUS Zenbook 14</nombre>
+        <descripcion>Laptop compacta con Intel Core Ultra 7, 16GB RAM y 1TB SSD</descripcion>
+        <sku>ASUS-ZENBOOK-14-DA8FF</sku>
+        <precio>1299.99</precio>
+        <stock>20</stock>
+        <peso>1.20</peso>
+        <categoriaId>1</categoriaId>
+        <vendedorId>4</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Laptop ASUS Zenbook 14</nombre>
+        <descripcion>Laptop compacta con Intel Core Ultra 7, 16GB RAM y 1TB SSD</descripcion>
+        <sku>ASUS-ZENBOOK-14-6E286</sku>
+        <precio>1299.99</precio>
+        <stock>24</stock>
+        <peso>1.20</peso>
+        <categoriaId>1</categoriaId>
+        <vendedorId>4</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Laptop Lenovo Legion</nombre>
+        <descripcion>AMD Ryzen 7, 512GB SSD</descripcion>
+        <sku>LENOVO-L7-R7-9BF2</sku>
+        <precio>1450.00</precio>
+        <stock>10</stock>
+        <peso>2.20</peso>
+        <categoriaId>1</categoriaId>
+        <vendedorId>1</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cafetería del Centro - Blend de la Casa</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cafetería del Centro. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-001-01</sku>
+        <precio>16.50</precio>
+        <stock>30</stock>
+        <peso>0.50</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>5</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cafetería del Centro - Espresso Supremo</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cafetería del Centro. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-001-02</sku>
+        <precio>20.00</precio>
+        <stock>29</stock>
+        <peso>0.55</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>5</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cafetería del Centro - Aroma de Altura</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cafetería del Centro. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-001-03</sku>
+        <precio>23.50</precio>
+        <stock>28</stock>
+        <peso>0.60</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>5</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cafetería del Centro - Granos Selectos</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cafetería del Centro. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-001-04</sku>
+        <precio>27.00</precio>
+        <stock>27</stock>
+        <peso>0.65</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>5</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cafetería del Centro - Tostado Oscuro</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cafetería del Centro. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-001-05</sku>
+        <precio>30.50</precio>
+        <stock>26</stock>
+        <peso>0.70</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>5</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cafetería del Centro - Geisha Reserva Especial</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cafetería del Centro. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-001-06</sku>
+        <precio>34.00</precio>
+        <stock>25</stock>
+        <peso>0.75</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>5</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cafetería del Centro - Bourbon Orgánico</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cafetería del Centro. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-001-07</sku>
+        <precio>37.50</precio>
+        <stock>24</stock>
+        <peso>0.80</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>5</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cafetería del Centro - Caturra Selección</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cafetería del Centro. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-001-08</sku>
+        <precio>41.00</precio>
+        <stock>23</stock>
+        <peso>0.85</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>5</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cafetería del Centro - Café Miel de Bosque</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cafetería del Centro. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-001-09</sku>
+        <precio>44.50</precio>
+        <stock>22</stock>
+        <peso>0.90</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>5</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cafetería del Centro - Café del Huerto</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cafetería del Centro. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-001-10</sku>
+        <precio>48.00</precio>
+        <stock>21</stock>
+        <peso>0.95</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>5</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cafetería del Centro - Finca La Flor</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cafetería del Centro. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-001-11</sku>
+        <precio>51.50</precio>
+        <stock>20</stock>
+        <peso>1.00</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>5</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cafetería del Centro - Espresso Roast</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cafetería del Centro. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-001-12</sku>
+        <precio>55.00</precio>
+        <stock>19</stock>
+        <peso>1.05</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>5</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cafetería del Centro - Cold Brew Blend</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cafetería del Centro. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-001-13</sku>
+        <precio>58.50</precio>
+        <stock>18</stock>
+        <peso>1.10</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>5</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cafetería del Centro - Descafeinado Natural</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cafetería del Centro. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-001-14</sku>
+        <precio>62.00</precio>
+        <stock>17</stock>
+        <peso>1.15</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>5</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cafetería del Centro - Grano Entero Gourmet</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cafetería del Centro. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-001-15</sku>
+        <precio>65.50</precio>
+        <stock>16</stock>
+        <peso>1.20</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>5</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cafetería del Centro - Molido Fino Intenso</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cafetería del Centro. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-001-16</sku>
+        <precio>69.00</precio>
+        <stock>15</stock>
+        <peso>1.25</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>5</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cafetería del Centro - Molido Medio Clásico</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cafetería del Centro. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-001-17</sku>
+        <precio>72.50</precio>
+        <stock>14</stock>
+        <peso>1.30</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>5</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cafetería del Centro - Néctar Andino</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cafetería del Centro. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-001-18</sku>
+        <precio>76.00</precio>
+        <stock>13</stock>
+        <peso>1.35</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>5</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cafetería del Centro - Reserva de Valle</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cafetería del Centro. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-001-19</sku>
+        <precio>79.50</precio>
+        <stock>12</stock>
+        <peso>1.40</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>5</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cafetería del Centro - Café Pacamara</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cafetería del Centro. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-001-20</sku>
+        <precio>83.00</precio>
+        <stock>11</stock>
+        <peso>1.45</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>5</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Chocolates El Ceibo - Chocolate Negro 70%</nombre>
+        <descripcion>Producto artesanal premium de la tienda Chocolates El Ceibo. Cultivado o elaborado siguiendo tradiciones locales de la región de Amazonas.</descripcion>
+        <sku>SKU-002-01</sku>
+        <precio>18.00</precio>
+        <stock>30</stock>
+        <peso>0.50</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>6</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Chocolates El Ceibo - Chocolate con Leche 45%</nombre>
+        <descripcion>Producto artesanal premium de la tienda Chocolates El Ceibo. Cultivado o elaborado siguiendo tradiciones locales de la región de Amazonas.</descripcion>
+        <sku>SKU-002-02</sku>
+        <precio>21.50</precio>
+        <stock>29</stock>
+        <peso>0.55</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>6</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Chocolates El Ceibo - Trufas de Cacao</nombre>
+        <descripcion>Producto artesanal premium de la tienda Chocolates El Ceibo. Cultivado o elaborado siguiendo tradiciones locales de la región de Amazonas.</descripcion>
+        <sku>SKU-002-03</sku>
+        <precio>25.00</precio>
+        <stock>28</stock>
+        <peso>0.60</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>6</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Chocolates El Ceibo - Chocolate con Maní</nombre>
+        <descripcion>Producto artesanal premium de la tienda Chocolates El Ceibo. Cultivado o elaborado siguiendo tradiciones locales de la región de Amazonas.</descripcion>
+        <sku>SKU-002-04</sku>
+        <precio>28.50</precio>
+        <stock>27</stock>
+        <peso>0.65</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>6</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Chocolates El Ceibo - Chocolate Blanco Cream</nombre>
+        <descripcion>Producto artesanal premium de la tienda Chocolates El Ceibo. Cultivado o elaborado siguiendo tradiciones locales de la región de Amazonas.</descripcion>
+        <sku>SKU-002-05</sku>
+        <precio>32.00</precio>
+        <stock>26</stock>
+        <peso>0.70</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>6</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Chocolates El Ceibo - Barra de Cacao Puro 100%</nombre>
+        <descripcion>Producto artesanal premium de la tienda Chocolates El Ceibo. Cultivado o elaborado siguiendo tradiciones locales de la región de Amazonas.</descripcion>
+        <sku>SKU-002-06</sku>
+        <precio>35.50</precio>
+        <stock>25</stock>
+        <peso>0.75</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>6</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Chocolates El Ceibo - Chocolate con Arándanos</nombre>
+        <descripcion>Producto artesanal premium de la tienda Chocolates El Ceibo. Cultivado o elaborado siguiendo tradiciones locales de la región de Amazonas.</descripcion>
+        <sku>SKU-002-07</sku>
+        <precio>39.00</precio>
+        <stock>24</stock>
+        <peso>0.80</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>6</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Chocolates El Ceibo - Bombones Surtidos</nombre>
+        <descripcion>Producto artesanal premium de la tienda Chocolates El Ceibo. Cultivado o elaborado siguiendo tradiciones locales de la región de Amazonas.</descripcion>
+        <sku>SKU-002-08</sku>
+        <precio>42.50</precio>
+        <stock>23</stock>
+        <peso>0.85</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>6</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Chocolates El Ceibo - Chocolate Caliente en Polvo</nombre>
+        <descripcion>Producto artesanal premium de la tienda Chocolates El Ceibo. Cultivado o elaborado siguiendo tradiciones locales de la región de Amazonas.</descripcion>
+        <sku>SKU-002-09</sku>
+        <precio>46.00</precio>
+        <stock>22</stock>
+        <peso>0.90</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>6</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Chocolates El Ceibo - Cobertura de Chocolate</nombre>
+        <descripcion>Producto artesanal premium de la tienda Chocolates El Ceibo. Cultivado o elaborado siguiendo tradiciones locales de la región de Amazonas.</descripcion>
+        <sku>SKU-002-10</sku>
+        <precio>49.50</precio>
+        <stock>21</stock>
+        <peso>0.95</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>6</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Chocolates El Ceibo - Cacao en Polvo Premium</nombre>
+        <descripcion>Producto artesanal premium de la tienda Chocolates El Ceibo. Cultivado o elaborado siguiendo tradiciones locales de la región de Amazonas.</descripcion>
+        <sku>SKU-002-11</sku>
+        <precio>53.00</precio>
+        <stock>20</stock>
+        <peso>1.00</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>6</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Chocolates El Ceibo - Barra de Cacao Fino 85%</nombre>
+        <descripcion>Producto artesanal premium de la tienda Chocolates El Ceibo. Cultivado o elaborado siguiendo tradiciones locales de la región de Amazonas.</descripcion>
+        <sku>SKU-002-12</sku>
+        <precio>56.50</precio>
+        <stock>19</stock>
+        <peso>1.05</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>6</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Chocolates El Ceibo - Chocolate con Sal de Mar</nombre>
+        <descripcion>Producto artesanal premium de la tienda Chocolates El Ceibo. Cultivado o elaborado siguiendo tradiciones locales de la región de Amazonas.</descripcion>
+        <sku>SKU-002-13</sku>
+        <precio>60.00</precio>
+        <stock>18</stock>
+        <peso>1.10</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>6</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Chocolates El Ceibo - Chocolate con Café</nombre>
+        <descripcion>Producto artesanal premium de la tienda Chocolates El Ceibo. Cultivado o elaborado siguiendo tradiciones locales de la región de Amazonas.</descripcion>
+        <sku>SKU-002-14</sku>
+        <precio>63.50</precio>
+        <stock>17</stock>
+        <peso>1.15</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>6</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Chocolates El Ceibo - Barra de Cacao Chuncho</nombre>
+        <descripcion>Producto artesanal premium de la tienda Chocolates El Ceibo. Cultivado o elaborado siguiendo tradiciones locales de la región de Amazonas.</descripcion>
+        <sku>SKU-002-15</sku>
+        <precio>67.00</precio>
+        <stock>16</stock>
+        <peso>1.20</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>6</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Chocolates El Ceibo - Chocolate con Almendras</nombre>
+        <descripcion>Producto artesanal premium de la tienda Chocolates El Ceibo. Cultivado o elaborado siguiendo tradiciones locales de la región de Amazonas.</descripcion>
+        <sku>SKU-002-16</sku>
+        <precio>70.50</precio>
+        <stock>15</stock>
+        <peso>1.25</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>6</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Chocolates El Ceibo - Trufas de Maracuyá</nombre>
+        <descripcion>Producto artesanal premium de la tienda Chocolates El Ceibo. Cultivado o elaborado siguiendo tradiciones locales de la región de Amazonas.</descripcion>
+        <sku>SKU-002-17</sku>
+        <precio>74.00</precio>
+        <stock>14</stock>
+        <peso>1.30</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>6</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Chocolates El Ceibo - Chocolate con Ají Limón</nombre>
+        <descripcion>Producto artesanal premium de la tienda Chocolates El Ceibo. Cultivado o elaborado siguiendo tradiciones locales de la región de Amazonas.</descripcion>
+        <sku>SKU-002-18</sku>
+        <precio>77.50</precio>
+        <stock>13</stock>
+        <peso>1.35</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>6</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Chocolates El Ceibo - Chocolate con Quinua Pop</nombre>
+        <descripcion>Producto artesanal premium de la tienda Chocolates El Ceibo. Cultivado o elaborado siguiendo tradiciones locales de la región de Amazonas.</descripcion>
+        <sku>SKU-002-19</sku>
+        <precio>81.00</precio>
+        <stock>12</stock>
+        <peso>1.40</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>6</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Chocolates El Ceibo - Barra Fondant Clásica</nombre>
+        <descripcion>Producto artesanal premium de la tienda Chocolates El Ceibo. Cultivado o elaborado siguiendo tradiciones locales de la región de Amazonas.</descripcion>
+        <sku>SKU-002-20</sku>
+        <precio>84.50</precio>
+        <stock>11</stock>
+        <peso>1.45</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>6</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Artesanías Andinas - Torito de Pucará Grande</nombre>
+        <descripcion>Producto artesanal premium de la tienda Artesanías Andinas. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-003-01</sku>
+        <precio>19.50</precio>
+        <stock>30</stock>
+        <peso>0.50</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>7</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Artesanías Andinas - Retablo Ayacuchano Mediano</nombre>
+        <descripcion>Producto artesanal premium de la tienda Artesanías Andinas. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-003-02</sku>
+        <precio>23.00</precio>
+        <stock>29</stock>
+        <peso>0.55</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>7</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Artesanías Andinas - Vasija de Barro Pintada</nombre>
+        <descripcion>Producto artesanal premium de la tienda Artesanías Andinas. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-003-03</sku>
+        <precio>26.50</precio>
+        <stock>28</stock>
+        <peso>0.60</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>7</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Artesanías Andinas - Mate Burilado Decorativo</nombre>
+        <descripcion>Producto artesanal premium de la tienda Artesanías Andinas. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-003-04</sku>
+        <precio>30.00</precio>
+        <stock>27</stock>
+        <peso>0.65</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>7</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Artesanías Andinas - Plato de Cerámica Tradicional</nombre>
+        <descripcion>Producto artesanal premium de la tienda Artesanías Andinas. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-003-05</sku>
+        <precio>33.50</precio>
+        <stock>26</stock>
+        <peso>0.70</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>7</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Artesanías Andinas - Llamita tallada en Piedra</nombre>
+        <descripcion>Producto artesanal premium de la tienda Artesanías Andinas. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-003-06</sku>
+        <precio>37.00</precio>
+        <stock>25</stock>
+        <peso>0.75</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>7</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Artesanías Andinas - Espejo con Marco Dorado</nombre>
+        <descripcion>Producto artesanal premium de la tienda Artesanías Andinas. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-003-07</sku>
+        <precio>40.50</precio>
+        <stock>24</stock>
+        <peso>0.80</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>7</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Artesanías Andinas - Máscara de la Diablada</nombre>
+        <descripcion>Producto artesanal premium de la tienda Artesanías Andinas. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-003-08</sku>
+        <precio>44.00</precio>
+        <stock>23</stock>
+        <peso>0.85</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>7</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Artesanías Andinas - Cofre de Madera Tallado</nombre>
+        <descripcion>Producto artesanal premium de la tienda Artesanías Andinas. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-003-09</sku>
+        <precio>47.50</precio>
+        <stock>22</stock>
+        <peso>0.90</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>7</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Artesanías Andinas - Florero de Cerámica Esmaltada</nombre>
+        <descripcion>Producto artesanal premium de la tienda Artesanías Andinas. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-003-10</sku>
+        <precio>51.00</precio>
+        <stock>21</stock>
+        <peso>0.95</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>7</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Artesanías Andinas - Pulsera de Plata Filigrana</nombre>
+        <descripcion>Producto artesanal premium de la tienda Artesanías Andinas. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-003-11</sku>
+        <precio>54.50</precio>
+        <stock>20</stock>
+        <peso>1.00</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>7</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Artesanías Andinas - Collar de Huayruro y Plata</nombre>
+        <descripcion>Producto artesanal premium de la tienda Artesanías Andinas. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-003-12</sku>
+        <precio>58.00</precio>
+        <stock>19</stock>
+        <peso>1.05</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>7</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Artesanías Andinas - Torito de Pucará Mini</nombre>
+        <descripcion>Producto artesanal premium de la tienda Artesanías Andinas. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-003-13</sku>
+        <precio>61.50</precio>
+        <stock>18</stock>
+        <peso>1.10</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>7</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Artesanías Andinas - Cuadro Andino en Relieve</nombre>
+        <descripcion>Producto artesanal premium de la tienda Artesanías Andinas. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-003-14</sku>
+        <precio>65.00</precio>
+        <stock>17</stock>
+        <peso>1.15</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>7</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Artesanías Andinas - Adorno de Nacimiento Barro</nombre>
+        <descripcion>Producto artesanal premium de la tienda Artesanías Andinas. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-003-15</sku>
+        <precio>68.50</precio>
+        <stock>16</stock>
+        <peso>1.20</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>7</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Artesanías Andinas - Portavelas Rústico</nombre>
+        <descripcion>Producto artesanal premium de la tienda Artesanías Andinas. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-003-16</sku>
+        <precio>72.00</precio>
+        <stock>15</stock>
+        <peso>1.25</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>7</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Artesanías Andinas - Cesta de Paja Tejida</nombre>
+        <descripcion>Producto artesanal premium de la tienda Artesanías Andinas. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-003-17</sku>
+        <precio>75.50</precio>
+        <stock>14</stock>
+        <peso>1.30</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>7</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Artesanías Andinas - Jarrón Decorativo Rústico</nombre>
+        <descripcion>Producto artesanal premium de la tienda Artesanías Andinas. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-003-18</sku>
+        <precio>79.00</precio>
+        <stock>13</stock>
+        <peso>1.35</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>7</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Artesanías Andinas - Figura de Alpaca de Lana</nombre>
+        <descripcion>Producto artesanal premium de la tienda Artesanías Andinas. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-003-19</sku>
+        <precio>82.50</precio>
+        <stock>12</stock>
+        <peso>1.40</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>7</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Artesanías Andinas - Aretes de Plata Catacaos</nombre>
+        <descripcion>Producto artesanal premium de la tienda Artesanías Andinas. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-003-20</sku>
+        <precio>86.00</precio>
+        <stock>11</stock>
+        <peso>1.45</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>7</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Ferretería Cleo - Taladro Percutor DeWalt 20V Max</nombre>
+        <descripcion>Producto artesanal premium de la tienda Ferretería Cleo. Cultivado o elaborado siguiendo tradiciones locales de la región de Lima.</descripcion>
+        <sku>SKU-004-01</sku>
+        <precio>21.00</precio>
+        <stock>30</stock>
+        <peso>0.50</peso>
+        <categoriaId>8</categoriaId>
+        <vendedorId>8</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Ferretería Cleo - Juego de Herramientas Stanley 110p</nombre>
+        <descripcion>Producto artesanal premium de la tienda Ferretería Cleo. Cultivado o elaborado siguiendo tradiciones locales de la región de Lima.</descripcion>
+        <sku>SKU-004-02</sku>
+        <precio>24.50</precio>
+        <stock>29</stock>
+        <peso>0.55</peso>
+        <categoriaId>8</categoriaId>
+        <vendedorId>8</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Ferretería Cleo - Amoladora Angular Bosch 850W</nombre>
+        <descripcion>Producto artesanal premium de la tienda Ferretería Cleo. Cultivado o elaborado siguiendo tradiciones locales de la región de Lima.</descripcion>
+        <sku>SKU-004-03</sku>
+        <precio>28.00</precio>
+        <stock>28</stock>
+        <peso>0.60</peso>
+        <categoriaId>8</categoriaId>
+        <vendedorId>8</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Ferretería Cleo - Caja de Herramientas Plástica 20"</nombre>
+        <descripcion>Producto artesanal premium de la tienda Ferretería Cleo. Cultivado o elaborado siguiendo tradiciones locales de la región de Lima.</descripcion>
+        <sku>SKU-004-04</sku>
+        <precio>31.50</precio>
+        <stock>27</stock>
+        <peso>0.65</peso>
+        <categoriaId>8</categoriaId>
+        <vendedorId>8</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Ferretería Cleo - Cerradura Digital Inteligente Yale</nombre>
+        <descripcion>Producto artesanal premium de la tienda Ferretería Cleo. Cultivado o elaborado siguiendo tradiciones locales de la región de Lima.</descripcion>
+        <sku>SKU-004-05</sku>
+        <precio>35.00</precio>
+        <stock>26</stock>
+        <peso>0.70</peso>
+        <categoriaId>8</categoriaId>
+        <vendedorId>8</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Ferretería Cleo - Set de Destornilladores Imantados</nombre>
+        <descripcion>Producto artesanal premium de la tienda Ferretería Cleo. Cultivado o elaborado siguiendo tradiciones locales de la región de Lima.</descripcion>
+        <sku>SKU-004-06</sku>
+        <precio>38.50</precio>
+        <stock>25</stock>
+        <peso>0.75</peso>
+        <categoriaId>8</categoriaId>
+        <vendedorId>8</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Ferretería Cleo - Pintura Látex Premium CPP</nombre>
+        <descripcion>Producto artesanal premium de la tienda Ferretería Cleo. Cultivado o elaborado siguiendo tradiciones locales de la región de Lima.</descripcion>
+        <sku>SKU-004-07</sku>
+        <precio>42.00</precio>
+        <stock>24</stock>
+        <peso>0.80</peso>
+        <categoriaId>8</categoriaId>
+        <vendedorId>8</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Ferretería Cleo - Candado de Acero Blindado Forte</nombre>
+        <descripcion>Producto artesanal premium de la tienda Ferretería Cleo. Cultivado o elaborado siguiendo tradiciones locales de la región de Lima.</descripcion>
+        <sku>SKU-004-08</sku>
+        <precio>45.50</precio>
+        <stock>23</stock>
+        <peso>0.85</peso>
+        <categoriaId>8</categoriaId>
+        <vendedorId>8</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Ferretería Cleo - Rotomartillo SDS Plus Makita</nombre>
+        <descripcion>Producto artesanal premium de la tienda Ferretería Cleo. Cultivado o elaborado siguiendo tradiciones locales de la región de Lima.</descripcion>
+        <sku>SKU-004-09</sku>
+        <precio>49.00</precio>
+        <stock>22</stock>
+        <peso>0.90</peso>
+        <categoriaId>8</categoriaId>
+        <vendedorId>8</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Ferretería Cleo - Martillo de Uña Tramontina</nombre>
+        <descripcion>Producto artesanal premium de la tienda Ferretería Cleo. Cultivado o elaborado siguiendo tradiciones locales de la región de Lima.</descripcion>
+        <sku>SKU-004-10</sku>
+        <precio>52.50</precio>
+        <stock>21</stock>
+        <peso>0.95</peso>
+        <categoriaId>8</categoriaId>
+        <vendedorId>8</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Ferretería Cleo - Wincha Métrica Stanley 8m</nombre>
+        <descripcion>Producto artesanal premium de la tienda Ferretería Cleo. Cultivado o elaborado siguiendo tradiciones locales de la región de Lima.</descripcion>
+        <sku>SKU-004-11</sku>
+        <precio>56.00</precio>
+        <stock>20</stock>
+        <peso>1.00</peso>
+        <categoriaId>8</categoriaId>
+        <vendedorId>8</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Ferretería Cleo - Linterna LED Recargable 1000Lm</nombre>
+        <descripcion>Producto artesanal premium de la tienda Ferretería Cleo. Cultivado o elaborado siguiendo tradiciones locales de la región de Lima.</descripcion>
+        <sku>SKU-004-12</sku>
+        <precio>59.50</precio>
+        <stock>19</stock>
+        <peso>1.05</peso>
+        <categoriaId>8</categoriaId>
+        <vendedorId>8</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Ferretería Cleo - Juego de Llaves Mixtas 12p</nombre>
+        <descripcion>Producto artesanal premium de la tienda Ferretería Cleo. Cultivado o elaborado siguiendo tradiciones locales de la región de Lima.</descripcion>
+        <sku>SKU-004-13</sku>
+        <precio>63.00</precio>
+        <stock>18</stock>
+        <peso>1.10</peso>
+        <categoriaId>8</categoriaId>
+        <vendedorId>8</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Ferretería Cleo - Sierra Circular Black+Decker</nombre>
+        <descripcion>Producto artesanal premium de la tienda Ferretería Cleo. Cultivado o elaborado siguiendo tradiciones locales de la región de Lima.</descripcion>
+        <sku>SKU-004-14</sku>
+        <precio>66.50</precio>
+        <stock>17</stock>
+        <peso>1.15</peso>
+        <categoriaId>8</categoriaId>
+        <vendedorId>8</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Ferretería Cleo - Cable Eléctrico Indeco Nro 12</nombre>
+        <descripcion>Producto artesanal premium de la tienda Ferretería Cleo. Cultivado o elaborado siguiendo tradiciones locales de la región de Lima.</descripcion>
+        <sku>SKU-004-15</sku>
+        <precio>70.00</precio>
+        <stock>16</stock>
+        <peso>1.20</peso>
+        <categoriaId>8</categoriaId>
+        <vendedorId>8</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Ferretería Cleo - Set de Brochas Atlas Premium</nombre>
+        <descripcion>Producto artesanal premium de la tienda Ferretería Cleo. Cultivado o elaborado siguiendo tradiciones locales de la región de Lima.</descripcion>
+        <sku>SKU-004-16</sku>
+        <precio>73.50</precio>
+        <stock>15</stock>
+        <peso>1.25</peso>
+        <categoriaId>8</categoriaId>
+        <vendedorId>8</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Ferretería Cleo - Cinta Aisladora 3M Temflex</nombre>
+        <descripcion>Producto artesanal premium de la tienda Ferretería Cleo. Cultivado o elaborado siguiendo tradiciones locales de la región de Lima.</descripcion>
+        <sku>SKU-004-17</sku>
+        <precio>77.00</precio>
+        <stock>14</stock>
+        <peso>1.30</peso>
+        <categoriaId>8</categoriaId>
+        <vendedorId>8</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Ferretería Cleo - Nivel de Burbuja Aluminio 24"</nombre>
+        <descripcion>Producto artesanal premium de la tienda Ferretería Cleo. Cultivado o elaborado siguiendo tradiciones locales de la región de Lima.</descripcion>
+        <sku>SKU-004-18</sku>
+        <precio>80.50</precio>
+        <stock>13</stock>
+        <peso>1.35</peso>
+        <categoriaId>8</categoriaId>
+        <vendedorId>8</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Ferretería Cleo - Candado TSA Programable Yale</nombre>
+        <descripcion>Producto artesanal premium de la tienda Ferretería Cleo. Cultivado o elaborado siguiendo tradiciones locales de la región de Lima.</descripcion>
+        <sku>SKU-004-19</sku>
+        <precio>84.00</precio>
+        <stock>12</stock>
+        <peso>1.40</peso>
+        <categoriaId>8</categoriaId>
+        <vendedorId>8</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Ferretería Cleo - Compresora de Aire Truper 24L</nombre>
+        <descripcion>Producto artesanal premium de la tienda Ferretería Cleo. Cultivado o elaborado siguiendo tradiciones locales de la región de Lima.</descripcion>
+        <sku>SKU-004-20</sku>
+        <precio>87.50</precio>
+        <stock>11</stock>
+        <peso>1.45</peso>
+        <categoriaId>8</categoriaId>
+        <vendedorId>8</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cusco Premium Café - Blend de la Casa</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cusco Premium Café. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-005-01</sku>
+        <precio>22.50</precio>
+        <stock>30</stock>
+        <peso>0.50</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>9</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cusco Premium Café - Espresso Supremo</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cusco Premium Café. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-005-02</sku>
+        <precio>26.00</precio>
+        <stock>29</stock>
+        <peso>0.55</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>9</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cusco Premium Café - Aroma de Altura</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cusco Premium Café. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-005-03</sku>
+        <precio>29.50</precio>
+        <stock>28</stock>
+        <peso>0.60</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>9</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cusco Premium Café - Granos Selectos</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cusco Premium Café. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-005-04</sku>
+        <precio>33.00</precio>
+        <stock>27</stock>
+        <peso>0.65</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>9</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cusco Premium Café - Tostado Oscuro</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cusco Premium Café. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-005-05</sku>
+        <precio>36.50</precio>
+        <stock>26</stock>
+        <peso>0.70</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>9</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cusco Premium Café - Geisha Reserva Especial</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cusco Premium Café. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-005-06</sku>
+        <precio>40.00</precio>
+        <stock>25</stock>
+        <peso>0.75</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>9</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cusco Premium Café - Bourbon Orgánico</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cusco Premium Café. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-005-07</sku>
+        <precio>43.50</precio>
+        <stock>24</stock>
+        <peso>0.80</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>9</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cusco Premium Café - Caturra Selección</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cusco Premium Café. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-005-08</sku>
+        <precio>47.00</precio>
+        <stock>23</stock>
+        <peso>0.85</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>9</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cusco Premium Café - Café Miel de Bosque</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cusco Premium Café. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-005-09</sku>
+        <precio>50.50</precio>
+        <stock>22</stock>
+        <peso>0.90</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>9</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cusco Premium Café - Café del Huerto</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cusco Premium Café. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-005-10</sku>
+        <precio>54.00</precio>
+        <stock>21</stock>
+        <peso>0.95</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>9</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cusco Premium Café - Finca La Flor</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cusco Premium Café. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-005-11</sku>
+        <precio>57.50</precio>
+        <stock>20</stock>
+        <peso>1.00</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>9</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cusco Premium Café - Espresso Roast</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cusco Premium Café. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-005-12</sku>
+        <precio>61.00</precio>
+        <stock>19</stock>
+        <peso>1.05</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>9</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cusco Premium Café - Cold Brew Blend</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cusco Premium Café. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-005-13</sku>
+        <precio>64.50</precio>
+        <stock>18</stock>
+        <peso>1.10</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>9</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cusco Premium Café - Descafeinado Natural</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cusco Premium Café. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-005-14</sku>
+        <precio>68.00</precio>
+        <stock>17</stock>
+        <peso>1.15</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>9</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cusco Premium Café - Grano Entero Gourmet</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cusco Premium Café. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-005-15</sku>
+        <precio>71.50</precio>
+        <stock>16</stock>
+        <peso>1.20</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>9</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cusco Premium Café - Molido Fino Intenso</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cusco Premium Café. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-005-16</sku>
+        <precio>75.00</precio>
+        <stock>15</stock>
+        <peso>1.25</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>9</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cusco Premium Café - Molido Medio Clásico</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cusco Premium Café. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-005-17</sku>
+        <precio>78.50</precio>
+        <stock>14</stock>
+        <peso>1.30</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>9</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cusco Premium Café - Néctar Andino</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cusco Premium Café. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-005-18</sku>
+        <precio>82.00</precio>
+        <stock>13</stock>
+        <peso>1.35</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>9</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cusco Premium Café - Reserva de Valle</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cusco Premium Café. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-005-19</sku>
+        <precio>85.50</precio>
+        <stock>12</stock>
+        <peso>1.40</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>9</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cusco Premium Café - Café Pacamara</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cusco Premium Café. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-005-20</sku>
+        <precio>89.00</precio>
+        <stock>11</stock>
+        <peso>1.45</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>9</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Dulce Amazonía - Chocolate Negro 70%</nombre>
+        <descripcion>Producto artesanal premium de la tienda Dulce Amazonía. Cultivado o elaborado siguiendo tradiciones locales de la región de Amazonas.</descripcion>
+        <sku>SKU-006-01</sku>
+        <precio>24.00</precio>
+        <stock>30</stock>
+        <peso>0.50</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>10</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Dulce Amazonía - Chocolate con Leche 45%</nombre>
+        <descripcion>Producto artesanal premium de la tienda Dulce Amazonía. Cultivado o elaborado siguiendo tradiciones locales de la región de Amazonas.</descripcion>
+        <sku>SKU-006-02</sku>
+        <precio>27.50</precio>
+        <stock>29</stock>
+        <peso>0.55</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>10</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Dulce Amazonía - Trufas de Cacao</nombre>
+        <descripcion>Producto artesanal premium de la tienda Dulce Amazonía. Cultivado o elaborado siguiendo tradiciones locales de la región de Amazonas.</descripcion>
+        <sku>SKU-006-03</sku>
+        <precio>31.00</precio>
+        <stock>28</stock>
+        <peso>0.60</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>10</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Dulce Amazonía - Chocolate con Maní</nombre>
+        <descripcion>Producto artesanal premium de la tienda Dulce Amazonía. Cultivado o elaborado siguiendo tradiciones locales de la región de Amazonas.</descripcion>
+        <sku>SKU-006-04</sku>
+        <precio>34.50</precio>
+        <stock>27</stock>
+        <peso>0.65</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>10</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Dulce Amazonía - Chocolate Blanco Cream</nombre>
+        <descripcion>Producto artesanal premium de la tienda Dulce Amazonía. Cultivado o elaborado siguiendo tradiciones locales de la región de Amazonas.</descripcion>
+        <sku>SKU-006-05</sku>
+        <precio>38.00</precio>
+        <stock>26</stock>
+        <peso>0.70</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>10</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Dulce Amazonía - Barra de Cacao Puro 100%</nombre>
+        <descripcion>Producto artesanal premium de la tienda Dulce Amazonía. Cultivado o elaborado siguiendo tradiciones locales de la región de Amazonas.</descripcion>
+        <sku>SKU-006-06</sku>
+        <precio>41.50</precio>
+        <stock>25</stock>
+        <peso>0.75</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>10</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Dulce Amazonía - Chocolate con Arándanos</nombre>
+        <descripcion>Producto artesanal premium de la tienda Dulce Amazonía. Cultivado o elaborado siguiendo tradiciones locales de la región de Amazonas.</descripcion>
+        <sku>SKU-006-07</sku>
+        <precio>45.00</precio>
+        <stock>24</stock>
+        <peso>0.80</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>10</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Dulce Amazonía - Bombones Surtidos</nombre>
+        <descripcion>Producto artesanal premium de la tienda Dulce Amazonía. Cultivado o elaborado siguiendo tradiciones locales de la región de Amazonas.</descripcion>
+        <sku>SKU-006-08</sku>
+        <precio>48.50</precio>
+        <stock>23</stock>
+        <peso>0.85</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>10</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Dulce Amazonía - Chocolate Caliente en Polvo</nombre>
+        <descripcion>Producto artesanal premium de la tienda Dulce Amazonía. Cultivado o elaborado siguiendo tradiciones locales de la región de Amazonas.</descripcion>
+        <sku>SKU-006-09</sku>
+        <precio>52.00</precio>
+        <stock>22</stock>
+        <peso>0.90</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>10</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Dulce Amazonía - Cobertura de Chocolate</nombre>
+        <descripcion>Producto artesanal premium de la tienda Dulce Amazonía. Cultivado o elaborado siguiendo tradiciones locales de la región de Amazonas.</descripcion>
+        <sku>SKU-006-10</sku>
+        <precio>55.50</precio>
+        <stock>21</stock>
+        <peso>0.95</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>10</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Dulce Amazonía - Cacao en Polvo Premium</nombre>
+        <descripcion>Producto artesanal premium de la tienda Dulce Amazonía. Cultivado o elaborado siguiendo tradiciones locales de la región de Amazonas.</descripcion>
+        <sku>SKU-006-11</sku>
+        <precio>59.00</precio>
+        <stock>20</stock>
+        <peso>1.00</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>10</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Dulce Amazonía - Barra de Cacao Fino 85%</nombre>
+        <descripcion>Producto artesanal premium de la tienda Dulce Amazonía. Cultivado o elaborado siguiendo tradiciones locales de la región de Amazonas.</descripcion>
+        <sku>SKU-006-12</sku>
+        <precio>62.50</precio>
+        <stock>19</stock>
+        <peso>1.05</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>10</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Dulce Amazonía - Chocolate con Sal de Mar</nombre>
+        <descripcion>Producto artesanal premium de la tienda Dulce Amazonía. Cultivado o elaborado siguiendo tradiciones locales de la región de Amazonas.</descripcion>
+        <sku>SKU-006-13</sku>
+        <precio>66.00</precio>
+        <stock>18</stock>
+        <peso>1.10</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>10</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Dulce Amazonía - Chocolate con Café</nombre>
+        <descripcion>Producto artesanal premium de la tienda Dulce Amazonía. Cultivado o elaborado siguiendo tradiciones locales de la región de Amazonas.</descripcion>
+        <sku>SKU-006-14</sku>
+        <precio>69.50</precio>
+        <stock>17</stock>
+        <peso>1.15</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>10</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Dulce Amazonía - Barra de Cacao Chuncho</nombre>
+        <descripcion>Producto artesanal premium de la tienda Dulce Amazonía. Cultivado o elaborado siguiendo tradiciones locales de la región de Amazonas.</descripcion>
+        <sku>SKU-006-15</sku>
+        <precio>73.00</precio>
+        <stock>16</stock>
+        <peso>1.20</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>10</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Dulce Amazonía - Chocolate con Almendras</nombre>
+        <descripcion>Producto artesanal premium de la tienda Dulce Amazonía. Cultivado o elaborado siguiendo tradiciones locales de la región de Amazonas.</descripcion>
+        <sku>SKU-006-16</sku>
+        <precio>76.50</precio>
+        <stock>15</stock>
+        <peso>1.25</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>10</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Dulce Amazonía - Trufas de Maracuyá</nombre>
+        <descripcion>Producto artesanal premium de la tienda Dulce Amazonía. Cultivado o elaborado siguiendo tradiciones locales de la región de Amazonas.</descripcion>
+        <sku>SKU-006-17</sku>
+        <precio>80.00</precio>
+        <stock>14</stock>
+        <peso>1.30</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>10</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Dulce Amazonía - Chocolate con Ají Limón</nombre>
+        <descripcion>Producto artesanal premium de la tienda Dulce Amazonía. Cultivado o elaborado siguiendo tradiciones locales de la región de Amazonas.</descripcion>
+        <sku>SKU-006-18</sku>
+        <precio>83.50</precio>
+        <stock>13</stock>
+        <peso>1.35</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>10</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Dulce Amazonía - Chocolate con Quinua Pop</nombre>
+        <descripcion>Producto artesanal premium de la tienda Dulce Amazonía. Cultivado o elaborado siguiendo tradiciones locales de la región de Amazonas.</descripcion>
+        <sku>SKU-006-19</sku>
+        <precio>87.00</precio>
+        <stock>12</stock>
+        <peso>1.40</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>10</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Dulce Amazonía - Barra Fondant Clásica</nombre>
+        <descripcion>Producto artesanal premium de la tienda Dulce Amazonía. Cultivado o elaborado siguiendo tradiciones locales de la región de Amazonas.</descripcion>
+        <sku>SKU-006-20</sku>
+        <precio>90.50</precio>
+        <stock>11</stock>
+        <peso>1.45</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>10</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Cusco Imperial - Chalina de Alpaca Fina</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Cusco Imperial. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-007-01</sku>
+        <precio>25.50</precio>
+        <stock>30</stock>
+        <peso>0.50</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>11</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Cusco Imperial - Chompa de Alpaca Baby</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Cusco Imperial. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-007-02</sku>
+        <precio>29.00</precio>
+        <stock>29</stock>
+        <peso>0.55</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>11</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Cusco Imperial - Manta Andina Multicolor</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Cusco Imperial. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-007-03</sku>
+        <precio>32.50</precio>
+        <stock>28</stock>
+        <peso>0.60</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>11</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Cusco Imperial - Poncho de Lana de Oveja</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Cusco Imperial. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-007-04</sku>
+        <precio>36.00</precio>
+        <stock>27</stock>
+        <peso>0.65</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>11</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Cusco Imperial - Chullo Tradicional Puno</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Cusco Imperial. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-007-05</sku>
+        <precio>39.50</precio>
+        <stock>26</stock>
+        <peso>0.70</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>11</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Cusco Imperial - Alfombra de Telar Hecho a Mano</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Cusco Imperial. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-007-06</sku>
+        <precio>43.00</precio>
+        <stock>25</stock>
+        <peso>0.75</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>11</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Cusco Imperial - Cojín Decorativo Bordado</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Cusco Imperial. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-007-07</sku>
+        <precio>46.50</precio>
+        <stock>24</stock>
+        <peso>0.80</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>11</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Cusco Imperial - Bolso de Telar Étnico</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Cusco Imperial. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-007-08</sku>
+        <precio>50.00</precio>
+        <stock>23</stock>
+        <peso>0.85</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>11</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Cusco Imperial - Guantes de Lana de Alpaca</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Cusco Imperial. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-007-09</sku>
+        <precio>53.50</precio>
+        <stock>22</stock>
+        <peso>0.90</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>11</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Cusco Imperial - Chaqueta Étnica Andina</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Cusco Imperial. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-007-10</sku>
+        <precio>57.00</precio>
+        <stock>21</stock>
+        <peso>0.95</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>11</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Cusco Imperial - Chal de Fina Alpaca</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Cusco Imperial. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-007-11</sku>
+        <precio>60.50</precio>
+        <stock>20</stock>
+        <peso>1.00</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>11</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Cusco Imperial - Medias de Alpaca Térmicas</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Cusco Imperial. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-007-12</sku>
+        <precio>64.00</precio>
+        <stock>19</stock>
+        <peso>1.05</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>11</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Cusco Imperial - Poncho Cusco Premium</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Cusco Imperial. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-007-13</sku>
+        <precio>67.50</precio>
+        <stock>18</stock>
+        <peso>1.10</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>11</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Cusco Imperial - Gorro de Lana Gruesa</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Cusco Imperial. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-007-14</sku>
+        <precio>71.00</precio>
+        <stock>17</stock>
+        <peso>1.15</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>11</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Cusco Imperial - Cojín de Alpaca Suave</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Cusco Imperial. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-007-15</sku>
+        <precio>74.50</precio>
+        <stock>16</stock>
+        <peso>1.20</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>11</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Cusco Imperial - Carpeta de Telar Decorativa</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Cusco Imperial. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-007-16</sku>
+        <precio>78.00</precio>
+        <stock>15</stock>
+        <peso>1.25</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>11</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Cusco Imperial - Camino de Mesa Andino</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Cusco Imperial. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-007-17</sku>
+        <precio>81.50</precio>
+        <stock>14</stock>
+        <peso>1.30</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>11</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Cusco Imperial - Faja Tradicional Bordada</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Cusco Imperial. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-007-18</sku>
+        <precio>85.00</precio>
+        <stock>13</stock>
+        <peso>1.35</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>11</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Cusco Imperial - Monedero de Telar con Cierre</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Cusco Imperial. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-007-19</sku>
+        <precio>88.50</precio>
+        <stock>12</stock>
+        <peso>1.40</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>11</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Cusco Imperial - Chalina Baby Alpaca Negra</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Cusco Imperial. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-007-20</sku>
+        <precio>92.00</precio>
+        <stock>11</stock>
+        <peso>1.45</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>11</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Apícola del Bosque - Miel de Eucalipto 1kg</nombre>
+        <descripcion>Producto artesanal premium de la tienda Apícola del Bosque. Cultivado o elaborado siguiendo tradiciones locales de la región de Lambayeque.</descripcion>
+        <sku>SKU-008-01</sku>
+        <precio>27.00</precio>
+        <stock>30</stock>
+        <peso>0.50</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>12</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Apícola del Bosque - Miel de Naranjo 500g</nombre>
+        <descripcion>Producto artesanal premium de la tienda Apícola del Bosque. Cultivado o elaborado siguiendo tradiciones locales de la región de Lambayeque.</descripcion>
+        <sku>SKU-008-02</sku>
+        <precio>30.50</precio>
+        <stock>29</stock>
+        <peso>0.55</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>12</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Apícola del Bosque - Miel de Flores Silvestres 1kg</nombre>
+        <descripcion>Producto artesanal premium de la tienda Apícola del Bosque. Cultivado o elaborado siguiendo tradiciones locales de la región de Lambayeque.</descripcion>
+        <sku>SKU-008-03</sku>
+        <precio>34.00</precio>
+        <stock>28</stock>
+        <peso>0.60</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>12</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Apícola del Bosque - Miel de Algarrobo 1kg</nombre>
+        <descripcion>Producto artesanal premium de la tienda Apícola del Bosque. Cultivado o elaborado siguiendo tradiciones locales de la región de Lambayeque.</descripcion>
+        <sku>SKU-008-04</sku>
+        <precio>37.50</precio>
+        <stock>27</stock>
+        <peso>0.65</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>12</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Apícola del Bosque - Polen Organico Granulado</nombre>
+        <descripcion>Producto artesanal premium de la tienda Apícola del Bosque. Cultivado o elaborado siguiendo tradiciones locales de la región de Lambayeque.</descripcion>
+        <sku>SKU-008-05</sku>
+        <precio>41.00</precio>
+        <stock>26</stock>
+        <peso>0.70</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>12</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Apícola del Bosque - Jalea Real Pura 50g</nombre>
+        <descripcion>Producto artesanal premium de la tienda Apícola del Bosque. Cultivado o elaborado siguiendo tradiciones locales de la región de Lambayeque.</descripcion>
+        <sku>SKU-008-06</sku>
+        <precio>44.50</precio>
+        <stock>25</stock>
+        <peso>0.75</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>12</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Apícola del Bosque - Propóleo en Spray 30ml</nombre>
+        <descripcion>Producto artesanal premium de la tienda Apícola del Bosque. Cultivado o elaborado siguiendo tradiciones locales de la región de Lambayeque.</descripcion>
+        <sku>SKU-008-07</sku>
+        <precio>48.00</precio>
+        <stock>24</stock>
+        <peso>0.80</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>12</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Apícola del Bosque - Miel con Kión y Limón</nombre>
+        <descripcion>Producto artesanal premium de la tienda Apícola del Bosque. Cultivado o elaborado siguiendo tradiciones locales de la región de Lambayeque.</descripcion>
+        <sku>SKU-008-08</sku>
+        <precio>51.50</precio>
+        <stock>23</stock>
+        <peso>0.85</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>12</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Apícola del Bosque - Crema de Miel Untable</nombre>
+        <descripcion>Producto artesanal premium de la tienda Apícola del Bosque. Cultivado o elaborado siguiendo tradiciones locales de la región de Lambayeque.</descripcion>
+        <sku>SKU-008-09</sku>
+        <precio>55.00</precio>
+        <stock>22</stock>
+        <peso>0.90</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>12</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Apícola del Bosque - Panal de Abeja en Frasco</nombre>
+        <descripcion>Producto artesanal premium de la tienda Apícola del Bosque. Cultivado o elaborado siguiendo tradiciones locales de la región de Lambayeque.</descripcion>
+        <sku>SKU-008-10</sku>
+        <precio>58.50</precio>
+        <stock>21</stock>
+        <peso>0.95</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>12</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Apícola del Bosque - Miel de Romero 500g</nombre>
+        <descripcion>Producto artesanal premium de la tienda Apícola del Bosque. Cultivado o elaborado siguiendo tradiciones locales de la región de Lambayeque.</descripcion>
+        <sku>SKU-008-11</sku>
+        <precio>62.00</precio>
+        <stock>20</stock>
+        <peso>1.00</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>12</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Apícola del Bosque - Miel Multifloral del Cusco</nombre>
+        <descripcion>Producto artesanal premium de la tienda Apícola del Bosque. Cultivado o elaborado siguiendo tradiciones locales de la región de Lambayeque.</descripcion>
+        <sku>SKU-008-12</sku>
+        <precio>65.50</precio>
+        <stock>19</stock>
+        <peso>1.05</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>12</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Apícola del Bosque - Polen Nutritivo 250g</nombre>
+        <descripcion>Producto artesanal premium de la tienda Apícola del Bosque. Cultivado o elaborado siguiendo tradiciones locales de la región de Lambayeque.</descripcion>
+        <sku>SKU-008-13</sku>
+        <precio>69.00</precio>
+        <stock>18</stock>
+        <peso>1.10</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>12</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Apícola del Bosque - Propóleo en Gotas</nombre>
+        <descripcion>Producto artesanal premium de la tienda Apícola del Bosque. Cultivado o elaborado siguiendo tradiciones locales de la región de Lambayeque.</descripcion>
+        <sku>SKU-008-14</sku>
+        <precio>72.50</precio>
+        <stock>17</stock>
+        <peso>1.15</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>12</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Apícola del Bosque - Caramelos de Miel y Eucalipto</nombre>
+        <descripcion>Producto artesanal premium de la tienda Apícola del Bosque. Cultivado o elaborado siguiendo tradiciones locales de la región de Lambayeque.</descripcion>
+        <sku>SKU-008-15</sku>
+        <precio>76.00</precio>
+        <stock>16</stock>
+        <peso>1.20</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>12</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Apícola del Bosque - Miel de Eucalipto 500g</nombre>
+        <descripcion>Producto artesanal premium de la tienda Apícola del Bosque. Cultivado o elaborado siguiendo tradiciones locales de la región de Lambayeque.</descripcion>
+        <sku>SKU-008-16</sku>
+        <precio>79.50</precio>
+        <stock>15</stock>
+        <peso>1.25</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>12</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Apícola del Bosque - Miel con Propóleo Reforzado</nombre>
+        <descripcion>Producto artesanal premium de la tienda Apícola del Bosque. Cultivado o elaborado siguiendo tradiciones locales de la región de Lambayeque.</descripcion>
+        <sku>SKU-008-17</sku>
+        <precio>83.00</precio>
+        <stock>14</stock>
+        <peso>1.30</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>12</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Apícola del Bosque - Miel de Café Orgánica</nombre>
+        <descripcion>Producto artesanal premium de la tienda Apícola del Bosque. Cultivado o elaborado siguiendo tradiciones locales de la región de Lambayeque.</descripcion>
+        <sku>SKU-008-18</sku>
+        <precio>86.50</precio>
+        <stock>13</stock>
+        <peso>1.35</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>12</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Apícola del Bosque - Miel Silvestre del Norte 500g</nombre>
+        <descripcion>Producto artesanal premium de la tienda Apícola del Bosque. Cultivado o elaborado siguiendo tradiciones locales de la región de Lambayeque.</descripcion>
+        <sku>SKU-008-19</sku>
+        <precio>90.00</precio>
+        <stock>12</stock>
+        <peso>1.40</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>12</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Apícola del Bosque - Extracto de Propóleo Concentrado</nombre>
+        <descripcion>Producto artesanal premium de la tienda Apícola del Bosque. Cultivado o elaborado siguiendo tradiciones locales de la región de Lambayeque.</descripcion>
+        <sku>SKU-008-20</sku>
+        <precio>93.50</precio>
+        <stock>11</stock>
+        <peso>1.45</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>12</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cerámicas Pucará - Torito de Pucará Grande</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cerámicas Pucará. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-009-01</sku>
+        <precio>28.50</precio>
+        <stock>30</stock>
+        <peso>0.50</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>13</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cerámicas Pucará - Retablo Ayacuchano Mediano</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cerámicas Pucará. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-009-02</sku>
+        <precio>32.00</precio>
+        <stock>29</stock>
+        <peso>0.55</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>13</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cerámicas Pucará - Vasija de Barro Pintada</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cerámicas Pucará. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-009-03</sku>
+        <precio>35.50</precio>
+        <stock>28</stock>
+        <peso>0.60</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>13</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cerámicas Pucará - Mate Burilado Decorativo</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cerámicas Pucará. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-009-04</sku>
+        <precio>39.00</precio>
+        <stock>27</stock>
+        <peso>0.65</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>13</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cerámicas Pucará - Plato de Cerámica Tradicional</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cerámicas Pucará. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-009-05</sku>
+        <precio>42.50</precio>
+        <stock>26</stock>
+        <peso>0.70</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>13</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cerámicas Pucará - Llamita tallada en Piedra</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cerámicas Pucará. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-009-06</sku>
+        <precio>46.00</precio>
+        <stock>25</stock>
+        <peso>0.75</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>13</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cerámicas Pucará - Espejo con Marco Dorado</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cerámicas Pucará. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-009-07</sku>
+        <precio>49.50</precio>
+        <stock>24</stock>
+        <peso>0.80</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>13</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cerámicas Pucará - Máscara de la Diablada</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cerámicas Pucará. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-009-08</sku>
+        <precio>53.00</precio>
+        <stock>23</stock>
+        <peso>0.85</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>13</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cerámicas Pucará - Cofre de Madera Tallado</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cerámicas Pucará. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-009-09</sku>
+        <precio>56.50</precio>
+        <stock>22</stock>
+        <peso>0.90</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>13</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cerámicas Pucará - Florero de Cerámica Esmaltada</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cerámicas Pucará. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-009-10</sku>
+        <precio>60.00</precio>
+        <stock>21</stock>
+        <peso>0.95</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>13</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cerámicas Pucará - Pulsera de Plata Filigrana</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cerámicas Pucará. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-009-11</sku>
+        <precio>63.50</precio>
+        <stock>20</stock>
+        <peso>1.00</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>13</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cerámicas Pucará - Collar de Huayruro y Plata</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cerámicas Pucará. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-009-12</sku>
+        <precio>67.00</precio>
+        <stock>19</stock>
+        <peso>1.05</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>13</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cerámicas Pucará - Torito de Pucará Mini</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cerámicas Pucará. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-009-13</sku>
+        <precio>70.50</precio>
+        <stock>18</stock>
+        <peso>1.10</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>13</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cerámicas Pucará - Cuadro Andino en Relieve</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cerámicas Pucará. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-009-14</sku>
+        <precio>74.00</precio>
+        <stock>17</stock>
+        <peso>1.15</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>13</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cerámicas Pucará - Adorno de Nacimiento Barro</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cerámicas Pucará. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-009-15</sku>
+        <precio>77.50</precio>
+        <stock>16</stock>
+        <peso>1.20</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>13</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cerámicas Pucará - Portavelas Rústico</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cerámicas Pucará. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-009-16</sku>
+        <precio>81.00</precio>
+        <stock>15</stock>
+        <peso>1.25</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>13</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cerámicas Pucará - Cesta de Paja Tejida</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cerámicas Pucará. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-009-17</sku>
+        <precio>84.50</precio>
+        <stock>14</stock>
+        <peso>1.30</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>13</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cerámicas Pucará - Jarrón Decorativo Rústico</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cerámicas Pucará. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-009-18</sku>
+        <precio>88.00</precio>
+        <stock>13</stock>
+        <peso>1.35</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>13</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cerámicas Pucará - Figura de Alpaca de Lana</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cerámicas Pucará. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-009-19</sku>
+        <precio>91.50</precio>
+        <stock>12</stock>
+        <peso>1.40</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>13</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Cerámicas Pucará - Aretes de Plata Catacaos</nombre>
+        <descripcion>Producto artesanal premium de la tienda Cerámicas Pucará. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-009-20</sku>
+        <precio>95.00</precio>
+        <stock>11</stock>
+        <peso>1.45</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>13</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Café San Martín Gourmet - Blend de la Casa</nombre>
+        <descripcion>Producto artesanal premium de la tienda Café San Martín Gourmet. Cultivado o elaborado siguiendo tradiciones locales de la región de San Martín.</descripcion>
+        <sku>SKU-010-01</sku>
+        <precio>30.00</precio>
+        <stock>30</stock>
+        <peso>0.50</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>14</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Café San Martín Gourmet - Espresso Supremo</nombre>
+        <descripcion>Producto artesanal premium de la tienda Café San Martín Gourmet. Cultivado o elaborado siguiendo tradiciones locales de la región de San Martín.</descripcion>
+        <sku>SKU-010-02</sku>
+        <precio>33.50</precio>
+        <stock>29</stock>
+        <peso>0.55</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>14</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Café San Martín Gourmet - Aroma de Altura</nombre>
+        <descripcion>Producto artesanal premium de la tienda Café San Martín Gourmet. Cultivado o elaborado siguiendo tradiciones locales de la región de San Martín.</descripcion>
+        <sku>SKU-010-03</sku>
+        <precio>37.00</precio>
+        <stock>28</stock>
+        <peso>0.60</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>14</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Café San Martín Gourmet - Granos Selectos</nombre>
+        <descripcion>Producto artesanal premium de la tienda Café San Martín Gourmet. Cultivado o elaborado siguiendo tradiciones locales de la región de San Martín.</descripcion>
+        <sku>SKU-010-04</sku>
+        <precio>40.50</precio>
+        <stock>27</stock>
+        <peso>0.65</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>14</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Café San Martín Gourmet - Tostado Oscuro</nombre>
+        <descripcion>Producto artesanal premium de la tienda Café San Martín Gourmet. Cultivado o elaborado siguiendo tradiciones locales de la región de San Martín.</descripcion>
+        <sku>SKU-010-05</sku>
+        <precio>44.00</precio>
+        <stock>26</stock>
+        <peso>0.70</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>14</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Café San Martín Gourmet - Geisha Reserva Especial</nombre>
+        <descripcion>Producto artesanal premium de la tienda Café San Martín Gourmet. Cultivado o elaborado siguiendo tradiciones locales de la región de San Martín.</descripcion>
+        <sku>SKU-010-06</sku>
+        <precio>47.50</precio>
+        <stock>25</stock>
+        <peso>0.75</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>14</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Café San Martín Gourmet - Bourbon Orgánico</nombre>
+        <descripcion>Producto artesanal premium de la tienda Café San Martín Gourmet. Cultivado o elaborado siguiendo tradiciones locales de la región de San Martín.</descripcion>
+        <sku>SKU-010-07</sku>
+        <precio>51.00</precio>
+        <stock>24</stock>
+        <peso>0.80</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>14</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Café San Martín Gourmet - Caturra Selección</nombre>
+        <descripcion>Producto artesanal premium de la tienda Café San Martín Gourmet. Cultivado o elaborado siguiendo tradiciones locales de la región de San Martín.</descripcion>
+        <sku>SKU-010-08</sku>
+        <precio>54.50</precio>
+        <stock>23</stock>
+        <peso>0.85</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>14</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Café San Martín Gourmet - Café Miel de Bosque</nombre>
+        <descripcion>Producto artesanal premium de la tienda Café San Martín Gourmet. Cultivado o elaborado siguiendo tradiciones locales de la región de San Martín.</descripcion>
+        <sku>SKU-010-09</sku>
+        <precio>58.00</precio>
+        <stock>22</stock>
+        <peso>0.90</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>14</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Café San Martín Gourmet - Café del Huerto</nombre>
+        <descripcion>Producto artesanal premium de la tienda Café San Martín Gourmet. Cultivado o elaborado siguiendo tradiciones locales de la región de San Martín.</descripcion>
+        <sku>SKU-010-10</sku>
+        <precio>61.50</precio>
+        <stock>21</stock>
+        <peso>0.95</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>14</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Café San Martín Gourmet - Finca La Flor</nombre>
+        <descripcion>Producto artesanal premium de la tienda Café San Martín Gourmet. Cultivado o elaborado siguiendo tradiciones locales de la región de San Martín.</descripcion>
+        <sku>SKU-010-11</sku>
+        <precio>65.00</precio>
+        <stock>20</stock>
+        <peso>1.00</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>14</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Café San Martín Gourmet - Espresso Roast</nombre>
+        <descripcion>Producto artesanal premium de la tienda Café San Martín Gourmet. Cultivado o elaborado siguiendo tradiciones locales de la región de San Martín.</descripcion>
+        <sku>SKU-010-12</sku>
+        <precio>68.50</precio>
+        <stock>19</stock>
+        <peso>1.05</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>14</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Café San Martín Gourmet - Cold Brew Blend</nombre>
+        <descripcion>Producto artesanal premium de la tienda Café San Martín Gourmet. Cultivado o elaborado siguiendo tradiciones locales de la región de San Martín.</descripcion>
+        <sku>SKU-010-13</sku>
+        <precio>72.00</precio>
+        <stock>18</stock>
+        <peso>1.10</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>14</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Café San Martín Gourmet - Descafeinado Natural</nombre>
+        <descripcion>Producto artesanal premium de la tienda Café San Martín Gourmet. Cultivado o elaborado siguiendo tradiciones locales de la región de San Martín.</descripcion>
+        <sku>SKU-010-14</sku>
+        <precio>75.50</precio>
+        <stock>17</stock>
+        <peso>1.15</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>14</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Café San Martín Gourmet - Grano Entero Gourmet</nombre>
+        <descripcion>Producto artesanal premium de la tienda Café San Martín Gourmet. Cultivado o elaborado siguiendo tradiciones locales de la región de San Martín.</descripcion>
+        <sku>SKU-010-15</sku>
+        <precio>79.00</precio>
+        <stock>16</stock>
+        <peso>1.20</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>14</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Café San Martín Gourmet - Molido Fino Intenso</nombre>
+        <descripcion>Producto artesanal premium de la tienda Café San Martín Gourmet. Cultivado o elaborado siguiendo tradiciones locales de la región de San Martín.</descripcion>
+        <sku>SKU-010-16</sku>
+        <precio>82.50</precio>
+        <stock>15</stock>
+        <peso>1.25</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>14</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Café San Martín Gourmet - Molido Medio Clásico</nombre>
+        <descripcion>Producto artesanal premium de la tienda Café San Martín Gourmet. Cultivado o elaborado siguiendo tradiciones locales de la región de San Martín.</descripcion>
+        <sku>SKU-010-17</sku>
+        <precio>86.00</precio>
+        <stock>14</stock>
+        <peso>1.30</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>14</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Café San Martín Gourmet - Néctar Andino</nombre>
+        <descripcion>Producto artesanal premium de la tienda Café San Martín Gourmet. Cultivado o elaborado siguiendo tradiciones locales de la región de San Martín.</descripcion>
+        <sku>SKU-010-18</sku>
+        <precio>89.50</precio>
+        <stock>13</stock>
+        <peso>1.35</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>14</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Café San Martín Gourmet - Reserva de Valle</nombre>
+        <descripcion>Producto artesanal premium de la tienda Café San Martín Gourmet. Cultivado o elaborado siguiendo tradiciones locales de la región de San Martín.</descripcion>
+        <sku>SKU-010-19</sku>
+        <precio>93.00</precio>
+        <stock>12</stock>
+        <peso>1.40</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>14</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Café San Martín Gourmet - Café Pacamara</nombre>
+        <descripcion>Producto artesanal premium de la tienda Café San Martín Gourmet. Cultivado o elaborado siguiendo tradiciones locales de la región de San Martín.</descripcion>
+        <sku>SKU-010-20</sku>
+        <precio>96.50</precio>
+        <stock>11</stock>
+        <peso>1.45</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>14</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Chocolates Quillabamba - Chocolate Negro 70%</nombre>
+        <descripcion>Producto artesanal premium de la tienda Chocolates Quillabamba. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-011-01</sku>
+        <precio>31.50</precio>
+        <stock>30</stock>
+        <peso>0.50</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>15</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Chocolates Quillabamba - Chocolate con Leche 45%</nombre>
+        <descripcion>Producto artesanal premium de la tienda Chocolates Quillabamba. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-011-02</sku>
+        <precio>35.00</precio>
+        <stock>29</stock>
+        <peso>0.55</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>15</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Chocolates Quillabamba - Trufas de Cacao</nombre>
+        <descripcion>Producto artesanal premium de la tienda Chocolates Quillabamba. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-011-03</sku>
+        <precio>38.50</precio>
+        <stock>28</stock>
+        <peso>0.60</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>15</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Chocolates Quillabamba - Chocolate con Maní</nombre>
+        <descripcion>Producto artesanal premium de la tienda Chocolates Quillabamba. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-011-04</sku>
+        <precio>42.00</precio>
+        <stock>27</stock>
+        <peso>0.65</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>15</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Chocolates Quillabamba - Chocolate Blanco Cream</nombre>
+        <descripcion>Producto artesanal premium de la tienda Chocolates Quillabamba. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-011-05</sku>
+        <precio>45.50</precio>
+        <stock>26</stock>
+        <peso>0.70</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>15</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Chocolates Quillabamba - Barra de Cacao Puro 100%</nombre>
+        <descripcion>Producto artesanal premium de la tienda Chocolates Quillabamba. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-011-06</sku>
+        <precio>49.00</precio>
+        <stock>25</stock>
+        <peso>0.75</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>15</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Chocolates Quillabamba - Chocolate con Arándanos</nombre>
+        <descripcion>Producto artesanal premium de la tienda Chocolates Quillabamba. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-011-07</sku>
+        <precio>52.50</precio>
+        <stock>24</stock>
+        <peso>0.80</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>15</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Chocolates Quillabamba - Bombones Surtidos</nombre>
+        <descripcion>Producto artesanal premium de la tienda Chocolates Quillabamba. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-011-08</sku>
+        <precio>56.00</precio>
+        <stock>23</stock>
+        <peso>0.85</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>15</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Chocolates Quillabamba - Chocolate Caliente en Polvo</nombre>
+        <descripcion>Producto artesanal premium de la tienda Chocolates Quillabamba. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-011-09</sku>
+        <precio>59.50</precio>
+        <stock>22</stock>
+        <peso>0.90</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>15</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Chocolates Quillabamba - Cobertura de Chocolate</nombre>
+        <descripcion>Producto artesanal premium de la tienda Chocolates Quillabamba. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-011-10</sku>
+        <precio>63.00</precio>
+        <stock>21</stock>
+        <peso>0.95</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>15</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Chocolates Quillabamba - Cacao en Polvo Premium</nombre>
+        <descripcion>Producto artesanal premium de la tienda Chocolates Quillabamba. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-011-11</sku>
+        <precio>66.50</precio>
+        <stock>20</stock>
+        <peso>1.00</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>15</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Chocolates Quillabamba - Barra de Cacao Fino 85%</nombre>
+        <descripcion>Producto artesanal premium de la tienda Chocolates Quillabamba. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-011-12</sku>
+        <precio>70.00</precio>
+        <stock>19</stock>
+        <peso>1.05</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>15</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Chocolates Quillabamba - Chocolate con Sal de Mar</nombre>
+        <descripcion>Producto artesanal premium de la tienda Chocolates Quillabamba. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-011-13</sku>
+        <precio>73.50</precio>
+        <stock>18</stock>
+        <peso>1.10</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>15</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Chocolates Quillabamba - Chocolate con Café</nombre>
+        <descripcion>Producto artesanal premium de la tienda Chocolates Quillabamba. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-011-14</sku>
+        <precio>77.00</precio>
+        <stock>17</stock>
+        <peso>1.15</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>15</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Chocolates Quillabamba - Barra de Cacao Chuncho</nombre>
+        <descripcion>Producto artesanal premium de la tienda Chocolates Quillabamba. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-011-15</sku>
+        <precio>80.50</precio>
+        <stock>16</stock>
+        <peso>1.20</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>15</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Chocolates Quillabamba - Chocolate con Almendras</nombre>
+        <descripcion>Producto artesanal premium de la tienda Chocolates Quillabamba. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-011-16</sku>
+        <precio>84.00</precio>
+        <stock>15</stock>
+        <peso>1.25</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>15</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Chocolates Quillabamba - Trufas de Maracuyá</nombre>
+        <descripcion>Producto artesanal premium de la tienda Chocolates Quillabamba. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-011-17</sku>
+        <precio>87.50</precio>
+        <stock>14</stock>
+        <peso>1.30</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>15</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Chocolates Quillabamba - Chocolate con Ají Limón</nombre>
+        <descripcion>Producto artesanal premium de la tienda Chocolates Quillabamba. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-011-18</sku>
+        <precio>91.00</precio>
+        <stock>13</stock>
+        <peso>1.35</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>15</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Chocolates Quillabamba - Chocolate con Quinua Pop</nombre>
+        <descripcion>Producto artesanal premium de la tienda Chocolates Quillabamba. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-011-19</sku>
+        <precio>94.50</precio>
+        <stock>12</stock>
+        <peso>1.40</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>15</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Chocolates Quillabamba - Barra Fondant Clásica</nombre>
+        <descripcion>Producto artesanal premium de la tienda Chocolates Quillabamba. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-011-20</sku>
+        <precio>98.00</precio>
+        <stock>11</stock>
+        <peso>1.45</peso>
+        <categoriaId>4</categoriaId>
+        <vendedorId>15</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Orfebrería del Sur - Torito de Pucará Grande</nombre>
+        <descripcion>Producto artesanal premium de la tienda Orfebrería del Sur. Cultivado o elaborado siguiendo tradiciones locales de la región de Arequipa.</descripcion>
+        <sku>SKU-012-01</sku>
+        <precio>33.00</precio>
+        <stock>30</stock>
+        <peso>0.50</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>16</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Orfebrería del Sur - Retablo Ayacuchano Mediano</nombre>
+        <descripcion>Producto artesanal premium de la tienda Orfebrería del Sur. Cultivado o elaborado siguiendo tradiciones locales de la región de Arequipa.</descripcion>
+        <sku>SKU-012-02</sku>
+        <precio>36.50</precio>
+        <stock>29</stock>
+        <peso>0.55</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>16</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Orfebrería del Sur - Vasija de Barro Pintada</nombre>
+        <descripcion>Producto artesanal premium de la tienda Orfebrería del Sur. Cultivado o elaborado siguiendo tradiciones locales de la región de Arequipa.</descripcion>
+        <sku>SKU-012-03</sku>
+        <precio>40.00</precio>
+        <stock>28</stock>
+        <peso>0.60</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>16</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Orfebrería del Sur - Mate Burilado Decorativo</nombre>
+        <descripcion>Producto artesanal premium de la tienda Orfebrería del Sur. Cultivado o elaborado siguiendo tradiciones locales de la región de Arequipa.</descripcion>
+        <sku>SKU-012-04</sku>
+        <precio>43.50</precio>
+        <stock>27</stock>
+        <peso>0.65</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>16</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Orfebrería del Sur - Plato de Cerámica Tradicional</nombre>
+        <descripcion>Producto artesanal premium de la tienda Orfebrería del Sur. Cultivado o elaborado siguiendo tradiciones locales de la región de Arequipa.</descripcion>
+        <sku>SKU-012-05</sku>
+        <precio>47.00</precio>
+        <stock>26</stock>
+        <peso>0.70</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>16</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Orfebrería del Sur - Llamita tallada en Piedra</nombre>
+        <descripcion>Producto artesanal premium de la tienda Orfebrería del Sur. Cultivado o elaborado siguiendo tradiciones locales de la región de Arequipa.</descripcion>
+        <sku>SKU-012-06</sku>
+        <precio>50.50</precio>
+        <stock>25</stock>
+        <peso>0.75</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>16</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Orfebrería del Sur - Espejo con Marco Dorado</nombre>
+        <descripcion>Producto artesanal premium de la tienda Orfebrería del Sur. Cultivado o elaborado siguiendo tradiciones locales de la región de Arequipa.</descripcion>
+        <sku>SKU-012-07</sku>
+        <precio>54.00</precio>
+        <stock>24</stock>
+        <peso>0.80</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>16</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Orfebrería del Sur - Máscara de la Diablada</nombre>
+        <descripcion>Producto artesanal premium de la tienda Orfebrería del Sur. Cultivado o elaborado siguiendo tradiciones locales de la región de Arequipa.</descripcion>
+        <sku>SKU-012-08</sku>
+        <precio>57.50</precio>
+        <stock>23</stock>
+        <peso>0.85</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>16</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Orfebrería del Sur - Cofre de Madera Tallado</nombre>
+        <descripcion>Producto artesanal premium de la tienda Orfebrería del Sur. Cultivado o elaborado siguiendo tradiciones locales de la región de Arequipa.</descripcion>
+        <sku>SKU-012-09</sku>
+        <precio>61.00</precio>
+        <stock>22</stock>
+        <peso>0.90</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>16</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Orfebrería del Sur - Florero de Cerámica Esmaltada</nombre>
+        <descripcion>Producto artesanal premium de la tienda Orfebrería del Sur. Cultivado o elaborado siguiendo tradiciones locales de la región de Arequipa.</descripcion>
+        <sku>SKU-012-10</sku>
+        <precio>64.50</precio>
+        <stock>21</stock>
+        <peso>0.95</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>16</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Orfebrería del Sur - Pulsera de Plata Filigrana</nombre>
+        <descripcion>Producto artesanal premium de la tienda Orfebrería del Sur. Cultivado o elaborado siguiendo tradiciones locales de la región de Arequipa.</descripcion>
+        <sku>SKU-012-11</sku>
+        <precio>68.00</precio>
+        <stock>20</stock>
+        <peso>1.00</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>16</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Orfebrería del Sur - Collar de Huayruro y Plata</nombre>
+        <descripcion>Producto artesanal premium de la tienda Orfebrería del Sur. Cultivado o elaborado siguiendo tradiciones locales de la región de Arequipa.</descripcion>
+        <sku>SKU-012-12</sku>
+        <precio>71.50</precio>
+        <stock>19</stock>
+        <peso>1.05</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>16</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Orfebrería del Sur - Torito de Pucará Mini</nombre>
+        <descripcion>Producto artesanal premium de la tienda Orfebrería del Sur. Cultivado o elaborado siguiendo tradiciones locales de la región de Arequipa.</descripcion>
+        <sku>SKU-012-13</sku>
+        <precio>75.00</precio>
+        <stock>18</stock>
+        <peso>1.10</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>16</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Orfebrería del Sur - Cuadro Andino en Relieve</nombre>
+        <descripcion>Producto artesanal premium de la tienda Orfebrería del Sur. Cultivado o elaborado siguiendo tradiciones locales de la región de Arequipa.</descripcion>
+        <sku>SKU-012-14</sku>
+        <precio>78.50</precio>
+        <stock>17</stock>
+        <peso>1.15</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>16</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Orfebrería del Sur - Adorno de Nacimiento Barro</nombre>
+        <descripcion>Producto artesanal premium de la tienda Orfebrería del Sur. Cultivado o elaborado siguiendo tradiciones locales de la región de Arequipa.</descripcion>
+        <sku>SKU-012-15</sku>
+        <precio>82.00</precio>
+        <stock>16</stock>
+        <peso>1.20</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>16</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Orfebrería del Sur - Portavelas Rústico</nombre>
+        <descripcion>Producto artesanal premium de la tienda Orfebrería del Sur. Cultivado o elaborado siguiendo tradiciones locales de la región de Arequipa.</descripcion>
+        <sku>SKU-012-16</sku>
+        <precio>85.50</precio>
+        <stock>15</stock>
+        <peso>1.25</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>16</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Orfebrería del Sur - Cesta de Paja Tejida</nombre>
+        <descripcion>Producto artesanal premium de la tienda Orfebrería del Sur. Cultivado o elaborado siguiendo tradiciones locales de la región de Arequipa.</descripcion>
+        <sku>SKU-012-17</sku>
+        <precio>89.00</precio>
+        <stock>14</stock>
+        <peso>1.30</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>16</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Orfebrería del Sur - Jarrón Decorativo Rústico</nombre>
+        <descripcion>Producto artesanal premium de la tienda Orfebrería del Sur. Cultivado o elaborado siguiendo tradiciones locales de la región de Arequipa.</descripcion>
+        <sku>SKU-012-18</sku>
+        <precio>92.50</precio>
+        <stock>13</stock>
+        <peso>1.35</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>16</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Orfebrería del Sur - Figura de Alpaca de Lana</nombre>
+        <descripcion>Producto artesanal premium de la tienda Orfebrería del Sur. Cultivado o elaborado siguiendo tradiciones locales de la región de Arequipa.</descripcion>
+        <sku>SKU-012-19</sku>
+        <precio>96.00</precio>
+        <stock>12</stock>
+        <peso>1.40</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>16</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Orfebrería del Sur - Aretes de Plata Catacaos</nombre>
+        <descripcion>Producto artesanal premium de la tienda Orfebrería del Sur. Cultivado o elaborado siguiendo tradiciones locales de la región de Arequipa.</descripcion>
+        <sku>SKU-012-20</sku>
+        <precio>99.50</precio>
+        <stock>11</stock>
+        <peso>1.45</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>16</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Altiplano - Chalina de Alpaca Fina</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Altiplano. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-013-01</sku>
+        <precio>34.50</precio>
+        <stock>30</stock>
+        <peso>0.50</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>17</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Altiplano - Chompa de Alpaca Baby</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Altiplano. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-013-02</sku>
+        <precio>38.00</precio>
+        <stock>29</stock>
+        <peso>0.55</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>17</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Altiplano - Manta Andina Multicolor</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Altiplano. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-013-03</sku>
+        <precio>41.50</precio>
+        <stock>28</stock>
+        <peso>0.60</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>17</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Altiplano - Poncho de Lana de Oveja</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Altiplano. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-013-04</sku>
+        <precio>45.00</precio>
+        <stock>27</stock>
+        <peso>0.65</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>17</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Altiplano - Chullo Tradicional Puno</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Altiplano. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-013-05</sku>
+        <precio>48.50</precio>
+        <stock>26</stock>
+        <peso>0.70</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>17</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Altiplano - Alfombra de Telar Hecho a Mano</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Altiplano. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-013-06</sku>
+        <precio>52.00</precio>
+        <stock>25</stock>
+        <peso>0.75</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>17</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Altiplano - Cojín Decorativo Bordado</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Altiplano. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-013-07</sku>
+        <precio>55.50</precio>
+        <stock>24</stock>
+        <peso>0.80</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>17</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Altiplano - Bolso de Telar Étnico</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Altiplano. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-013-08</sku>
+        <precio>59.00</precio>
+        <stock>23</stock>
+        <peso>0.85</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>17</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Altiplano - Guantes de Lana de Alpaca</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Altiplano. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-013-09</sku>
+        <precio>62.50</precio>
+        <stock>22</stock>
+        <peso>0.90</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>17</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Altiplano - Chaqueta Étnica Andina</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Altiplano. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-013-10</sku>
+        <precio>66.00</precio>
+        <stock>21</stock>
+        <peso>0.95</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>17</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Altiplano - Chal de Fina Alpaca</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Altiplano. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-013-11</sku>
+        <precio>69.50</precio>
+        <stock>20</stock>
+        <peso>1.00</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>17</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Altiplano - Medias de Alpaca Térmicas</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Altiplano. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-013-12</sku>
+        <precio>73.00</precio>
+        <stock>19</stock>
+        <peso>1.05</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>17</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Altiplano - Poncho Cusco Premium</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Altiplano. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-013-13</sku>
+        <precio>76.50</precio>
+        <stock>18</stock>
+        <peso>1.10</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>17</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Altiplano - Gorro de Lana Gruesa</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Altiplano. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-013-14</sku>
+        <precio>80.00</precio>
+        <stock>17</stock>
+        <peso>1.15</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>17</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Altiplano - Cojín de Alpaca Suave</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Altiplano. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-013-15</sku>
+        <precio>83.50</precio>
+        <stock>16</stock>
+        <peso>1.20</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>17</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Altiplano - Carpeta de Telar Decorativa</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Altiplano. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-013-16</sku>
+        <precio>87.00</precio>
+        <stock>15</stock>
+        <peso>1.25</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>17</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Altiplano - Camino de Mesa Andino</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Altiplano. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-013-17</sku>
+        <precio>90.50</precio>
+        <stock>14</stock>
+        <peso>1.30</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>17</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Altiplano - Faja Tradicional Bordada</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Altiplano. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-013-18</sku>
+        <precio>94.00</precio>
+        <stock>13</stock>
+        <peso>1.35</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>17</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Altiplano - Monedero de Telar con Cierre</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Altiplano. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-013-19</sku>
+        <precio>97.50</precio>
+        <stock>12</stock>
+        <peso>1.40</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>17</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Altiplano - Chalina Baby Alpaca Negra</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Altiplano. Cultivado o elaborado siguiendo tradiciones locales de la región de Puno.</descripcion>
+        <sku>SKU-013-20</sku>
+        <precio>101.00</precio>
+        <stock>11</stock>
+        <peso>1.45</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>17</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Miel de La Libertad - Miel de Eucalipto 1kg</nombre>
+        <descripcion>Producto artesanal premium de la tienda Miel de La Libertad. Cultivado o elaborado siguiendo tradiciones locales de la región de La Libertad.</descripcion>
+        <sku>SKU-014-01</sku>
+        <precio>36.00</precio>
+        <stock>30</stock>
+        <peso>0.50</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>18</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Miel de La Libertad - Miel de Naranjo 500g</nombre>
+        <descripcion>Producto artesanal premium de la tienda Miel de La Libertad. Cultivado o elaborado siguiendo tradiciones locales de la región de La Libertad.</descripcion>
+        <sku>SKU-014-02</sku>
+        <precio>39.50</precio>
+        <stock>29</stock>
+        <peso>0.55</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>18</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Miel de La Libertad - Miel de Flores Silvestres 1kg</nombre>
+        <descripcion>Producto artesanal premium de la tienda Miel de La Libertad. Cultivado o elaborado siguiendo tradiciones locales de la región de La Libertad.</descripcion>
+        <sku>SKU-014-03</sku>
+        <precio>43.00</precio>
+        <stock>28</stock>
+        <peso>0.60</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>18</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Miel de La Libertad - Miel de Algarrobo 1kg</nombre>
+        <descripcion>Producto artesanal premium de la tienda Miel de La Libertad. Cultivado o elaborado siguiendo tradiciones locales de la región de La Libertad.</descripcion>
+        <sku>SKU-014-04</sku>
+        <precio>46.50</precio>
+        <stock>27</stock>
+        <peso>0.65</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>18</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Miel de La Libertad - Polen Organico Granulado</nombre>
+        <descripcion>Producto artesanal premium de la tienda Miel de La Libertad. Cultivado o elaborado siguiendo tradiciones locales de la región de La Libertad.</descripcion>
+        <sku>SKU-014-05</sku>
+        <precio>50.00</precio>
+        <stock>26</stock>
+        <peso>0.70</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>18</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Miel de La Libertad - Jalea Real Pura 50g</nombre>
+        <descripcion>Producto artesanal premium de la tienda Miel de La Libertad. Cultivado o elaborado siguiendo tradiciones locales de la región de La Libertad.</descripcion>
+        <sku>SKU-014-06</sku>
+        <precio>53.50</precio>
+        <stock>25</stock>
+        <peso>0.75</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>18</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Miel de La Libertad - Propóleo en Spray 30ml</nombre>
+        <descripcion>Producto artesanal premium de la tienda Miel de La Libertad. Cultivado o elaborado siguiendo tradiciones locales de la región de La Libertad.</descripcion>
+        <sku>SKU-014-07</sku>
+        <precio>57.00</precio>
+        <stock>24</stock>
+        <peso>0.80</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>18</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Miel de La Libertad - Miel con Kión y Limón</nombre>
+        <descripcion>Producto artesanal premium de la tienda Miel de La Libertad. Cultivado o elaborado siguiendo tradiciones locales de la región de La Libertad.</descripcion>
+        <sku>SKU-014-08</sku>
+        <precio>60.50</precio>
+        <stock>23</stock>
+        <peso>0.85</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>18</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Miel de La Libertad - Crema de Miel Untable</nombre>
+        <descripcion>Producto artesanal premium de la tienda Miel de La Libertad. Cultivado o elaborado siguiendo tradiciones locales de la región de La Libertad.</descripcion>
+        <sku>SKU-014-09</sku>
+        <precio>64.00</precio>
+        <stock>22</stock>
+        <peso>0.90</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>18</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Miel de La Libertad - Panal de Abeja en Frasco</nombre>
+        <descripcion>Producto artesanal premium de la tienda Miel de La Libertad. Cultivado o elaborado siguiendo tradiciones locales de la región de La Libertad.</descripcion>
+        <sku>SKU-014-10</sku>
+        <precio>67.50</precio>
+        <stock>21</stock>
+        <peso>0.95</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>18</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Miel de La Libertad - Miel de Romero 500g</nombre>
+        <descripcion>Producto artesanal premium de la tienda Miel de La Libertad. Cultivado o elaborado siguiendo tradiciones locales de la región de La Libertad.</descripcion>
+        <sku>SKU-014-11</sku>
+        <precio>71.00</precio>
+        <stock>20</stock>
+        <peso>1.00</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>18</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Miel de La Libertad - Miel Multifloral del Cusco</nombre>
+        <descripcion>Producto artesanal premium de la tienda Miel de La Libertad. Cultivado o elaborado siguiendo tradiciones locales de la región de La Libertad.</descripcion>
+        <sku>SKU-014-12</sku>
+        <precio>74.50</precio>
+        <stock>19</stock>
+        <peso>1.05</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>18</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Miel de La Libertad - Polen Nutritivo 250g</nombre>
+        <descripcion>Producto artesanal premium de la tienda Miel de La Libertad. Cultivado o elaborado siguiendo tradiciones locales de la región de La Libertad.</descripcion>
+        <sku>SKU-014-13</sku>
+        <precio>78.00</precio>
+        <stock>18</stock>
+        <peso>1.10</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>18</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Miel de La Libertad - Propóleo en Gotas</nombre>
+        <descripcion>Producto artesanal premium de la tienda Miel de La Libertad. Cultivado o elaborado siguiendo tradiciones locales de la región de La Libertad.</descripcion>
+        <sku>SKU-014-14</sku>
+        <precio>81.50</precio>
+        <stock>17</stock>
+        <peso>1.15</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>18</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Miel de La Libertad - Caramelos de Miel y Eucalipto</nombre>
+        <descripcion>Producto artesanal premium de la tienda Miel de La Libertad. Cultivado o elaborado siguiendo tradiciones locales de la región de La Libertad.</descripcion>
+        <sku>SKU-014-15</sku>
+        <precio>85.00</precio>
+        <stock>16</stock>
+        <peso>1.20</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>18</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Miel de La Libertad - Miel de Eucalipto 500g</nombre>
+        <descripcion>Producto artesanal premium de la tienda Miel de La Libertad. Cultivado o elaborado siguiendo tradiciones locales de la región de La Libertad.</descripcion>
+        <sku>SKU-014-16</sku>
+        <precio>88.50</precio>
+        <stock>15</stock>
+        <peso>1.25</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>18</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Miel de La Libertad - Miel con Propóleo Reforzado</nombre>
+        <descripcion>Producto artesanal premium de la tienda Miel de La Libertad. Cultivado o elaborado siguiendo tradiciones locales de la región de La Libertad.</descripcion>
+        <sku>SKU-014-17</sku>
+        <precio>92.00</precio>
+        <stock>14</stock>
+        <peso>1.30</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>18</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Miel de La Libertad - Miel de Café Orgánica</nombre>
+        <descripcion>Producto artesanal premium de la tienda Miel de La Libertad. Cultivado o elaborado siguiendo tradiciones locales de la región de La Libertad.</descripcion>
+        <sku>SKU-014-18</sku>
+        <precio>95.50</precio>
+        <stock>13</stock>
+        <peso>1.35</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>18</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Miel de La Libertad - Miel Silvestre del Norte 500g</nombre>
+        <descripcion>Producto artesanal premium de la tienda Miel de La Libertad. Cultivado o elaborado siguiendo tradiciones locales de la región de La Libertad.</descripcion>
+        <sku>SKU-014-19</sku>
+        <precio>99.00</precio>
+        <stock>12</stock>
+        <peso>1.40</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>18</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Miel de La Libertad - Extracto de Propóleo Concentrado</nombre>
+        <descripcion>Producto artesanal premium de la tienda Miel de La Libertad. Cultivado o elaborado siguiendo tradiciones locales de la región de La Libertad.</descripcion>
+        <sku>SKU-014-20</sku>
+        <precio>102.50</precio>
+        <stock>11</stock>
+        <peso>1.45</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>18</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Ferretería Norte - Taladro Percutor DeWalt 20V Max</nombre>
+        <descripcion>Producto artesanal premium de la tienda Ferretería Norte. Cultivado o elaborado siguiendo tradiciones locales de la región de Piura.</descripcion>
+        <sku>SKU-015-01</sku>
+        <precio>37.50</precio>
+        <stock>30</stock>
+        <peso>0.50</peso>
+        <categoriaId>8</categoriaId>
+        <vendedorId>19</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Ferretería Norte - Juego de Herramientas Stanley 110p</nombre>
+        <descripcion>Producto artesanal premium de la tienda Ferretería Norte. Cultivado o elaborado siguiendo tradiciones locales de la región de Piura.</descripcion>
+        <sku>SKU-015-02</sku>
+        <precio>41.00</precio>
+        <stock>29</stock>
+        <peso>0.55</peso>
+        <categoriaId>8</categoriaId>
+        <vendedorId>19</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Ferretería Norte - Amoladora Angular Bosch 850W</nombre>
+        <descripcion>Producto artesanal premium de la tienda Ferretería Norte. Cultivado o elaborado siguiendo tradiciones locales de la región de Piura.</descripcion>
+        <sku>SKU-015-03</sku>
+        <precio>44.50</precio>
+        <stock>28</stock>
+        <peso>0.60</peso>
+        <categoriaId>8</categoriaId>
+        <vendedorId>19</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Ferretería Norte - Caja de Herramientas Plástica 20"</nombre>
+        <descripcion>Producto artesanal premium de la tienda Ferretería Norte. Cultivado o elaborado siguiendo tradiciones locales de la región de Piura.</descripcion>
+        <sku>SKU-015-04</sku>
+        <precio>48.00</precio>
+        <stock>27</stock>
+        <peso>0.65</peso>
+        <categoriaId>8</categoriaId>
+        <vendedorId>19</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Ferretería Norte - Cerradura Digital Inteligente Yale</nombre>
+        <descripcion>Producto artesanal premium de la tienda Ferretería Norte. Cultivado o elaborado siguiendo tradiciones locales de la región de Piura.</descripcion>
+        <sku>SKU-015-05</sku>
+        <precio>51.50</precio>
+        <stock>26</stock>
+        <peso>0.70</peso>
+        <categoriaId>8</categoriaId>
+        <vendedorId>19</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Ferretería Norte - Set de Destornilladores Imantados</nombre>
+        <descripcion>Producto artesanal premium de la tienda Ferretería Norte. Cultivado o elaborado siguiendo tradiciones locales de la región de Piura.</descripcion>
+        <sku>SKU-015-06</sku>
+        <precio>55.00</precio>
+        <stock>25</stock>
+        <peso>0.75</peso>
+        <categoriaId>8</categoriaId>
+        <vendedorId>19</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Ferretería Norte - Pintura Látex Premium CPP</nombre>
+        <descripcion>Producto artesanal premium de la tienda Ferretería Norte. Cultivado o elaborado siguiendo tradiciones locales de la región de Piura.</descripcion>
+        <sku>SKU-015-07</sku>
+        <precio>58.50</precio>
+        <stock>24</stock>
+        <peso>0.80</peso>
+        <categoriaId>8</categoriaId>
+        <vendedorId>19</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Ferretería Norte - Candado de Acero Blindado Forte</nombre>
+        <descripcion>Producto artesanal premium de la tienda Ferretería Norte. Cultivado o elaborado siguiendo tradiciones locales de la región de Piura.</descripcion>
+        <sku>SKU-015-08</sku>
+        <precio>62.00</precio>
+        <stock>23</stock>
+        <peso>0.85</peso>
+        <categoriaId>8</categoriaId>
+        <vendedorId>19</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Ferretería Norte - Rotomartillo SDS Plus Makita</nombre>
+        <descripcion>Producto artesanal premium de la tienda Ferretería Norte. Cultivado o elaborado siguiendo tradiciones locales de la región de Piura.</descripcion>
+        <sku>SKU-015-09</sku>
+        <precio>65.50</precio>
+        <stock>22</stock>
+        <peso>0.90</peso>
+        <categoriaId>8</categoriaId>
+        <vendedorId>19</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Ferretería Norte - Martillo de Uña Tramontina</nombre>
+        <descripcion>Producto artesanal premium de la tienda Ferretería Norte. Cultivado o elaborado siguiendo tradiciones locales de la región de Piura.</descripcion>
+        <sku>SKU-015-10</sku>
+        <precio>69.00</precio>
+        <stock>21</stock>
+        <peso>0.95</peso>
+        <categoriaId>8</categoriaId>
+        <vendedorId>19</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Ferretería Norte - Wincha Métrica Stanley 8m</nombre>
+        <descripcion>Producto artesanal premium de la tienda Ferretería Norte. Cultivado o elaborado siguiendo tradiciones locales de la región de Piura.</descripcion>
+        <sku>SKU-015-11</sku>
+        <precio>72.50</precio>
+        <stock>20</stock>
+        <peso>1.00</peso>
+        <categoriaId>8</categoriaId>
+        <vendedorId>19</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Ferretería Norte - Linterna LED Recargable 1000Lm</nombre>
+        <descripcion>Producto artesanal premium de la tienda Ferretería Norte. Cultivado o elaborado siguiendo tradiciones locales de la región de Piura.</descripcion>
+        <sku>SKU-015-12</sku>
+        <precio>76.00</precio>
+        <stock>19</stock>
+        <peso>1.05</peso>
+        <categoriaId>8</categoriaId>
+        <vendedorId>19</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Ferretería Norte - Juego de Llaves Mixtas 12p</nombre>
+        <descripcion>Producto artesanal premium de la tienda Ferretería Norte. Cultivado o elaborado siguiendo tradiciones locales de la región de Piura.</descripcion>
+        <sku>SKU-015-13</sku>
+        <precio>79.50</precio>
+        <stock>18</stock>
+        <peso>1.10</peso>
+        <categoriaId>8</categoriaId>
+        <vendedorId>19</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Ferretería Norte - Sierra Circular Black+Decker</nombre>
+        <descripcion>Producto artesanal premium de la tienda Ferretería Norte. Cultivado o elaborado siguiendo tradiciones locales de la región de Piura.</descripcion>
+        <sku>SKU-015-14</sku>
+        <precio>83.00</precio>
+        <stock>17</stock>
+        <peso>1.15</peso>
+        <categoriaId>8</categoriaId>
+        <vendedorId>19</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Ferretería Norte - Cable Eléctrico Indeco Nro 12</nombre>
+        <descripcion>Producto artesanal premium de la tienda Ferretería Norte. Cultivado o elaborado siguiendo tradiciones locales de la región de Piura.</descripcion>
+        <sku>SKU-015-15</sku>
+        <precio>86.50</precio>
+        <stock>16</stock>
+        <peso>1.20</peso>
+        <categoriaId>8</categoriaId>
+        <vendedorId>19</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Ferretería Norte - Set de Brochas Atlas Premium</nombre>
+        <descripcion>Producto artesanal premium de la tienda Ferretería Norte. Cultivado o elaborado siguiendo tradiciones locales de la región de Piura.</descripcion>
+        <sku>SKU-015-16</sku>
+        <precio>90.00</precio>
+        <stock>15</stock>
+        <peso>1.25</peso>
+        <categoriaId>8</categoriaId>
+        <vendedorId>19</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Ferretería Norte - Cinta Aisladora 3M Temflex</nombre>
+        <descripcion>Producto artesanal premium de la tienda Ferretería Norte. Cultivado o elaborado siguiendo tradiciones locales de la región de Piura.</descripcion>
+        <sku>SKU-015-17</sku>
+        <precio>93.50</precio>
+        <stock>14</stock>
+        <peso>1.30</peso>
+        <categoriaId>8</categoriaId>
+        <vendedorId>19</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Ferretería Norte - Nivel de Burbuja Aluminio 24"</nombre>
+        <descripcion>Producto artesanal premium de la tienda Ferretería Norte. Cultivado o elaborado siguiendo tradiciones locales de la región de Piura.</descripcion>
+        <sku>SKU-015-18</sku>
+        <precio>97.00</precio>
+        <stock>13</stock>
+        <peso>1.35</peso>
+        <categoriaId>8</categoriaId>
+        <vendedorId>19</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Ferretería Norte - Candado TSA Programable Yale</nombre>
+        <descripcion>Producto artesanal premium de la tienda Ferretería Norte. Cultivado o elaborado siguiendo tradiciones locales de la región de Piura.</descripcion>
+        <sku>SKU-015-19</sku>
+        <precio>100.50</precio>
+        <stock>12</stock>
+        <peso>1.40</peso>
+        <categoriaId>8</categoriaId>
+        <vendedorId>19</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Ferretería Norte - Compresora de Aire Truper 24L</nombre>
+        <descripcion>Producto artesanal premium de la tienda Ferretería Norte. Cultivado o elaborado siguiendo tradiciones locales de la región de Piura.</descripcion>
+        <sku>SKU-015-20</sku>
+        <precio>104.00</precio>
+        <stock>11</stock>
+        <peso>1.45</peso>
+        <categoriaId>8</categoriaId>
+        <vendedorId>19</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Café Chanchamayo - Blend de la Casa</nombre>
+        <descripcion>Producto artesanal premium de la tienda Café Chanchamayo. Cultivado o elaborado siguiendo tradiciones locales de la región de Junín.</descripcion>
+        <sku>SKU-016-01</sku>
+        <precio>39.00</precio>
+        <stock>30</stock>
+        <peso>0.50</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>20</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Café Chanchamayo - Espresso Supremo</nombre>
+        <descripcion>Producto artesanal premium de la tienda Café Chanchamayo. Cultivado o elaborado siguiendo tradiciones locales de la región de Junín.</descripcion>
+        <sku>SKU-016-02</sku>
+        <precio>42.50</precio>
+        <stock>29</stock>
+        <peso>0.55</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>20</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Café Chanchamayo - Aroma de Altura</nombre>
+        <descripcion>Producto artesanal premium de la tienda Café Chanchamayo. Cultivado o elaborado siguiendo tradiciones locales de la región de Junín.</descripcion>
+        <sku>SKU-016-03</sku>
+        <precio>46.00</precio>
+        <stock>28</stock>
+        <peso>0.60</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>20</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Café Chanchamayo - Granos Selectos</nombre>
+        <descripcion>Producto artesanal premium de la tienda Café Chanchamayo. Cultivado o elaborado siguiendo tradiciones locales de la región de Junín.</descripcion>
+        <sku>SKU-016-04</sku>
+        <precio>49.50</precio>
+        <stock>27</stock>
+        <peso>0.65</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>20</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Café Chanchamayo - Tostado Oscuro</nombre>
+        <descripcion>Producto artesanal premium de la tienda Café Chanchamayo. Cultivado o elaborado siguiendo tradiciones locales de la región de Junín.</descripcion>
+        <sku>SKU-016-05</sku>
+        <precio>53.00</precio>
+        <stock>26</stock>
+        <peso>0.70</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>20</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Café Chanchamayo - Geisha Reserva Especial</nombre>
+        <descripcion>Producto artesanal premium de la tienda Café Chanchamayo. Cultivado o elaborado siguiendo tradiciones locales de la región de Junín.</descripcion>
+        <sku>SKU-016-06</sku>
+        <precio>56.50</precio>
+        <stock>25</stock>
+        <peso>0.75</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>20</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Café Chanchamayo - Bourbon Orgánico</nombre>
+        <descripcion>Producto artesanal premium de la tienda Café Chanchamayo. Cultivado o elaborado siguiendo tradiciones locales de la región de Junín.</descripcion>
+        <sku>SKU-016-07</sku>
+        <precio>60.00</precio>
+        <stock>24</stock>
+        <peso>0.80</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>20</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Café Chanchamayo - Caturra Selección</nombre>
+        <descripcion>Producto artesanal premium de la tienda Café Chanchamayo. Cultivado o elaborado siguiendo tradiciones locales de la región de Junín.</descripcion>
+        <sku>SKU-016-08</sku>
+        <precio>63.50</precio>
+        <stock>23</stock>
+        <peso>0.85</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>20</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Café Chanchamayo - Café Miel de Bosque</nombre>
+        <descripcion>Producto artesanal premium de la tienda Café Chanchamayo. Cultivado o elaborado siguiendo tradiciones locales de la región de Junín.</descripcion>
+        <sku>SKU-016-09</sku>
+        <precio>67.00</precio>
+        <stock>22</stock>
+        <peso>0.90</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>20</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Café Chanchamayo - Café del Huerto</nombre>
+        <descripcion>Producto artesanal premium de la tienda Café Chanchamayo. Cultivado o elaborado siguiendo tradiciones locales de la región de Junín.</descripcion>
+        <sku>SKU-016-10</sku>
+        <precio>70.50</precio>
+        <stock>21</stock>
+        <peso>0.95</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>20</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Café Chanchamayo - Finca La Flor</nombre>
+        <descripcion>Producto artesanal premium de la tienda Café Chanchamayo. Cultivado o elaborado siguiendo tradiciones locales de la región de Junín.</descripcion>
+        <sku>SKU-016-11</sku>
+        <precio>74.00</precio>
+        <stock>20</stock>
+        <peso>1.00</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>20</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Café Chanchamayo - Espresso Roast</nombre>
+        <descripcion>Producto artesanal premium de la tienda Café Chanchamayo. Cultivado o elaborado siguiendo tradiciones locales de la región de Junín.</descripcion>
+        <sku>SKU-016-12</sku>
+        <precio>77.50</precio>
+        <stock>19</stock>
+        <peso>1.05</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>20</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Café Chanchamayo - Cold Brew Blend</nombre>
+        <descripcion>Producto artesanal premium de la tienda Café Chanchamayo. Cultivado o elaborado siguiendo tradiciones locales de la región de Junín.</descripcion>
+        <sku>SKU-016-13</sku>
+        <precio>81.00</precio>
+        <stock>18</stock>
+        <peso>1.10</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>20</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Café Chanchamayo - Descafeinado Natural</nombre>
+        <descripcion>Producto artesanal premium de la tienda Café Chanchamayo. Cultivado o elaborado siguiendo tradiciones locales de la región de Junín.</descripcion>
+        <sku>SKU-016-14</sku>
+        <precio>84.50</precio>
+        <stock>17</stock>
+        <peso>1.15</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>20</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Café Chanchamayo - Grano Entero Gourmet</nombre>
+        <descripcion>Producto artesanal premium de la tienda Café Chanchamayo. Cultivado o elaborado siguiendo tradiciones locales de la región de Junín.</descripcion>
+        <sku>SKU-016-15</sku>
+        <precio>88.00</precio>
+        <stock>16</stock>
+        <peso>1.20</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>20</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Café Chanchamayo - Molido Fino Intenso</nombre>
+        <descripcion>Producto artesanal premium de la tienda Café Chanchamayo. Cultivado o elaborado siguiendo tradiciones locales de la región de Junín.</descripcion>
+        <sku>SKU-016-16</sku>
+        <precio>91.50</precio>
+        <stock>15</stock>
+        <peso>1.25</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>20</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Café Chanchamayo - Molido Medio Clásico</nombre>
+        <descripcion>Producto artesanal premium de la tienda Café Chanchamayo. Cultivado o elaborado siguiendo tradiciones locales de la región de Junín.</descripcion>
+        <sku>SKU-016-17</sku>
+        <precio>95.00</precio>
+        <stock>14</stock>
+        <peso>1.30</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>20</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Café Chanchamayo - Néctar Andino</nombre>
+        <descripcion>Producto artesanal premium de la tienda Café Chanchamayo. Cultivado o elaborado siguiendo tradiciones locales de la región de Junín.</descripcion>
+        <sku>SKU-016-18</sku>
+        <precio>98.50</precio>
+        <stock>13</stock>
+        <peso>1.35</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>20</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Café Chanchamayo - Reserva de Valle</nombre>
+        <descripcion>Producto artesanal premium de la tienda Café Chanchamayo. Cultivado o elaborado siguiendo tradiciones locales de la región de Junín.</descripcion>
+        <sku>SKU-016-19</sku>
+        <precio>102.00</precio>
+        <stock>12</stock>
+        <peso>1.40</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>20</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Café Chanchamayo - Café Pacamara</nombre>
+        <descripcion>Producto artesanal premium de la tienda Café Chanchamayo. Cultivado o elaborado siguiendo tradiciones locales de la región de Junín.</descripcion>
+        <sku>SKU-016-20</sku>
+        <precio>105.50</precio>
+        <stock>11</stock>
+        <peso>1.45</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>20</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Granos Cajamarca - Blend de la Casa</nombre>
+        <descripcion>Producto artesanal premium de la tienda Granos Cajamarca. Cultivado o elaborado siguiendo tradiciones locales de la región de Cajamarca.</descripcion>
+        <sku>SKU-017-01</sku>
+        <precio>40.50</precio>
+        <stock>30</stock>
+        <peso>0.50</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>21</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Granos Cajamarca - Espresso Supremo</nombre>
+        <descripcion>Producto artesanal premium de la tienda Granos Cajamarca. Cultivado o elaborado siguiendo tradiciones locales de la región de Cajamarca.</descripcion>
+        <sku>SKU-017-02</sku>
+        <precio>44.00</precio>
+        <stock>29</stock>
+        <peso>0.55</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>21</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Granos Cajamarca - Aroma de Altura</nombre>
+        <descripcion>Producto artesanal premium de la tienda Granos Cajamarca. Cultivado o elaborado siguiendo tradiciones locales de la región de Cajamarca.</descripcion>
+        <sku>SKU-017-03</sku>
+        <precio>47.50</precio>
+        <stock>28</stock>
+        <peso>0.60</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>21</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Granos Cajamarca - Granos Selectos</nombre>
+        <descripcion>Producto artesanal premium de la tienda Granos Cajamarca. Cultivado o elaborado siguiendo tradiciones locales de la región de Cajamarca.</descripcion>
+        <sku>SKU-017-04</sku>
+        <precio>51.00</precio>
+        <stock>27</stock>
+        <peso>0.65</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>21</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Granos Cajamarca - Tostado Oscuro</nombre>
+        <descripcion>Producto artesanal premium de la tienda Granos Cajamarca. Cultivado o elaborado siguiendo tradiciones locales de la región de Cajamarca.</descripcion>
+        <sku>SKU-017-05</sku>
+        <precio>54.50</precio>
+        <stock>26</stock>
+        <peso>0.70</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>21</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Granos Cajamarca - Geisha Reserva Especial</nombre>
+        <descripcion>Producto artesanal premium de la tienda Granos Cajamarca. Cultivado o elaborado siguiendo tradiciones locales de la región de Cajamarca.</descripcion>
+        <sku>SKU-017-06</sku>
+        <precio>58.00</precio>
+        <stock>25</stock>
+        <peso>0.75</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>21</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Granos Cajamarca - Bourbon Orgánico</nombre>
+        <descripcion>Producto artesanal premium de la tienda Granos Cajamarca. Cultivado o elaborado siguiendo tradiciones locales de la región de Cajamarca.</descripcion>
+        <sku>SKU-017-07</sku>
+        <precio>61.50</precio>
+        <stock>24</stock>
+        <peso>0.80</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>21</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Granos Cajamarca - Caturra Selección</nombre>
+        <descripcion>Producto artesanal premium de la tienda Granos Cajamarca. Cultivado o elaborado siguiendo tradiciones locales de la región de Cajamarca.</descripcion>
+        <sku>SKU-017-08</sku>
+        <precio>65.00</precio>
+        <stock>23</stock>
+        <peso>0.85</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>21</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Granos Cajamarca - Café Miel de Bosque</nombre>
+        <descripcion>Producto artesanal premium de la tienda Granos Cajamarca. Cultivado o elaborado siguiendo tradiciones locales de la región de Cajamarca.</descripcion>
+        <sku>SKU-017-09</sku>
+        <precio>68.50</precio>
+        <stock>22</stock>
+        <peso>0.90</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>21</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Granos Cajamarca - Café del Huerto</nombre>
+        <descripcion>Producto artesanal premium de la tienda Granos Cajamarca. Cultivado o elaborado siguiendo tradiciones locales de la región de Cajamarca.</descripcion>
+        <sku>SKU-017-10</sku>
+        <precio>72.00</precio>
+        <stock>21</stock>
+        <peso>0.95</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>21</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Granos Cajamarca - Finca La Flor</nombre>
+        <descripcion>Producto artesanal premium de la tienda Granos Cajamarca. Cultivado o elaborado siguiendo tradiciones locales de la región de Cajamarca.</descripcion>
+        <sku>SKU-017-11</sku>
+        <precio>75.50</precio>
+        <stock>20</stock>
+        <peso>1.00</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>21</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Granos Cajamarca - Espresso Roast</nombre>
+        <descripcion>Producto artesanal premium de la tienda Granos Cajamarca. Cultivado o elaborado siguiendo tradiciones locales de la región de Cajamarca.</descripcion>
+        <sku>SKU-017-12</sku>
+        <precio>79.00</precio>
+        <stock>19</stock>
+        <peso>1.05</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>21</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Granos Cajamarca - Cold Brew Blend</nombre>
+        <descripcion>Producto artesanal premium de la tienda Granos Cajamarca. Cultivado o elaborado siguiendo tradiciones locales de la región de Cajamarca.</descripcion>
+        <sku>SKU-017-13</sku>
+        <precio>82.50</precio>
+        <stock>18</stock>
+        <peso>1.10</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>21</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Granos Cajamarca - Descafeinado Natural</nombre>
+        <descripcion>Producto artesanal premium de la tienda Granos Cajamarca. Cultivado o elaborado siguiendo tradiciones locales de la región de Cajamarca.</descripcion>
+        <sku>SKU-017-14</sku>
+        <precio>86.00</precio>
+        <stock>17</stock>
+        <peso>1.15</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>21</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Granos Cajamarca - Grano Entero Gourmet</nombre>
+        <descripcion>Producto artesanal premium de la tienda Granos Cajamarca. Cultivado o elaborado siguiendo tradiciones locales de la región de Cajamarca.</descripcion>
+        <sku>SKU-017-15</sku>
+        <precio>89.50</precio>
+        <stock>16</stock>
+        <peso>1.20</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>21</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Granos Cajamarca - Molido Fino Intenso</nombre>
+        <descripcion>Producto artesanal premium de la tienda Granos Cajamarca. Cultivado o elaborado siguiendo tradiciones locales de la región de Cajamarca.</descripcion>
+        <sku>SKU-017-16</sku>
+        <precio>93.00</precio>
+        <stock>15</stock>
+        <peso>1.25</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>21</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Granos Cajamarca - Molido Medio Clásico</nombre>
+        <descripcion>Producto artesanal premium de la tienda Granos Cajamarca. Cultivado o elaborado siguiendo tradiciones locales de la región de Cajamarca.</descripcion>
+        <sku>SKU-017-17</sku>
+        <precio>96.50</precio>
+        <stock>14</stock>
+        <peso>1.30</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>21</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Granos Cajamarca - Néctar Andino</nombre>
+        <descripcion>Producto artesanal premium de la tienda Granos Cajamarca. Cultivado o elaborado siguiendo tradiciones locales de la región de Cajamarca.</descripcion>
+        <sku>SKU-017-18</sku>
+        <precio>100.00</precio>
+        <stock>13</stock>
+        <peso>1.35</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>21</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Granos Cajamarca - Reserva de Valle</nombre>
+        <descripcion>Producto artesanal premium de la tienda Granos Cajamarca. Cultivado o elaborado siguiendo tradiciones locales de la región de Cajamarca.</descripcion>
+        <sku>SKU-017-19</sku>
+        <precio>103.50</precio>
+        <stock>12</stock>
+        <peso>1.40</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>21</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Granos Cajamarca - Café Pacamara</nombre>
+        <descripcion>Producto artesanal premium de la tienda Granos Cajamarca. Cultivado o elaborado siguiendo tradiciones locales de la región de Cajamarca.</descripcion>
+        <sku>SKU-017-20</sku>
+        <precio>107.00</precio>
+        <stock>11</stock>
+        <peso>1.45</peso>
+        <categoriaId>3</categoriaId>
+        <vendedorId>21</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Artesanías de Piura - Torito de Pucará Grande</nombre>
+        <descripcion>Producto artesanal premium de la tienda Artesanías de Piura. Cultivado o elaborado siguiendo tradiciones locales de la región de Piura.</descripcion>
+        <sku>SKU-018-01</sku>
+        <precio>42.00</precio>
+        <stock>30</stock>
+        <peso>0.50</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>22</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Artesanías de Piura - Retablo Ayacuchano Mediano</nombre>
+        <descripcion>Producto artesanal premium de la tienda Artesanías de Piura. Cultivado o elaborado siguiendo tradiciones locales de la región de Piura.</descripcion>
+        <sku>SKU-018-02</sku>
+        <precio>45.50</precio>
+        <stock>29</stock>
+        <peso>0.55</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>22</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Artesanías de Piura - Vasija de Barro Pintada</nombre>
+        <descripcion>Producto artesanal premium de la tienda Artesanías de Piura. Cultivado o elaborado siguiendo tradiciones locales de la región de Piura.</descripcion>
+        <sku>SKU-018-03</sku>
+        <precio>49.00</precio>
+        <stock>28</stock>
+        <peso>0.60</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>22</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Artesanías de Piura - Mate Burilado Decorativo</nombre>
+        <descripcion>Producto artesanal premium de la tienda Artesanías de Piura. Cultivado o elaborado siguiendo tradiciones locales de la región de Piura.</descripcion>
+        <sku>SKU-018-04</sku>
+        <precio>52.50</precio>
+        <stock>27</stock>
+        <peso>0.65</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>22</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Artesanías de Piura - Plato de Cerámica Tradicional</nombre>
+        <descripcion>Producto artesanal premium de la tienda Artesanías de Piura. Cultivado o elaborado siguiendo tradiciones locales de la región de Piura.</descripcion>
+        <sku>SKU-018-05</sku>
+        <precio>56.00</precio>
+        <stock>26</stock>
+        <peso>0.70</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>22</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Artesanías de Piura - Llamita tallada en Piedra</nombre>
+        <descripcion>Producto artesanal premium de la tienda Artesanías de Piura. Cultivado o elaborado siguiendo tradiciones locales de la región de Piura.</descripcion>
+        <sku>SKU-018-06</sku>
+        <precio>59.50</precio>
+        <stock>25</stock>
+        <peso>0.75</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>22</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Artesanías de Piura - Espejo con Marco Dorado</nombre>
+        <descripcion>Producto artesanal premium de la tienda Artesanías de Piura. Cultivado o elaborado siguiendo tradiciones locales de la región de Piura.</descripcion>
+        <sku>SKU-018-07</sku>
+        <precio>63.00</precio>
+        <stock>24</stock>
+        <peso>0.80</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>22</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Artesanías de Piura - Máscara de la Diablada</nombre>
+        <descripcion>Producto artesanal premium de la tienda Artesanías de Piura. Cultivado o elaborado siguiendo tradiciones locales de la región de Piura.</descripcion>
+        <sku>SKU-018-08</sku>
+        <precio>66.50</precio>
+        <stock>23</stock>
+        <peso>0.85</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>22</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Artesanías de Piura - Cofre de Madera Tallado</nombre>
+        <descripcion>Producto artesanal premium de la tienda Artesanías de Piura. Cultivado o elaborado siguiendo tradiciones locales de la región de Piura.</descripcion>
+        <sku>SKU-018-09</sku>
+        <precio>70.00</precio>
+        <stock>22</stock>
+        <peso>0.90</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>22</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Artesanías de Piura - Florero de Cerámica Esmaltada</nombre>
+        <descripcion>Producto artesanal premium de la tienda Artesanías de Piura. Cultivado o elaborado siguiendo tradiciones locales de la región de Piura.</descripcion>
+        <sku>SKU-018-10</sku>
+        <precio>73.50</precio>
+        <stock>21</stock>
+        <peso>0.95</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>22</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Artesanías de Piura - Pulsera de Plata Filigrana</nombre>
+        <descripcion>Producto artesanal premium de la tienda Artesanías de Piura. Cultivado o elaborado siguiendo tradiciones locales de la región de Piura.</descripcion>
+        <sku>SKU-018-11</sku>
+        <precio>77.00</precio>
+        <stock>20</stock>
+        <peso>1.00</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>22</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Artesanías de Piura - Collar de Huayruro y Plata</nombre>
+        <descripcion>Producto artesanal premium de la tienda Artesanías de Piura. Cultivado o elaborado siguiendo tradiciones locales de la región de Piura.</descripcion>
+        <sku>SKU-018-12</sku>
+        <precio>80.50</precio>
+        <stock>19</stock>
+        <peso>1.05</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>22</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Artesanías de Piura - Torito de Pucará Mini</nombre>
+        <descripcion>Producto artesanal premium de la tienda Artesanías de Piura. Cultivado o elaborado siguiendo tradiciones locales de la región de Piura.</descripcion>
+        <sku>SKU-018-13</sku>
+        <precio>84.00</precio>
+        <stock>18</stock>
+        <peso>1.10</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>22</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Artesanías de Piura - Cuadro Andino en Relieve</nombre>
+        <descripcion>Producto artesanal premium de la tienda Artesanías de Piura. Cultivado o elaborado siguiendo tradiciones locales de la región de Piura.</descripcion>
+        <sku>SKU-018-14</sku>
+        <precio>87.50</precio>
+        <stock>17</stock>
+        <peso>1.15</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>22</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Artesanías de Piura - Adorno de Nacimiento Barro</nombre>
+        <descripcion>Producto artesanal premium de la tienda Artesanías de Piura. Cultivado o elaborado siguiendo tradiciones locales de la región de Piura.</descripcion>
+        <sku>SKU-018-15</sku>
+        <precio>91.00</precio>
+        <stock>16</stock>
+        <peso>1.20</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>22</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Artesanías de Piura - Portavelas Rústico</nombre>
+        <descripcion>Producto artesanal premium de la tienda Artesanías de Piura. Cultivado o elaborado siguiendo tradiciones locales de la región de Piura.</descripcion>
+        <sku>SKU-018-16</sku>
+        <precio>94.50</precio>
+        <stock>15</stock>
+        <peso>1.25</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>22</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Artesanías de Piura - Cesta de Paja Tejida</nombre>
+        <descripcion>Producto artesanal premium de la tienda Artesanías de Piura. Cultivado o elaborado siguiendo tradiciones locales de la región de Piura.</descripcion>
+        <sku>SKU-018-17</sku>
+        <precio>98.00</precio>
+        <stock>14</stock>
+        <peso>1.30</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>22</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Artesanías de Piura - Jarrón Decorativo Rústico</nombre>
+        <descripcion>Producto artesanal premium de la tienda Artesanías de Piura. Cultivado o elaborado siguiendo tradiciones locales de la región de Piura.</descripcion>
+        <sku>SKU-018-18</sku>
+        <precio>101.50</precio>
+        <stock>13</stock>
+        <peso>1.35</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>22</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Artesanías de Piura - Figura de Alpaca de Lana</nombre>
+        <descripcion>Producto artesanal premium de la tienda Artesanías de Piura. Cultivado o elaborado siguiendo tradiciones locales de la región de Piura.</descripcion>
+        <sku>SKU-018-19</sku>
+        <precio>105.00</precio>
+        <stock>12</stock>
+        <peso>1.40</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>22</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Artesanías de Piura - Aretes de Plata Catacaos</nombre>
+        <descripcion>Producto artesanal premium de la tienda Artesanías de Piura. Cultivado o elaborado siguiendo tradiciones locales de la región de Piura.</descripcion>
+        <sku>SKU-018-20</sku>
+        <precio>108.50</precio>
+        <stock>11</stock>
+        <peso>1.45</peso>
+        <categoriaId>5</categoriaId>
+        <vendedorId>22</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Alpaca Real - Chalina de Alpaca Fina</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Alpaca Real. Cultivado o elaborado siguiendo tradiciones locales de la región de Arequipa.</descripcion>
+        <sku>SKU-019-01</sku>
+        <precio>43.50</precio>
+        <stock>30</stock>
+        <peso>0.50</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>23</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Alpaca Real - Chompa de Alpaca Baby</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Alpaca Real. Cultivado o elaborado siguiendo tradiciones locales de la región de Arequipa.</descripcion>
+        <sku>SKU-019-02</sku>
+        <precio>47.00</precio>
+        <stock>29</stock>
+        <peso>0.55</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>23</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Alpaca Real - Manta Andina Multicolor</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Alpaca Real. Cultivado o elaborado siguiendo tradiciones locales de la región de Arequipa.</descripcion>
+        <sku>SKU-019-03</sku>
+        <precio>50.50</precio>
+        <stock>28</stock>
+        <peso>0.60</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>23</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Alpaca Real - Poncho de Lana de Oveja</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Alpaca Real. Cultivado o elaborado siguiendo tradiciones locales de la región de Arequipa.</descripcion>
+        <sku>SKU-019-04</sku>
+        <precio>54.00</precio>
+        <stock>27</stock>
+        <peso>0.65</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>23</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Alpaca Real - Chullo Tradicional Puno</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Alpaca Real. Cultivado o elaborado siguiendo tradiciones locales de la región de Arequipa.</descripcion>
+        <sku>SKU-019-05</sku>
+        <precio>57.50</precio>
+        <stock>26</stock>
+        <peso>0.70</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>23</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Alpaca Real - Alfombra de Telar Hecho a Mano</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Alpaca Real. Cultivado o elaborado siguiendo tradiciones locales de la región de Arequipa.</descripcion>
+        <sku>SKU-019-06</sku>
+        <precio>61.00</precio>
+        <stock>25</stock>
+        <peso>0.75</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>23</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Alpaca Real - Cojín Decorativo Bordado</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Alpaca Real. Cultivado o elaborado siguiendo tradiciones locales de la región de Arequipa.</descripcion>
+        <sku>SKU-019-07</sku>
+        <precio>64.50</precio>
+        <stock>24</stock>
+        <peso>0.80</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>23</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Alpaca Real - Bolso de Telar Étnico</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Alpaca Real. Cultivado o elaborado siguiendo tradiciones locales de la región de Arequipa.</descripcion>
+        <sku>SKU-019-08</sku>
+        <precio>68.00</precio>
+        <stock>23</stock>
+        <peso>0.85</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>23</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Alpaca Real - Guantes de Lana de Alpaca</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Alpaca Real. Cultivado o elaborado siguiendo tradiciones locales de la región de Arequipa.</descripcion>
+        <sku>SKU-019-09</sku>
+        <precio>71.50</precio>
+        <stock>22</stock>
+        <peso>0.90</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>23</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Alpaca Real - Chaqueta Étnica Andina</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Alpaca Real. Cultivado o elaborado siguiendo tradiciones locales de la región de Arequipa.</descripcion>
+        <sku>SKU-019-10</sku>
+        <precio>75.00</precio>
+        <stock>21</stock>
+        <peso>0.95</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>23</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Alpaca Real - Chal de Fina Alpaca</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Alpaca Real. Cultivado o elaborado siguiendo tradiciones locales de la región de Arequipa.</descripcion>
+        <sku>SKU-019-11</sku>
+        <precio>78.50</precio>
+        <stock>20</stock>
+        <peso>1.00</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>23</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Alpaca Real - Medias de Alpaca Térmicas</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Alpaca Real. Cultivado o elaborado siguiendo tradiciones locales de la región de Arequipa.</descripcion>
+        <sku>SKU-019-12</sku>
+        <precio>82.00</precio>
+        <stock>19</stock>
+        <peso>1.05</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>23</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Alpaca Real - Poncho Cusco Premium</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Alpaca Real. Cultivado o elaborado siguiendo tradiciones locales de la región de Arequipa.</descripcion>
+        <sku>SKU-019-13</sku>
+        <precio>85.50</precio>
+        <stock>18</stock>
+        <peso>1.10</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>23</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Alpaca Real - Gorro de Lana Gruesa</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Alpaca Real. Cultivado o elaborado siguiendo tradiciones locales de la región de Arequipa.</descripcion>
+        <sku>SKU-019-14</sku>
+        <precio>89.00</precio>
+        <stock>17</stock>
+        <peso>1.15</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>23</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Alpaca Real - Cojín de Alpaca Suave</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Alpaca Real. Cultivado o elaborado siguiendo tradiciones locales de la región de Arequipa.</descripcion>
+        <sku>SKU-019-15</sku>
+        <precio>92.50</precio>
+        <stock>16</stock>
+        <peso>1.20</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>23</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Alpaca Real - Carpeta de Telar Decorativa</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Alpaca Real. Cultivado o elaborado siguiendo tradiciones locales de la región de Arequipa.</descripcion>
+        <sku>SKU-019-16</sku>
+        <precio>96.00</precio>
+        <stock>15</stock>
+        <peso>1.25</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>23</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Alpaca Real - Camino de Mesa Andino</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Alpaca Real. Cultivado o elaborado siguiendo tradiciones locales de la región de Arequipa.</descripcion>
+        <sku>SKU-019-17</sku>
+        <precio>99.50</precio>
+        <stock>14</stock>
+        <peso>1.30</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>23</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Alpaca Real - Faja Tradicional Bordada</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Alpaca Real. Cultivado o elaborado siguiendo tradiciones locales de la región de Arequipa.</descripcion>
+        <sku>SKU-019-18</sku>
+        <precio>103.00</precio>
+        <stock>13</stock>
+        <peso>1.35</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>23</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Alpaca Real - Monedero de Telar con Cierre</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Alpaca Real. Cultivado o elaborado siguiendo tradiciones locales de la región de Arequipa.</descripcion>
+        <sku>SKU-019-19</sku>
+        <precio>106.50</precio>
+        <stock>12</stock>
+        <peso>1.40</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>23</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Textil Alpaca Real - Chalina Baby Alpaca Negra</nombre>
+        <descripcion>Producto artesanal premium de la tienda Textil Alpaca Real. Cultivado o elaborado siguiendo tradiciones locales de la región de Arequipa.</descripcion>
+        <sku>SKU-019-20</sku>
+        <precio>110.00</precio>
+        <stock>11</stock>
+        <peso>1.45</peso>
+        <categoriaId>6</categoriaId>
+        <vendedorId>23</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Miel Andina - Miel de Eucalipto 1kg</nombre>
+        <descripcion>Producto artesanal premium de la tienda Miel Andina. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-020-01</sku>
+        <precio>45.00</precio>
+        <stock>30</stock>
+        <peso>0.50</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>24</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Miel Andina - Miel de Naranjo 500g</nombre>
+        <descripcion>Producto artesanal premium de la tienda Miel Andina. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-020-02</sku>
+        <precio>48.50</precio>
+        <stock>29</stock>
+        <peso>0.55</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>24</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Miel Andina - Miel de Flores Silvestres 1kg</nombre>
+        <descripcion>Producto artesanal premium de la tienda Miel Andina. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-020-03</sku>
+        <precio>52.00</precio>
+        <stock>28</stock>
+        <peso>0.60</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>24</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Miel Andina - Miel de Algarrobo 1kg</nombre>
+        <descripcion>Producto artesanal premium de la tienda Miel Andina. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-020-04</sku>
+        <precio>55.50</precio>
+        <stock>27</stock>
+        <peso>0.65</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>24</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Miel Andina - Polen Organico Granulado</nombre>
+        <descripcion>Producto artesanal premium de la tienda Miel Andina. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-020-05</sku>
+        <precio>59.00</precio>
+        <stock>26</stock>
+        <peso>0.70</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>24</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Miel Andina - Jalea Real Pura 50g</nombre>
+        <descripcion>Producto artesanal premium de la tienda Miel Andina. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-020-06</sku>
+        <precio>62.50</precio>
+        <stock>25</stock>
+        <peso>0.75</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>24</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Miel Andina - Propóleo en Spray 30ml</nombre>
+        <descripcion>Producto artesanal premium de la tienda Miel Andina. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-020-07</sku>
+        <precio>66.00</precio>
+        <stock>24</stock>
+        <peso>0.80</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>24</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Miel Andina - Miel con Kión y Limón</nombre>
+        <descripcion>Producto artesanal premium de la tienda Miel Andina. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-020-08</sku>
+        <precio>69.50</precio>
+        <stock>23</stock>
+        <peso>0.85</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>24</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Miel Andina - Crema de Miel Untable</nombre>
+        <descripcion>Producto artesanal premium de la tienda Miel Andina. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-020-09</sku>
+        <precio>73.00</precio>
+        <stock>22</stock>
+        <peso>0.90</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>24</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Miel Andina - Panal de Abeja en Frasco</nombre>
+        <descripcion>Producto artesanal premium de la tienda Miel Andina. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-020-10</sku>
+        <precio>76.50</precio>
+        <stock>21</stock>
+        <peso>0.95</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>24</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Miel Andina - Miel de Romero 500g</nombre>
+        <descripcion>Producto artesanal premium de la tienda Miel Andina. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-020-11</sku>
+        <precio>80.00</precio>
+        <stock>20</stock>
+        <peso>1.00</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>24</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Miel Andina - Miel Multifloral del Cusco</nombre>
+        <descripcion>Producto artesanal premium de la tienda Miel Andina. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-020-12</sku>
+        <precio>83.50</precio>
+        <stock>19</stock>
+        <peso>1.05</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>24</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Miel Andina - Polen Nutritivo 250g</nombre>
+        <descripcion>Producto artesanal premium de la tienda Miel Andina. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-020-13</sku>
+        <precio>87.00</precio>
+        <stock>18</stock>
+        <peso>1.10</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>24</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Miel Andina - Propóleo en Gotas</nombre>
+        <descripcion>Producto artesanal premium de la tienda Miel Andina. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-020-14</sku>
+        <precio>90.50</precio>
+        <stock>17</stock>
+        <peso>1.15</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>24</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Miel Andina - Caramelos de Miel y Eucalipto</nombre>
+        <descripcion>Producto artesanal premium de la tienda Miel Andina. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-020-15</sku>
+        <precio>94.00</precio>
+        <stock>16</stock>
+        <peso>1.20</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>24</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Miel Andina - Miel de Eucalipto 500g</nombre>
+        <descripcion>Producto artesanal premium de la tienda Miel Andina. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-020-16</sku>
+        <precio>97.50</precio>
+        <stock>15</stock>
+        <peso>1.25</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>24</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Miel Andina - Miel con Propóleo Reforzado</nombre>
+        <descripcion>Producto artesanal premium de la tienda Miel Andina. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-020-17</sku>
+        <precio>101.00</precio>
+        <stock>14</stock>
+        <peso>1.30</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>24</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Miel Andina - Miel de Café Orgánica</nombre>
+        <descripcion>Producto artesanal premium de la tienda Miel Andina. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-020-18</sku>
+        <precio>104.50</precio>
+        <stock>13</stock>
+        <peso>1.35</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>24</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Miel Andina - Miel Silvestre del Norte 500g</nombre>
+        <descripcion>Producto artesanal premium de la tienda Miel Andina. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-020-19</sku>
+        <precio>108.00</precio>
+        <stock>12</stock>
+        <peso>1.40</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>24</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Miel Andina - Extracto de Propóleo Concentrado</nombre>
+        <descripcion>Producto artesanal premium de la tienda Miel Andina. Cultivado o elaborado siguiendo tradiciones locales de la región de Cusco.</descripcion>
+        <sku>SKU-020-20</sku>
+        <precio>111.50</precio>
+        <stock>11</stock>
+        <peso>1.45</peso>
+        <categoriaId>7</categoriaId>
+        <vendedorId>24</vendedorId>
+    </producto>
+    <producto>
+        <nombre>Producto QA 1780790324827 Editado</nombre>
+        <descripcion>Descripción editada</descripcion>
+        <sku>SKU-QA-1780790324827</sku>
+        <precio>149.99</precio>
+        <stock>8</stock>
+        <peso>2.00</peso>
+        <categoriaId>10</categoriaId>
+        <vendedorId>25</vendedorId>
+    </producto>
+</catalogo>

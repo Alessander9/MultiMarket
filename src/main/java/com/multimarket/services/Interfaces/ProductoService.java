@@ -12,6 +12,8 @@ public interface ProductoService {
     ProductoResponse editarProducto(Long id, String correoUsuario, ProductoRequest request);
     ProductoResponse consultarProducto(Long id);
     List<ProductoResponse> listarProductosActivos();
+    List<ProductoResponse> listarMisProductos(String correoUsuario);
+    List<ProductoResponse> listarProductosPorTienda(Long vendedorId);
     void desactivarProducto(Long id, String correoUsuario);
     
     // Búsqueda avanzada
