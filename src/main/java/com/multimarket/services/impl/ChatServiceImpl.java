@@ -143,6 +143,7 @@ public class ChatServiceImpl implements ChatService {
                 c.getFechaCreacion(),
                 c.getActiva(),
                 c.getComprador().getCorreo(),
+                c.getVendedor().getId(),
                 c.getVendedor().getNombreTienda()
         );
     }

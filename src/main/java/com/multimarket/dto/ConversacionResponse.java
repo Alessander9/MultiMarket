@@ -7,15 +7,17 @@ public class ConversacionResponse {
     private LocalDateTime fechaCreacion;
     private Boolean activa;
     private String compradorCorreo;
+    private Long vendedorId;
     private String vendedorTienda;
 
     public ConversacionResponse() {}
 
-    public ConversacionResponse(Long id, LocalDateTime fechaCreacion, Boolean activa, String compradorCorreo, String vendedorTienda) {
+    public ConversacionResponse(Long id, LocalDateTime fechaCreacion, Boolean activa, String compradorCorreo, Long vendedorId, String vendedorTienda) {
         this.id = id;
         this.fechaCreacion = fechaCreacion;
         this.activa = activa;
         this.compradorCorreo = compradorCorreo;
+        this.vendedorId = vendedorId;
         this.vendedorTienda = vendedorTienda;
     }
 
@@ -50,6 +52,14 @@ public class ConversacionResponse {
 
     public void setCompradorCorreo(String compradorCorreo) {
         this.compradorCorreo = compradorCorreo;
+    }
+
+    public Long getVendedorId() {
+        return vendedorId;
+    }
+
+    public void setVendedorId(Long vendedorId) {
+        this.vendedorId = vendedorId;
     }
 
     public String getVendedorTienda() {

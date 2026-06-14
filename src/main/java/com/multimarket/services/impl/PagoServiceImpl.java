@@ -4,12 +4,16 @@ import com.multimarket.dto.PagoRequest;
 import com.multimarket.dto.PagoResponse;
 import com.multimarket.dto.SoapTransactionResponse;
 import com.multimarket.models.*;
+import com.multimarket.repositories.UsuarioRepository;
 import com.multimarket.repositories.PagoRepository;
 import com.multimarket.repositories.PedidoRepository;
 import com.multimarket.repositories.TransaccionSOAPRepository;
+import com.multimarket.services.Interfaces.NotificacionService;
 import com.multimarket.services.Interfaces.PagoService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
@@ -20,16 +24,24 @@ import java.util.stream.Collectors;
 @Transactional
 public class PagoServiceImpl implements PagoService {
 
+    private static final Logger LOGGER = Logger.getLogger(PagoServiceImpl.class.getName());
+
     private final PagoRepository pagoRepository;
     private final PedidoRepository pedidoRepository;
     private final TransaccionSOAPRepository transaccionSOAPRepository;
+    private final UsuarioRepository usuarioRepository;
+    private final NotificacionService notificacionService;
 
     public PagoServiceImpl(PagoRepository pagoRepository,
                            PedidoRepository pedidoRepository,
-                           TransaccionSOAPRepository transaccionSOAPRepository) {
+                           TransaccionSOAPRepository transaccionSOAPRepository,
+                           UsuarioRepository usuarioRepository,
+                           NotificacionService notificacionService) {
         this.pagoRepository = pagoRepository;
         this.pedidoRepository = pedidoRepository;
         this.transaccionSOAPRepository = transaccionSOAPRepository;
+        this.usuarioRepository = usuarioRepository;
+        this.notificacionService = notificacionService;
     }
 
     @Override
@@ -80,6 +92,13 @@ public class PagoServiceImpl implements PagoService {
         // 6. Actualizar el estado del pedido a PAGADO
         pedido.setEstado(EstadoPedido.PAGADO);
         pedidoRepository.save(pedido);
+
+        try {
+            generarNotificacionesCompra(pedido, savedPago);
+        } catch (Exception ex) {
+            LOGGER.log(Level.WARNING, "No se pudieron generar todas las notificaciones de compra para el pedido {0}. El pago ya fue registrado.", pedido.getNumeroPedido());
+            LOGGER.log(Level.WARNING, ex.getMessage(), ex);
+        }
 
         return mapToResponse(savedPago);
     }
@@ -158,7 +177,11 @@ public class PagoServiceImpl implements PagoService {
         trans.setResponseXml(soapResponseXml);
         trans.setEstado(result ? "VALIDACION_EXITOSA" : "VALIDACION_RECHAZADA");
         trans.setFecha(LocalDateTime.now());
-        transaccionSOAPRepository.save(trans);
+        try {
+            transaccionSOAPRepository.save(trans);
+        } catch (Exception ex) {
+            LOGGER.log(Level.WARNING, "No se pudo persistir la auditoría SOAP de validación de tarjeta.", ex);
+        }
 
         return result;
     }
@@ -201,7 +224,11 @@ public class PagoServiceImpl implements PagoService {
         trans.setResponseXml(soapResponseXml);
         trans.setEstado(aprobado ? "PAGO_APROBADO" : "PAGO_RECHAZADO");
         trans.setFecha(LocalDateTime.now());
-        transaccionSOAPRepository.save(trans);
+        try {
+            transaccionSOAPRepository.save(trans);
+        } catch (Exception ex) {
+            LOGGER.log(Level.WARNING, "No se pudo persistir la auditoría SOAP del proceso de pago.", ex);
+        }
 
         return codigoOperacion;
     }
@@ -233,9 +260,43 @@ public class PagoServiceImpl implements PagoService {
         trans.setResponseXml(soapResponseXml);
         trans.setEstado("CONSULTA_OPERACION");
         trans.setFecha(LocalDateTime.now());
-        transaccionSOAPRepository.save(trans);
+        try {
+            transaccionSOAPRepository.save(trans);
+        } catch (Exception ex) {
+            LOGGER.log(Level.WARNING, "No se pudo persistir la auditoría SOAP de consulta de operación.", ex);
+        }
 
         return "PROCESADO";
+    }
+
+    private void generarNotificacionesCompra(Pedido pedido, Pago pago) {
+        String numeroPedido = pedido.getNumeroPedido();
+        String montoTexto = "S/ " + pago.getMonto().setScale(2, java.math.RoundingMode.HALF_UP).toPlainString();
+        String tienda = pedido.getVendedor().getNombreTienda();
+        String comprador = pedido.getComprador().getCorreo();
+
+        notificacionService.generarNotificacion(
+                pedido.getComprador().getId(),
+                "Compra confirmada " + numeroPedido,
+                "Tu pago por " + montoTexto + " fue aprobado. La tienda " + tienda + " ya recibió tu pedido.",
+                TipoNotificacion.PAGO
+        );
+
+        notificacionService.generarNotificacion(
+                pedido.getVendedor().getUsuario().getId(),
+                "Nueva compra confirmada " + numeroPedido,
+                "El comprador " + comprador + " confirmó el pago de " + montoTexto + " en la tienda " + tienda + ".",
+                TipoNotificacion.PAGO
+        );
+
+        usuarioRepository.findAllByRoleNombre(RolNombre.ADMIN).forEach(admin ->
+                notificacionService.generarNotificacion(
+                        admin.getId(),
+                        "Compra registrada en MultiMarket " + numeroPedido,
+                        "El pedido " + numeroPedido + " fue pagado por " + comprador + " en la tienda " + tienda + " por " + montoTexto + ".",
+                        TipoNotificacion.PAGO
+                )
+        );
     }
 
     private PagoResponse mapToResponse(Pago p) {
