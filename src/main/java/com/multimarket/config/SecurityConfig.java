@@ -37,7 +37,19 @@ public class SecurityConfig {
             .csrf(AbstractHttpConfigurer::disable)
             .cors(cors -> cors.configurationSource(corsConfigurationSource()))
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/auth/register", "/auth/login", "/auth/forgot-password", "/auth/reset-password", "/chat-websocket/**").permitAll()
+                .requestMatchers(
+                    "/auth/register",
+                    "/auth/login",
+                    "/auth/forgot-password",
+                    "/auth/reset-password",
+                    "/chat-websocket/**",
+                    "/productos",
+                    "/productos/**",
+                    "/vendedores",
+                    "/vendedores/**",
+                    "/categorias",
+                    "/categorias/**"
+                ).permitAll()
                 .anyRequest().authenticated()
             )
             .sessionManagement(session -> session

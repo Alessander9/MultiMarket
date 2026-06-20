@@ -68,12 +68,12 @@ public class VendedorServiceImpl implements VendedorService {
 
     @Override
     @Transactional
-    public VendedorResponse editarTienda(Long id, String correoUsuario, VendedorRequest request) {
+    public VendedorResponse editarTienda(Long id, String correoUsuario, boolean esAdmin, VendedorRequest request) {
         Vendedor tienda = vendedorRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Tienda no encontrada"));
 
-        // Validar propietario
-        if (!tienda.getUsuario().getCorreo().equals(correoUsuario)) {
+        // Administradores pueden editar cualquier tienda; el vendedor solo la suya
+        if (!esAdmin && !tienda.getUsuario().getCorreo().equals(correoUsuario)) {
             throw new SecurityException("No estás autorizado para modificar esta tienda.");
         }
 
@@ -118,15 +118,12 @@ public class VendedorServiceImpl implements VendedorService {
 
     @Override
     @Transactional
-    public VendedorResponse desactivarTienda(Long id, String correoUsuario, boolean activo) {
+    public VendedorResponse desactivarTienda(Long id, String correoUsuario, boolean esAdmin, boolean activo) {
         Vendedor tienda = vendedorRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Tienda no encontrada"));
 
-        // Propietario o ADMIN
-        boolean esAdmin = tienda.getUsuario().getRoles().stream()
-                .anyMatch(rol -> rol.getNombre() == RolNombre.ADMIN);
-
-        if (!tienda.getUsuario().getCorreo().equals(correoUsuario) && !esAdmin) {
+        // Administradores pueden cambiar cualquier tienda; el vendedor solo la suya
+        if (!esAdmin && !tienda.getUsuario().getCorreo().equals(correoUsuario)) {
             throw new SecurityException("No estás autorizado para cambiar el estado de esta tienda.");
         }
 

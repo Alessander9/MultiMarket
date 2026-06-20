@@ -7,10 +7,12 @@ import com.multimarket.dto.NotificacionResponse;
 import com.multimarket.repositories.NotificacionRepository;
 import com.multimarket.repositories.UsuarioRepository;
 import com.multimarket.services.Interfaces.NotificacionService;
+import com.multimarket.services.Interfaces.NotificationRealtimeService;
 import com.multimarket.kafka.KafkaProducer;
 import com.multimarket.kafka.events.NotificacionGeneradaEvent;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.scheduling.annotation.Async;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -21,13 +23,16 @@ public class NotificacionServiceImpl implements NotificacionService {
     private final NotificacionRepository notificacionRepository;
     private final UsuarioRepository usuarioRepository;
     private final KafkaProducer kafkaProducer;
+    private final NotificationRealtimeService notificationRealtimeService;
 
     public NotificacionServiceImpl(NotificacionRepository notificacionRepository,
                                    UsuarioRepository usuarioRepository,
-                                   KafkaProducer kafkaProducer) {
+                                   KafkaProducer kafkaProducer,
+                                   NotificationRealtimeService notificationRealtimeService) {
         this.notificacionRepository = notificacionRepository;
         this.usuarioRepository = usuarioRepository;
         this.kafkaProducer = kafkaProducer;
+        this.notificationRealtimeService = notificationRealtimeService;
     }
 
     @Override
@@ -53,7 +58,22 @@ public class NotificacionServiceImpl implements NotificacionService {
                 tipo.name()
         ));
 
+        publishRealtimeNotification(savedNotif);
+
         return savedNotif;
+    }
+
+    @Async
+    public void publishRealtimeNotification(Notificacion notif) {
+        notificationRealtimeService.broadcastNewNotification(new NotificacionResponse(
+                notif.getId(),
+                notif.getTitulo(),
+                notif.getMensaje(),
+                notif.getTipo().name(),
+                notif.getLeida(),
+                notif.getFechaCreacion(),
+                notif.getUsuario() != null ? notif.getUsuario().getCorreo() : null
+        ));
     }
 
     @Override

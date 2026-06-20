@@ -51,12 +51,14 @@ public class VendedorController {
     }
 
     @PutMapping("/{id}")
-    @PreAuthorize("hasRole('VENDEDOR')")
+    @PreAuthorize("hasAnyRole('VENDEDOR', 'ADMIN')")
     public ResponseEntity<VendedorResponse> editarTienda(
             @PathVariable Long id,
             @Valid @RequestBody VendedorRequest request,
             @AuthenticationPrincipal UserDetails userDetails) {
-        VendedorResponse response = vendedorService.editarTienda(id, userDetails.getUsername(), request);
+        boolean esAdmin = userDetails.getAuthorities().stream()
+                .anyMatch(a -> a.getAuthority().equals("ROLE_ADMIN"));
+        VendedorResponse response = vendedorService.editarTienda(id, userDetails.getUsername(), esAdmin, request);
         return ResponseEntity.ok(response);
     }
 
@@ -91,11 +93,14 @@ public class VendedorController {
     }
 
     @PutMapping("/{id}/desactivar")
+    @PreAuthorize("hasAnyRole('VENDEDOR', 'ADMIN')")
     public ResponseEntity<VendedorResponse> desactivarTienda(
             @PathVariable Long id,
             @RequestParam boolean activo,
             @AuthenticationPrincipal UserDetails userDetails) {
-        VendedorResponse response = vendedorService.desactivarTienda(id, userDetails.getUsername(), activo);
+        boolean esAdmin = userDetails.getAuthorities().stream()
+                .anyMatch(a -> a.getAuthority().equals("ROLE_ADMIN"));
+        VendedorResponse response = vendedorService.desactivarTienda(id, userDetails.getUsername(), esAdmin, activo);
         return ResponseEntity.ok(response);
     }
 }

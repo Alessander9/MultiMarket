@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogo>
+    <producto>
+        <nombre>Producto QA</nombre>
+        <descripcion>Demo</descripcion>
+        <sku>SKU-EXP</sku>
+        <precio>10</precio>
+        <stock>5</stock>
+        <peso>1</peso>
+        <categoriaId>1</categoriaId>
+        <vendedorId>3</vendedorId>
+    </producto>
+</catalogo>

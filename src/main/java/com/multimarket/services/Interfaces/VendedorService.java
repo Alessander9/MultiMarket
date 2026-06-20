@@ -6,9 +6,9 @@ import java.util.List;
 
 public interface VendedorService {
     VendedorResponse crearTienda(String correoUsuario, VendedorRequest request);
-    VendedorResponse editarTienda(Long id, String correoUsuario, VendedorRequest request);
+    VendedorResponse editarTienda(Long id, String correoUsuario, boolean esAdmin, VendedorRequest request);
     VendedorResponse consultarTienda(Long id);
     VendedorResponse consultarMiTienda(String correoUsuario);
-    VendedorResponse desactivarTienda(Long id, String correoUsuario, boolean activo);
+    VendedorResponse desactivarTienda(Long id, String correoUsuario, boolean esAdmin, boolean activo);
     List<VendedorResponse> listarTodos();
 }
