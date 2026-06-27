@@ -51,6 +51,20 @@ class VendedorControllerTest {
     }
 
     @Test
+    void desactivarTiendaShouldDelegateAdminFlagAndState() {
+        VendedorController controller = new VendedorController(vendedorService, productoService);
+        VendedorResponse response = new VendedorResponse(10L, 1L, "Tienda QA", "Demo", "Lima", "Av QA 123", "logo.png", "banner.png", LocalDateTime.now(), false, BigDecimal.valueOf(4.5));
+        when(vendedorService.desactivarTienda(eq(10L), eq("admin@test.com"), eq(true), eq(false))).thenReturn(response);
+
+        UserDetails admin = new User("admin@test.com", "x", Set.of(new SimpleGrantedAuthority("ROLE_ADMIN")));
+
+        var result = controller.desactivarTienda(10L, false, admin);
+
+        assertEquals(false, result.getBody().getActivo());
+        assertEquals("Tienda QA", result.getBody().getNombreTienda());
+    }
+
+    @Test
     void listarProductosMiTiendaShouldUseStoreId() {
         VendedorController controller = new VendedorController(vendedorService, productoService);
         VendedorResponse store = new VendedorResponse(9L, 1L, "Tienda QA", "Demo", "Lima", "Av QA", "logo", "banner", LocalDateTime.now(), true, BigDecimal.ONE);

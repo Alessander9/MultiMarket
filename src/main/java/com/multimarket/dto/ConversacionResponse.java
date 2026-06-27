@@ -9,6 +9,9 @@ public class ConversacionResponse {
     private String compradorCorreo;
     private Long vendedorId;
     private String vendedorTienda;
+    private String ultimoMensaje;
+    private LocalDateTime fechaUltimoMensaje;
+    private Integer noLeidos;
 
     public ConversacionResponse() {}
 
@@ -19,6 +22,13 @@ public class ConversacionResponse {
         this.compradorCorreo = compradorCorreo;
         this.vendedorId = vendedorId;
         this.vendedorTienda = vendedorTienda;
+    }
+
+    public ConversacionResponse(Long id, LocalDateTime fechaCreacion, Boolean activa, String compradorCorreo, Long vendedorId, String vendedorTienda, String ultimoMensaje, LocalDateTime fechaUltimoMensaje, Integer noLeidos) {
+        this(id, fechaCreacion, activa, compradorCorreo, vendedorId, vendedorTienda);
+        this.ultimoMensaje = ultimoMensaje;
+        this.fechaUltimoMensaje = fechaUltimoMensaje;
+        this.noLeidos = noLeidos;
     }
 
     // Getters y Setters
@@ -68,5 +78,29 @@ public class ConversacionResponse {
 
     public void setVendedorTienda(String vendedorTienda) {
         this.vendedorTienda = vendedorTienda;
+    }
+
+    public String getUltimoMensaje() {
+        return ultimoMensaje;
+    }
+
+    public void setUltimoMensaje(String ultimoMensaje) {
+        this.ultimoMensaje = ultimoMensaje;
+    }
+
+    public LocalDateTime getFechaUltimoMensaje() {
+        return fechaUltimoMensaje;
+    }
+
+    public void setFechaUltimoMensaje(LocalDateTime fechaUltimoMensaje) {
+        this.fechaUltimoMensaje = fechaUltimoMensaje;
+    }
+
+    public Integer getNoLeidos() {
+        return noLeidos;
+    }
+
+    public void setNoLeidos(Integer noLeidos) {
+        this.noLeidos = noLeidos;
     }
 }

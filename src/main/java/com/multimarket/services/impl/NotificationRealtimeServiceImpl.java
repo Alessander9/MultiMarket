@@ -14,7 +14,9 @@ import java.util.concurrent.ConcurrentHashMap;
 public class NotificationRealtimeServiceImpl implements NotificationRealtimeService {
 
     private final Map<String, WebSocketSession> sessions = new ConcurrentHashMap<>();
-    private final ObjectMapper mapper = new ObjectMapper();
+    private final ObjectMapper mapper = new ObjectMapper()
+            .registerModule(new com.fasterxml.jackson.datatype.jsr310.JavaTimeModule())
+            .disable(com.fasterxml.jackson.databind.SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
 
     public void register(String email, WebSocketSession session) {
         if (email != null && session != null) {

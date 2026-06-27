@@ -2,7 +2,6 @@ package com.multimarket.services.Interfaces;
 
 import com.multimarket.dto.ConversacionRequest;
 import com.multimarket.dto.ConversacionResponse;
-import com.multimarket.dto.MensajeRequest;
 import com.multimarket.dto.MensajeResponse;
 import java.util.List;
 

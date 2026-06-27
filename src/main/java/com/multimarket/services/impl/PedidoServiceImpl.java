@@ -9,7 +9,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
@@ -148,6 +147,38 @@ public class PedidoServiceImpl implements PedidoService {
         Pedido guardado = pedidoRepository.save(pedido);
 
         return mapToResponse(guardado);
+    }
+
+    @Override
+    public CompraAgrupadaResponse crearPedidosAgrupados(String compradorCorreo, CompraAgrupadaRequest request) {
+        Usuario comprador = usuarioRepository.findByCorreo(compradorCorreo)
+                .orElseThrow(() -> new IllegalArgumentException("No se encontró el comprador con el correo: " + compradorCorreo));
+
+        if (request.getGrupos() == null || request.getGrupos().isEmpty()) {
+            throw new IllegalArgumentException("La compra debe contener al menos un grupo de vendedor.");
+        }
+
+        List<PedidoResponse> pedidos = request.getGrupos().stream()
+                .map(grupo -> crearPedidoParaGrupo(comprador, grupo))
+                .collect(Collectors.toList());
+
+        BigDecimal subtotal = pedidos.stream()
+                .map(PedidoResponse::getSubtotal)
+                .reduce(BigDecimal.ZERO, BigDecimal::add);
+
+        BigDecimal impuesto = pedidos.stream()
+                .map(PedidoResponse::getImpuesto)
+                .reduce(BigDecimal.ZERO, BigDecimal::add);
+
+        BigDecimal costoEnvioTotal = pedidos.stream()
+                .map(PedidoResponse::getCostoEnvio)
+                .reduce(BigDecimal.ZERO, BigDecimal::add);
+
+        BigDecimal total = pedidos.stream()
+                .map(PedidoResponse::getTotal)
+                .reduce(BigDecimal.ZERO, BigDecimal::add);
+
+        return new CompraAgrupadaResponse(null, null, null, null, "PENDIENTE", pedidos, subtotal, impuesto, costoEnvioTotal, total);
     }
 
     @Override
@@ -293,8 +324,100 @@ public class PedidoServiceImpl implements PedidoService {
                 ped.getTotal(),
                 ped.getEstado().name(),
                 ped.getComprador().getCorreo(),
+                ped.getVendedor().getId(),
                 ped.getVendedor().getNombreTienda(),
                 detallesDto
         );
+    }
+
+    private PedidoResponse crearPedidoParaGrupo(Usuario comprador, GrupoPedidoRequest grupo) {
+        if (grupo.getVendedorId() == null) {
+            throw new IllegalArgumentException("Cada grupo debe indicar un vendedor.");
+        }
+
+        Vendedor vendedor = vendedorRepository.findById(grupo.getVendedorId())
+                .orElseThrow(() -> new IllegalArgumentException("No se encontró el vendedor con el ID: " + grupo.getVendedorId()));
+
+        if (vendedor.getUsuario().getId().equals(comprador.getId())) {
+            throw new IllegalArgumentException("Restricción de Negocio: No puedes realizar compras en tu propia tienda.");
+        }
+
+        if (grupo.getDetalles() == null || grupo.getDetalles().isEmpty()) {
+            throw new IllegalArgumentException("Cada grupo debe contener al menos un producto.");
+        }
+
+        String dateStr = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd"));
+        String randStr = UUID.randomUUID().toString().substring(0, 4).toUpperCase();
+        String numeroPedido = "MM-" + dateStr + "-" + randStr;
+
+        Pedido pedido = new Pedido();
+        pedido.setNumeroPedido(numeroPedido);
+        pedido.setComprador(comprador);
+        pedido.setVendedor(vendedor);
+        pedido.setCostoEnvio(grupo.getCostoEnvio());
+        pedido.setEstado(EstadoPedido.PENDIENTE);
+
+        BigDecimal acumuladoSubtotal = BigDecimal.ZERO;
+
+        for (DetallePedidoRequest detReq : grupo.getDetalles()) {
+            Producto producto = productoRepository.findById(detReq.getProductoId())
+                    .orElseThrow(() -> new IllegalArgumentException("Producto no encontrado con el ID: " + detReq.getProductoId()));
+
+            if (!producto.getVendedor().getId().equals(vendedor.getId())) {
+                throw new IllegalArgumentException("El producto '" + producto.getNombre() + "' no pertenece a la tienda seleccionada.");
+            }
+
+            if (!producto.getActivo()) {
+                throw new IllegalArgumentException("El producto '" + producto.getNombre() + "' no está activo para la venta.");
+            }
+
+            Inventario inventario = inventarioRepository.findByProductoId(producto.getId())
+                    .orElseGet(() -> {
+                        Inventario nuevo = new Inventario();
+                        nuevo.setStockActual(producto.getStock());
+                        nuevo.setStockMinimo(0);
+                        nuevo.setProducto(producto);
+                        nuevo.setUltimaActualizacion(LocalDateTime.now());
+                        return inventarioRepository.save(nuevo);
+                    });
+
+            if (inventario.getStockActual() < detReq.getCantidad()) {
+                throw new IllegalArgumentException("Stock insuficiente para el producto '" + producto.getNombre() + "'. Stock disponible: " + inventario.getStockActual() + ", Solicitado: " + detReq.getCantidad());
+            }
+
+            int nuevoStock = inventario.getStockActual() - detReq.getCantidad();
+            inventario.setStockActual(nuevoStock);
+            inventario.setUltimaActualizacion(LocalDateTime.now());
+            inventarioRepository.save(inventario);
+
+            producto.setStock(nuevoStock);
+            productoRepository.save(producto);
+
+            MovimientoInventario movimiento = new MovimientoInventario();
+            movimiento.setTipoMovimiento(TipoMovimiento.SALIDA);
+            movimiento.setCantidad(detReq.getCantidad());
+            movimiento.setObservacion("Despacho por creación de pedido: " + numeroPedido);
+            movimiento.setInventario(inventario);
+            movimientoInventarioRepository.save(movimiento);
+
+            DetallePedido detalle = new DetallePedido();
+            detalle.setProducto(producto);
+            detalle.setCantidad(detReq.getCantidad());
+            detalle.setPrecioUnitario(producto.getPrecio());
+
+            BigDecimal lineaSubtotal = producto.getPrecio().multiply(BigDecimal.valueOf(detReq.getCantidad()));
+            detalle.setSubtotal(lineaSubtotal);
+            acumuladoSubtotal = acumuladoSubtotal.add(lineaSubtotal);
+            pedido.addDetalle(detalle);
+        }
+
+        pedido.setSubtotal(acumuladoSubtotal);
+        BigDecimal impuesto = acumuladoSubtotal.multiply(BigDecimal.valueOf(0.18));
+        pedido.setImpuesto(impuesto);
+        BigDecimal total = acumuladoSubtotal.add(impuesto).add(grupo.getCostoEnvio());
+        pedido.setTotal(total);
+
+        Pedido guardado = pedidoRepository.save(pedido);
+        return mapToResponse(guardado);
     }
 }

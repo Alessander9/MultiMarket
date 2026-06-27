@@ -2,6 +2,7 @@ package com.multimarket.services.impl;
 
 import com.multimarket.dto.ProductoRequest;
 import com.multimarket.models.Categoria;
+import com.multimarket.models.ImagenProducto;
 import com.multimarket.models.Producto;
 import com.multimarket.models.Rol;
 import com.multimarket.models.RolNombre;
@@ -21,6 +22,7 @@ import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
@@ -125,5 +127,94 @@ class ProductoServiceImplTest {
                 () -> service.desactivarProducto(88L, "other@test.com"));
 
         assertTrue(ex.getMessage().contains("No estás autorizado"));
+    }
+
+    @Test
+    void editarProductoAsAdminShouldAllowAnyStore() {
+        Usuario admin = new Usuario();
+        admin.setId(50L);
+        admin.setCorreo("admin@test.com");
+        Rol rol = new Rol();
+        rol.setNombre(RolNombre.ADMIN);
+        admin.setRoles(Set.of(rol));
+
+        Producto producto = new Producto();
+        producto.setId(77L);
+        producto.setVendedor(tienda);
+        producto.setCategoria(categoria);
+
+        ProductoRequest request = new ProductoRequest();
+        request.setNombre("Producto Editado");
+        request.setDescripcion("Demo editado");
+        request.setSku("SKU-EDIT");
+        request.setPrecio(BigDecimal.valueOf(99));
+        request.setStock(8);
+        request.setPeso(BigDecimal.valueOf(2));
+        request.setCategoriaId(30L);
+
+        when(usuarioRepository.findByCorreo("admin@test.com")).thenReturn(Optional.of(admin));
+        when(productoRepository.findById(77L)).thenReturn(Optional.of(producto));
+        when(categoriaRepository.findById(30L)).thenReturn(Optional.of(categoria));
+        when(productoRepository.findBySku("SKU-EDIT")).thenReturn(Optional.empty());
+        when(productoRepository.save(any(Producto.class))).thenAnswer(inv -> inv.getArgument(0));
+
+        var response = service.editarProducto(77L, "admin@test.com", request);
+
+        assertEquals("Producto Editado", response.getNombre());
+        assertEquals("SKU-EDIT", response.getSku());
+    }
+
+    @Test
+    void agregarImagenAsAdminShouldBypassOwnership() {
+        Usuario admin = new Usuario();
+        admin.setId(50L);
+        admin.setCorreo("admin@test.com");
+        Rol rol = new Rol();
+        rol.setNombre(RolNombre.ADMIN);
+        admin.setRoles(Set.of(rol));
+
+        Producto producto = new Producto();
+        producto.setId(88L);
+        producto.setVendedor(tienda);
+        producto.setCategoria(categoria);
+
+        when(usuarioRepository.findByCorreo("admin@test.com")).thenReturn(Optional.of(admin));
+        when(productoRepository.findById(88L)).thenReturn(Optional.of(producto));
+        when(imagenRepository.save(any(ImagenProducto.class))).thenAnswer(inv -> {
+            ImagenProducto img = inv.getArgument(0);
+            img.setId(123L);
+            return img;
+        });
+
+        var response = service.agregarImagen(88L, "admin@test.com", "https://img.test/logo.png", true, 1);
+
+        assertEquals(123L, response.getId());
+        assertEquals("https://img.test/logo.png", response.getUrl());
+        verify(imagenRepository).save(any(ImagenProducto.class));
+    }
+
+    @Test
+    void eliminarImagenAsAdminShouldDeleteImage() {
+        Usuario admin = new Usuario();
+        admin.setId(50L);
+        admin.setCorreo("admin@test.com");
+        Rol rol = new Rol();
+        rol.setNombre(RolNombre.ADMIN);
+        admin.setRoles(Set.of(rol));
+
+        Producto producto = new Producto();
+        producto.setId(88L);
+        producto.setVendedor(tienda);
+
+        ImagenProducto imagen = new ImagenProducto();
+        imagen.setId(321L);
+        imagen.setProducto(producto);
+
+        when(usuarioRepository.findByCorreo("admin@test.com")).thenReturn(Optional.of(admin));
+        when(imagenRepository.findById(321L)).thenReturn(Optional.of(imagen));
+
+        service.eliminarImagen(321L, "admin@test.com");
+
+        verify(imagenRepository).delete(imagen);
     }
 }

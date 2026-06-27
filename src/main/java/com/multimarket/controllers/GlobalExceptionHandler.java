@@ -2,6 +2,8 @@ package com.multimarket.controllers;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.AccessDeniedException;
+import org.springframework.security.authentication.AuthenticationCredentialsNotFoundException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
@@ -58,6 +60,21 @@ public class GlobalExceptionHandler {
         System.err.println("[IllegalArgumentException] " + ex.getMessage());
         ex.printStackTrace();
         return buildResponse(HttpStatus.BAD_REQUEST, ex.getMessage());
+    }
+
+    @ExceptionHandler(AccessDeniedException.class)
+    public ResponseEntity<Map<String, Object>> handleAccessDeniedException(AccessDeniedException ex) {
+        System.err.println("[AccessDeniedException] " + ex.getMessage());
+        ex.printStackTrace();
+        return buildResponse(HttpStatus.FORBIDDEN, "No tienes permisos para realizar esta operación");
+    }
+
+    @ExceptionHandler(AuthenticationCredentialsNotFoundException.class)
+    public ResponseEntity<Map<String, Object>> handleAuthenticationCredentialsNotFoundException(
+            AuthenticationCredentialsNotFoundException ex) {
+        System.err.println("[AuthenticationCredentialsNotFoundException] " + ex.getMessage());
+        ex.printStackTrace();
+        return buildResponse(HttpStatus.UNAUTHORIZED, "Debes iniciar sesión para realizar esta operación");
     }
 
     @ExceptionHandler(Exception.class)

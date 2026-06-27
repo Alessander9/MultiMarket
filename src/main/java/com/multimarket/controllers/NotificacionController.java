@@ -33,6 +33,13 @@ public class NotificacionController {
         return ResponseEntity.ok().build();
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> eliminarNotificacion(@PathVariable("id") Long id,
+                                                     @AuthenticationPrincipal UserDetails userDetails) {
+        notificacionService.eliminarNotificacion(id, userDetails.getUsername());
+        return ResponseEntity.noContent().build();
+    }
+
     @PostMapping("/test")
     public ResponseEntity<Notificacion> createTestNotification(@RequestParam("usuarioId") Long usuarioId,
                                                                @RequestParam("titulo") String titulo,

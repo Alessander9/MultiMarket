@@ -6,9 +6,9 @@ import com.multimarket.dto.MensajeResponse;
 import com.multimarket.models.*;
 import com.multimarket.repositories.*;
 import com.multimarket.services.Interfaces.ChatService;
+import com.multimarket.services.Interfaces.NotificacionService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -21,15 +21,18 @@ public class ChatServiceImpl implements ChatService {
     private final MensajeRepository mensajeRepository;
     private final UsuarioRepository usuarioRepository;
     private final VendedorRepository vendedorRepository;
+    private final NotificacionService notificacionService;
 
     public ChatServiceImpl(ConversacionRepository conversacionRepository,
                            MensajeRepository mensajeRepository,
                            UsuarioRepository usuarioRepository,
-                           VendedorRepository vendedorRepository) {
+                           VendedorRepository vendedorRepository,
+                           NotificacionService notificacionService) {
         this.conversacionRepository = conversacionRepository;
         this.mensajeRepository = mensajeRepository;
         this.usuarioRepository = usuarioRepository;
         this.vendedorRepository = vendedorRepository;
+        this.notificacionService = notificacionService;
     }
 
     @Override
@@ -49,7 +52,7 @@ public class ChatServiceImpl implements ChatService {
                 .findByCompradorIdAndVendedorId(comprador.getId(), vendedor.getId());
         
         if (existente.isPresent()) {
-            return mapToResponse(existente.get());
+            return mapToResponse(existente.get(), comprador);
         }
 
         Conversacion conversacion = new Conversacion();
@@ -58,7 +61,13 @@ public class ChatServiceImpl implements ChatService {
         conversacion.setActiva(true);
 
         Conversacion guardada = conversacionRepository.save(conversacion);
-        return mapToResponse(guardada);
+        notificacionService.generarNotificacion(
+                comprador.getId(),
+                "Chat iniciado con " + vendedor.getNombreTienda(),
+                "Ya puedes continuar la conversación con " + vendedor.getNombreTienda() + ".",
+                TipoNotificacion.CHAT
+        );
+        return mapToResponse(guardada, comprador);
     }
 
     @Override
@@ -76,7 +85,9 @@ public class ChatServiceImpl implements ChatService {
             conversaciones = conversacionRepository.findByCompradorCorreoOrderByFechaCreacionDesc(usuarioCorreo);
         }
 
-        return conversaciones.stream().map(this::mapToResponse).collect(Collectors.toList());
+        return conversaciones.stream()
+                .map(conversacion -> mapToResponse(conversacion, usuario))
+                .collect(Collectors.toList());
     }
 
     @Override
@@ -133,18 +144,90 @@ public class ChatServiceImpl implements ChatService {
         mensaje.setLeido(false);
 
         Mensaje guardado = mensajeRepository.save(mensaje);
+        generarNotificacionChat(conversacion, remitente, guardado);
         
         return mapToResponse(guardado);
     }
 
-    private ConversacionResponse mapToResponse(Conversacion c) {
+    private void generarNotificacionChat(Conversacion conversacion, Usuario remitente, Mensaje mensaje) {
+        Usuario destinatario;
+        String remitenteNombre;
+        String titulo;
+        String mensajeNotificacion;
+
+        if (conversacion.getComprador().getId().equals(remitente.getId())) {
+            destinatario = conversacion.getVendedor().getUsuario();
+            remitenteNombre = resolverNombreMostrar(remitente, remitente.getCorreo());
+            titulo = "Nuevo mensaje de " + remitenteNombre;
+            mensajeNotificacion = "El comprador " + remitenteNombre + " te escribió: " + resumirContenido(mensaje.getContenido());
+        } else {
+            destinatario = conversacion.getComprador();
+            remitenteNombre = conversacion.getVendedor().getNombreTienda();
+            titulo = "Respuesta de " + remitenteNombre;
+            mensajeNotificacion = "La tienda " + remitenteNombre + " te respondió: " + resumirContenido(mensaje.getContenido());
+        }
+
+        if (destinatario == null || destinatario.getId().equals(remitente.getId())) {
+            return;
+        }
+
+        notificacionService.generarNotificacion(
+                destinatario.getId(),
+                titulo,
+                mensajeNotificacion,
+                TipoNotificacion.CHAT
+        );
+    }
+
+    private String resolverNombreMostrar(Usuario usuario, String fallback) {
+        if (usuario != null && usuario.getPerfil() != null) {
+            String nombres = usuario.getPerfil().getNombres() != null ? usuario.getPerfil().getNombres().trim() : "";
+            String apellidos = usuario.getPerfil().getApellidos() != null ? usuario.getPerfil().getApellidos().trim() : "";
+            String nombreCompleto = (nombres + " " + apellidos).trim();
+            if (!nombreCompleto.isEmpty()) {
+                return nombreCompleto;
+            }
+        }
+
+        if (fallback != null && fallback.contains("@")) {
+            String localPart = fallback.substring(0, fallback.indexOf('@')).replace('.', ' ').replace('_', ' ').replace('-', ' ').trim();
+            if (!localPart.isEmpty()) {
+                return localPart.substring(0, 1).toUpperCase() + localPart.substring(1);
+            }
+        }
+
+        return fallback != null && !fallback.isBlank() ? fallback : "usuario";
+    }
+
+    private String resumirContenido(String contenido) {
+        if (contenido == null) {
+            return "";
+        }
+
+        String texto = contenido.trim();
+        if (texto.length() <= 120) {
+            return texto;
+        }
+        return texto.substring(0, 117).trim() + "...";
+    }
+
+    private ConversacionResponse mapToResponse(Conversacion c, Usuario usuario) {
+        Mensaje ultimoMensaje = mensajeRepository.findTopByConversacionIdOrderByFechaEnvioDesc(c.getId()).orElse(null);
+        Long usuarioId = usuario != null ? usuario.getId() : null;
+        Integer noLeidos = usuarioId == null ? 0 : Math.toIntExact(
+                mensajeRepository.countByConversacionIdAndLeidoFalseAndRemitenteIdNot(c.getId(), usuarioId)
+        );
+
         return new ConversacionResponse(
                 c.getId(),
                 c.getFechaCreacion(),
                 c.getActiva(),
                 c.getComprador().getCorreo(),
                 c.getVendedor().getId(),
-                c.getVendedor().getNombreTienda()
+                c.getVendedor().getNombreTienda(),
+                ultimoMensaje != null ? ultimoMensaje.getContenido() : "",
+                ultimoMensaje != null ? ultimoMensaje.getFechaEnvio() : c.getFechaCreacion(),
+                noLeidos
         );
     }
 

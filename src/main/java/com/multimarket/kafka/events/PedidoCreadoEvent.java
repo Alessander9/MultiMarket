@@ -5,6 +5,8 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 public class PedidoCreadoEvent implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     private Long pedidoId;
     private String numeroPedido;
     private String compradorCorreo;

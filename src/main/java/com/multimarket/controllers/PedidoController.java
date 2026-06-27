@@ -1,6 +1,8 @@
 package com.multimarket.controllers;
 
 import com.multimarket.dto.ActualizarEstadoPedidoRequest;
+import com.multimarket.dto.CompraAgrupadaRequest;
+import com.multimarket.dto.CompraAgrupadaResponse;
 import com.multimarket.dto.PedidoRequest;
 import com.multimarket.dto.PedidoResponse;
 import com.multimarket.services.Interfaces.PedidoService;
@@ -27,6 +29,14 @@ public class PedidoController {
             @Valid @RequestBody PedidoRequest request,
             @AuthenticationPrincipal UserDetails userDetails) {
         PedidoResponse response = pedidoService.crearPedido(userDetails.getUsername(), request);
+        return ResponseEntity.ok(response);
+    }
+
+    @PostMapping("/agrupados")
+    public ResponseEntity<CompraAgrupadaResponse> crearPedidosAgrupados(
+            @Valid @RequestBody CompraAgrupadaRequest request,
+            @AuthenticationPrincipal UserDetails userDetails) {
+        CompraAgrupadaResponse response = pedidoService.crearPedidosAgrupados(userDetails.getUsername(), request);
         return ResponseEntity.ok(response);
     }
 

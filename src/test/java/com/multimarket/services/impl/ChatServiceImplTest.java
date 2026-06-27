@@ -11,6 +11,8 @@ import com.multimarket.repositories.ConversacionRepository;
 import com.multimarket.repositories.MensajeRepository;
 import com.multimarket.repositories.UsuarioRepository;
 import com.multimarket.repositories.VendedorRepository;
+import com.multimarket.services.Interfaces.NotificacionService;
+import com.multimarket.models.TipoNotificacion;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -24,6 +26,7 @@ import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -34,6 +37,7 @@ class ChatServiceImplTest {
     @Mock private MensajeRepository mensajeRepository;
     @Mock private UsuarioRepository usuarioRepository;
     @Mock private VendedorRepository vendedorRepository;
+    @Mock private NotificacionService notificacionService;
 
     @InjectMocks
     private ChatServiceImpl service;
@@ -77,6 +81,28 @@ class ChatServiceImplTest {
         assertEquals(99L, response.getId());
         assertEquals("buyer@test.com", response.getCompradorCorreo());
         assertEquals("Tienda QA", response.getVendedorTienda());
+    }
+
+    @Test
+    void crearConversacionShouldNotifyBuyerWhenNewThreadIsCreated() {
+        when(usuarioRepository.findByCorreo(comprador.getCorreo())).thenReturn(Optional.of(comprador));
+        when(vendedorRepository.findById(10L)).thenReturn(Optional.of(vendedor));
+        when(conversacionRepository.findByCompradorIdAndVendedorId(1L, 10L)).thenReturn(Optional.empty());
+        when(conversacionRepository.save(any(Conversacion.class))).thenAnswer(inv -> {
+            Conversacion conversation = inv.getArgument(0);
+            conversation.setId(123L);
+            return conversation;
+        });
+
+        var response = service.crearConversacion(comprador.getCorreo(), buildConversationRequest(10L));
+
+        assertEquals(123L, response.getId());
+        verify(notificacionService).generarNotificacion(
+                eq(1L),
+                eq("Chat iniciado con Tienda QA"),
+                eq("Ya puedes continuar la conversación con Tienda QA."),
+                eq(TipoNotificacion.CHAT)
+        );
     }
 
     @Test
@@ -179,6 +205,39 @@ class ChatServiceImplTest {
         assertEquals(500L, result.getId());
         assertEquals("Mensaje QA", result.getContenido());
         assertEquals(vendedorUsuario.getCorreo(), result.getRemitenteCorreo());
+        verify(notificacionService).generarNotificacion(
+                eq(1L),
+                eq("Respuesta de Tienda QA"),
+                eq("La tienda Tienda QA te respondió: Mensaje QA"),
+                eq(TipoNotificacion.CHAT)
+        );
+    }
+
+    @Test
+    void enviarMensajeFromBuyerShouldNotifySeller() {
+        Conversacion conversation = new Conversacion();
+        conversation.setId(13L);
+        conversation.setComprador(comprador);
+        conversation.setVendedor(vendedor);
+        conversation.setActiva(true);
+
+        when(conversacionRepository.findById(13L)).thenReturn(Optional.of(conversation));
+        when(usuarioRepository.findByCorreo(comprador.getCorreo())).thenReturn(Optional.of(comprador));
+        when(mensajeRepository.save(any(Mensaje.class))).thenAnswer(inv -> {
+            Mensaje message = inv.getArgument(0);
+            message.setId(501L);
+            return message;
+        });
+
+        var result = service.enviarMensaje(13L, comprador.getCorreo(), "Hola vendedor");
+
+        assertEquals(501L, result.getId());
+        verify(notificacionService).generarNotificacion(
+                eq(2L),
+                eq("Nuevo mensaje de Buyer"),
+                eq("El comprador Buyer te escribió: Hola vendedor"),
+                eq(TipoNotificacion.CHAT)
+        );
     }
 
     @Test

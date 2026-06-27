@@ -1,0 +1,12 @@
+<catalogo>
+  <producto>
+    <nombre>Producto QA</nombre>
+    <descripcion>Demo</descripcion>
+    <sku>SKU-IMP-1</sku>
+    <precio>19.99</precio>
+    <stock>5</stock>
+    <peso>1.2</peso>
+    <categoriaId>1</categoriaId>
+    <vendedorId>2</vendedorId>
+  </producto>
+</catalogo>

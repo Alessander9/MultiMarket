@@ -2,7 +2,6 @@ package com.multimarket.utils;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.multimarket.dto.MensajeResponse;
-import com.multimarket.models.Conversacion;
 import com.multimarket.repositories.ConversacionRepository;
 import com.multimarket.services.Interfaces.ChatService;
 import org.springframework.stereotype.Component;
@@ -79,15 +78,11 @@ public class ChatWebSocketHandler extends TextWebSocketHandler {
             String senderConfirmation = objectMapper.writeValueAsString(new ServerResponse("MESSAGE_ACK", request.getConversacionId(), savedMsg));
             session.sendMessage(new TextMessage(senderConfirmation));
 
-            // Find conversation to identify recipient
-            Conversacion conv = conversacionRepository.findById(request.getConversacionId())
+            String recipientEmail = conversacionRepository
+                    .findRecipientEmailByConversationIdAndSenderEmail(request.getConversacionId(), senderEmail)
                     .orElse(null);
 
-            if (conv != null) {
-                String recipientEmail = conv.getComprador().getCorreo().equals(senderEmail)
-                        ? conv.getVendedor().getUsuario().getCorreo()
-                        : conv.getComprador().getCorreo();
-
+            if (recipientEmail != null) {
                 // If recipient is online, send message in real-time
                 WebSocketSession recipientSession = activeSessions.get(recipientEmail);
                 if (recipientSession != null && recipientSession.isOpen()) {

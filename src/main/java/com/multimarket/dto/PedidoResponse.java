@@ -14,12 +14,13 @@ public class PedidoResponse {
     private BigDecimal total;
     private String estado;
     private String compradorCorreo;
+    private Long vendedorId;
     private String vendedorTienda;
     private List<DetallePedidoResponse> detalles;
 
     public PedidoResponse() {}
 
-    public PedidoResponse(Long id, String numeroPedido, LocalDateTime fechaPedido, BigDecimal subtotal, BigDecimal impuesto, BigDecimal costoEnvio, BigDecimal total, String estado, String compradorCorreo, String vendedorTienda, List<DetallePedidoResponse> detalles) {
+    public PedidoResponse(Long id, String numeroPedido, LocalDateTime fechaPedido, BigDecimal subtotal, BigDecimal impuesto, BigDecimal costoEnvio, BigDecimal total, String estado, String compradorCorreo, Long vendedorId, String vendedorTienda, List<DetallePedidoResponse> detalles) {
         this.id = id;
         this.numeroPedido = numeroPedido;
         this.fechaPedido = fechaPedido;
@@ -29,6 +30,7 @@ public class PedidoResponse {
         this.total = total;
         this.estado = estado;
         this.compradorCorreo = compradorCorreo;
+        this.vendedorId = vendedorId;
         this.vendedorTienda = vendedorTienda;
         this.detalles = detalles;
     }
@@ -104,6 +106,14 @@ public class PedidoResponse {
 
     public void setCompradorCorreo(String compradorCorreo) {
         this.compradorCorreo = compradorCorreo;
+    }
+
+    public Long getVendedorId() {
+        return vendedorId;
+    }
+
+    public void setVendedorId(Long vendedorId) {
+        this.vendedorId = vendedorId;
     }
 
     public String getVendedorTienda() {

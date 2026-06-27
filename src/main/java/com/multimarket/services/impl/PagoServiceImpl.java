@@ -1,21 +1,27 @@
 package com.multimarket.services.impl;
 
+import com.multimarket.dto.CompraAgrupadaPagoRequest;
+import com.multimarket.dto.CompraAgrupadaRequest;
+import com.multimarket.dto.CompraAgrupadaResponse;
 import com.multimarket.dto.PagoRequest;
 import com.multimarket.dto.PagoResponse;
 import com.multimarket.dto.SoapTransactionResponse;
 import com.multimarket.models.*;
+import com.multimarket.repositories.CompraAgrupadaRepository;
 import com.multimarket.repositories.UsuarioRepository;
 import com.multimarket.repositories.PagoRepository;
 import com.multimarket.repositories.PedidoRepository;
 import com.multimarket.repositories.TransaccionSOAPRepository;
 import com.multimarket.services.Interfaces.NotificacionService;
 import com.multimarket.services.Interfaces.PagoService;
+import com.multimarket.services.Interfaces.PedidoService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
@@ -28,20 +34,26 @@ public class PagoServiceImpl implements PagoService {
 
     private final PagoRepository pagoRepository;
     private final PedidoRepository pedidoRepository;
+    private final CompraAgrupadaRepository compraAgrupadaRepository;
     private final TransaccionSOAPRepository transaccionSOAPRepository;
     private final UsuarioRepository usuarioRepository;
     private final NotificacionService notificacionService;
+    private final PedidoService pedidoService;
 
     public PagoServiceImpl(PagoRepository pagoRepository,
                            PedidoRepository pedidoRepository,
+                           CompraAgrupadaRepository compraAgrupadaRepository,
                            TransaccionSOAPRepository transaccionSOAPRepository,
                            UsuarioRepository usuarioRepository,
-                           NotificacionService notificacionService) {
+                           NotificacionService notificacionService,
+                           PedidoService pedidoService) {
         this.pagoRepository = pagoRepository;
         this.pedidoRepository = pedidoRepository;
+        this.compraAgrupadaRepository = compraAgrupadaRepository;
         this.transaccionSOAPRepository = transaccionSOAPRepository;
         this.usuarioRepository = usuarioRepository;
         this.notificacionService = notificacionService;
+        this.pedidoService = pedidoService;
     }
 
     @Override
@@ -104,6 +116,80 @@ public class PagoServiceImpl implements PagoService {
     }
 
     @Override
+    public CompraAgrupadaResponse procesarCompraAgrupada(String compradorCorreo, CompraAgrupadaPagoRequest request) {
+        CompraAgrupadaRequest compraRequest = new CompraAgrupadaRequest();
+        compraRequest.setGrupos(request.getGrupos());
+
+        CompraAgrupadaResponse compra = pedidoService.crearPedidosAgrupados(compradorCorreo, compraRequest);
+
+        Usuario comprador = usuarioRepository.findByCorreo(compradorCorreo)
+                .orElseThrow(() -> new IllegalArgumentException("No se encontró el comprador con el correo: " + compradorCorreo));
+
+        CompraAgrupada compraAgrupada = new CompraAgrupada();
+        compraAgrupada.setNumeroCompra(generarNumeroCompra());
+        compraAgrupada.setComprador(comprador);
+        compraAgrupada.setMetodoPago(request.getMetodoPago());
+        compraAgrupada.setSubtotal(compra.getSubtotal());
+        compraAgrupada.setImpuesto(compra.getImpuesto());
+        compraAgrupada.setCostoEnvioTotal(compra.getCostoEnvioTotal());
+        compraAgrupada.setTotal(compra.getTotal());
+        CompraAgrupada compraGuardada = compraAgrupadaRepository.save(compraAgrupada);
+
+        for (var pedido : compra.getPedidos()) {
+            Pedido pedidoEntidad = pedidoRepository.findById(pedido.getId())
+                    .orElseThrow(() -> new IllegalArgumentException("No se encontró el pedido con el ID: " + pedido.getId()));
+            pedidoEntidad.setCompraAgrupada(compraGuardada);
+            pedidoRepository.save(pedidoEntidad);
+
+            PagoRequest pagoRequest = new PagoRequest();
+            pagoRequest.setPedidoId(pedido.getId());
+            pagoRequest.setMetodoPago(request.getMetodoPago());
+            pagoRequest.setNumeroTarjeta(request.getNumeroTarjeta());
+            pagoRequest.setCvv(request.getCvv());
+            pagoRequest.setFechaExpiracion(request.getFechaExpiracion());
+            procesarPago(compradorCorreo, pagoRequest);
+        }
+
+        List<com.multimarket.dto.PedidoResponse> pedidosActualizados = compra.getPedidos().stream()
+                .map(pedido -> pedidoService.consultarPedido(pedido.getId()))
+                .collect(Collectors.toList());
+
+        return new CompraAgrupadaResponse(
+                compraGuardada.getId(),
+                compraGuardada.getNumeroCompra(),
+                compraGuardada.getFechaCompra(),
+                compraGuardada.getMetodoPago().name(),
+                calcularEstadoGeneral(pedidosActualizados),
+                pedidosActualizados,
+                compra.getSubtotal(),
+                compra.getImpuesto(),
+                compra.getCostoEnvioTotal(),
+                compra.getTotal()
+        );
+    }
+
+    private String generarNumeroCompra() {
+        String dateStr = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd"));
+        String randStr = UUID.randomUUID().toString().substring(0, 4).toUpperCase();
+        return "CMP-" + dateStr + "-" + randStr;
+    }
+
+    private String calcularEstadoGeneral(List<com.multimarket.dto.PedidoResponse> pedidos) {
+        boolean todosEntregados = pedidos.stream().allMatch(p -> "ENTREGADO".equals(p.getEstado()));
+        boolean todosCancelados = pedidos.stream().allMatch(p -> "CANCELADO".equals(p.getEstado()));
+        boolean algunoEnviado = pedidos.stream().anyMatch(p -> "ENVIADO".equals(p.getEstado()));
+        boolean algunoProcesando = pedidos.stream().anyMatch(p -> "PROCESANDO".equals(p.getEstado()));
+        boolean todosPagados = pedidos.stream().allMatch(p -> "PAGADO".equals(p.getEstado()));
+
+        if (todosEntregados) return "ENTREGADO";
+        if (todosCancelados) return "CANCELADO";
+        if (algunoEnviado) return "ENVIADO";
+        if (algunoProcesando) return "PROCESANDO";
+        if (todosPagados) return "PAGADO";
+        return "PENDIENTE";
+    }
+
+    @Override
     @Transactional(readOnly = true)
     public PagoResponse consultarPago(Long id, String usuarioCorreo) {
         Pago pago = pagoRepository.findById(id)
@@ -124,6 +210,14 @@ public class PagoServiceImpl implements PagoService {
     @Transactional(readOnly = true)
     public List<PagoResponse> listarPagos() {
         return pagoRepository.findAll().stream()
+                .map(this::mapToResponse)
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public List<PagoResponse> listarPagosPorVendedor(String vendedorCorreo) {
+        return pagoRepository.findByPedidoVendedorUsuarioCorreoOrderByFechaPagoDesc(vendedorCorreo).stream()
                 .map(this::mapToResponse)
                 .collect(Collectors.toList());
     }

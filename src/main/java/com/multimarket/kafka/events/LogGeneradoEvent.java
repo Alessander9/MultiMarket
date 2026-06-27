@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 
 public class LogGeneradoEvent implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     private String nivel;
     private String modulo;
     private String accion;

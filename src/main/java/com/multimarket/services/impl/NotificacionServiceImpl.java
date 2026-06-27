@@ -91,6 +91,14 @@ public class NotificacionServiceImpl implements NotificacionService {
     }
 
     @Override
+    public void eliminarNotificacion(Long id, String usuarioCorreo) {
+        Notificacion notif = notificacionRepository.findByIdAndUsuarioCorreo(id, usuarioCorreo)
+                .orElseThrow(() -> new IllegalArgumentException("No se encontró la notificación con ID: " + id));
+
+        notificacionRepository.delete(notif);
+    }
+
+    @Override
     @Transactional(readOnly = true)
     public List<NotificacionResponse> consultarHistorial(String usuarioCorreo) {
         return notificacionRepository.findByUsuarioCorreoOrderByFechaCreacionDesc(usuarioCorreo).stream()

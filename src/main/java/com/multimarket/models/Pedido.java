@@ -63,6 +63,10 @@ public class Pedido {
     @JoinColumn(name = "vendedor_id", nullable = false)
     private Vendedor vendedor;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "compra_agrupada_id")
+    private CompraAgrupada compraAgrupada;
+
     @OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
     private List<DetallePedido> detalles = new ArrayList<>();
 
@@ -166,6 +170,14 @@ public class Pedido {
 
     public void setVendedor(Vendedor vendedor) {
         this.vendedor = vendedor;
+    }
+
+    public CompraAgrupada getCompraAgrupada() {
+        return compraAgrupada;
+    }
+
+    public void setCompraAgrupada(CompraAgrupada compraAgrupada) {
+        this.compraAgrupada = compraAgrupada;
     }
 
     public List<DetallePedido> getDetalles() {

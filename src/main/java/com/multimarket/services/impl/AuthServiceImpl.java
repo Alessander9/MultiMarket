@@ -112,6 +112,52 @@ public class AuthServiceImpl implements AuthService {
 
     @Override
     @Transactional
+    public AdminUserResponse createAdminUser(AdminCreateUserRequest request) {
+        if (usuarioRepository.existsByCorreo(request.getCorreo())) {
+            throw new IllegalArgumentException("El correo ya está registrado");
+        }
+
+        if (request.getRoles() == null || request.getRoles().isEmpty()) {
+            throw new IllegalArgumentException("Debe asignar al menos un rol");
+        }
+
+        Usuario usuario = new Usuario();
+        usuario.setCorreo(request.getCorreo());
+        usuario.setPassword(passwordEncoder.encode(request.getPassword()));
+        usuario.setEstado(request.getEstado() == null || request.getEstado());
+        usuario.setCorreoVerificado(true);
+        usuario.setIntentosFallidos(0);
+        usuario.setBloqueado(false);
+
+        Set<Rol> roles = new HashSet<>();
+        for (RolNombre rolNombre : request.getRoles()) {
+            Rol rol = rolRepository.findByNombre(rolNombre)
+                    .orElseGet(() -> rolRepository.save(new Rol(rolNombre, "Rol " + rolNombre.name())));
+            roles.add(rol);
+        }
+        usuario.setRoles(roles);
+
+        Perfil perfil = new Perfil();
+        String correo = request.getCorreo();
+        String localPart = correo.contains("@") ? correo.substring(0, correo.indexOf('@')) : correo;
+        String nombres = request.getNombres();
+        String apellidos = request.getApellidos();
+        String dni = request.getDni();
+
+        perfil.setNombres(isBlank(nombres) ? buildDisplayName(localPart) : nombres.trim());
+        perfil.setApellidos(isBlank(apellidos) ? buildProfileSuffix(request.getRoles()) : apellidos.trim());
+        perfil.setDni(isBlank(dni) ? buildGeneratedDni() : dni.trim());
+        perfil.setTelefono(request.getTelefono());
+        perfil.setDireccion(request.getDireccion());
+        perfil.setFechaNacimiento(java.time.LocalDate.of(1990, 1, 1));
+        usuario.setPerfil(perfil);
+
+        Usuario saved = usuarioRepository.save(usuario);
+        return mapToAdminUserResponse(saved);
+    }
+
+    @Override
+    @Transactional
     public LoginResponse login(LoginRequest request, String ip, String browser) {
         Usuario usuario = usuarioRepository.findByCorreo(request.getCorreo())
                 .orElseThrow(() -> new IllegalArgumentException("Credenciales incorrectas"));
@@ -261,5 +307,90 @@ public class AuthServiceImpl implements AuthService {
                 perfil.getFechaNacimiento(),
                 rolesString
         );
+    }
+
+    @Override
+    @Transactional
+    public UserProfileResponse updateProfile(String correo, UpdateProfileRequest request) {
+        Usuario usuario = usuarioRepository.findByCorreo(correo)
+                .orElseThrow(() -> new IllegalArgumentException("Usuario no encontrado"));
+
+        Perfil perfil = usuario.getPerfil();
+        if (perfil == null) {
+            perfil = new Perfil();
+            usuario.setPerfil(perfil);
+        }
+
+        String nombrePersonal = request.getNombrePersonal();
+        if (nombrePersonal != null && !nombrePersonal.trim().isEmpty()) {
+            String[] parts = nombrePersonal.trim().split("\\s+", 2);
+            perfil.setNombres(parts[0]);
+            perfil.setApellidos(parts.length > 1 ? parts[1] : perfil.getApellidos());
+        }
+
+        if (request.getTelefono() != null) {
+            perfil.setTelefono(request.getTelefono());
+        }
+        if (request.getDireccion() != null) {
+            perfil.setDireccion(request.getDireccion());
+        }
+        if (request.getFotoPerfil() != null) {
+            perfil.setFotoPerfil(request.getFotoPerfil());
+        }
+
+        usuarioRepository.save(usuario);
+        return getProfile(correo);
+    }
+
+    private AdminUserResponse mapToAdminUserResponse(Usuario usuario) {
+        Perfil perfil = usuario.getPerfil();
+        return new AdminUserResponse(
+                usuario.getId(),
+                usuario.getCorreo(),
+                usuario.getRoles().stream().map(rol -> rol.getNombre().name()).collect(Collectors.toList()),
+                usuario.getEstado(),
+                usuario.getCorreoVerificado(),
+                usuario.getFechaRegistro(),
+                usuario.getIntentosFallidos(),
+                usuario.getBloqueado(),
+                perfil != null ? perfil.getNombres() : null,
+                perfil != null ? perfil.getApellidos() : null,
+                perfil != null ? perfil.getDni() : null,
+                perfil != null ? perfil.getTelefono() : null,
+                perfil != null ? perfil.getDireccion() : null,
+                perfil != null ? perfil.getFotoPerfil() : null,
+                perfil != null ? perfil.getFechaNacimiento() : null
+        );
+    }
+
+    private boolean isBlank(String value) {
+        return value == null || value.trim().isEmpty();
+    }
+
+    private String buildDisplayName(String value) {
+        String cleaned = value == null ? "usuario" : value.replaceAll("[^a-zA-Z0-9]+", " ").trim();
+        if (cleaned.isEmpty()) {
+            return "Usuario";
+        }
+        String[] parts = cleaned.split("\\s+");
+        String first = parts[0].substring(0, 1).toUpperCase() + parts[0].substring(1).toLowerCase();
+        return first;
+    }
+
+    private String buildProfileSuffix(Set<RolNombre> roles) {
+        if (roles.contains(RolNombre.ADMIN)) {
+            return "Administrador";
+        }
+        if (roles.contains(RolNombre.VENDEDOR)) {
+            return "Vendedor";
+        }
+        if (roles.contains(RolNombre.COMPRADOR)) {
+            return "Comprador";
+        }
+        return "Usuario";
+    }
+
+    private String buildGeneratedDni() {
+        return "AUTO" + UUID.randomUUID().toString().replace("-", "").substring(0, 12).toUpperCase();
     }
 }

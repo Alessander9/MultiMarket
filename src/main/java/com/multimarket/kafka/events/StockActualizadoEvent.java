@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 
 public class StockActualizadoEvent implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     private Long productoId;
     private Integer stockAnterior;
     private Integer stockNuevo;

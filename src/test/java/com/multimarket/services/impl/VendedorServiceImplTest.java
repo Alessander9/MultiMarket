@@ -106,6 +106,23 @@ class VendedorServiceImplTest {
     }
 
     @Test
+    void desactivarTiendaAsAdminShouldUpdateState() {
+        Usuario admin = new Usuario();
+        admin.setId(8L);
+        admin.setCorreo("admin@test.com");
+        Rol rol = new Rol();
+        rol.setNombre(RolNombre.ADMIN);
+        admin.setRoles(Set.of(rol));
+
+        when(vendedorRepository.findById(10L)).thenReturn(Optional.of(tienda));
+        when(vendedorRepository.save(any(Vendedor.class))).thenAnswer(inv -> inv.getArgument(0));
+
+        var response = service.desactivarTienda(10L, admin.getCorreo(), true, false);
+
+        assertFalse(response.getActivo());
+    }
+
+    @Test
     void listarTodosShouldMapResponses() {
         when(vendedorRepository.findAll()).thenReturn(List.of(tienda));
 
@@ -135,5 +152,27 @@ class VendedorServiceImplTest {
                 () -> service.crearTienda("buyer@test.com", request));
 
         assertTrue(ex.getMessage().contains("rol de VENDEDOR"));
+    }
+
+    @Test
+    void editarTiendaShouldRejectForeignSellerWhenNotAdmin() {
+        Usuario other = new Usuario();
+        other.setId(9L);
+        other.setCorreo("other@test.com");
+        Rol rol = new Rol();
+        rol.setNombre(RolNombre.VENDEDOR);
+        other.setRoles(Set.of(rol));
+
+        VendedorRequest request = new VendedorRequest();
+        request.setNombreTienda("Otra Tienda");
+        request.setRegion("Lima");
+        request.setDireccion("Av QA");
+
+        when(vendedorRepository.findById(10L)).thenReturn(Optional.of(tienda));
+
+        SecurityException ex = assertThrows(SecurityException.class,
+                () -> service.editarTienda(10L, other.getCorreo(), false, request));
+
+        assertTrue(ex.getMessage().contains("No estás autorizado"));
     }
 }

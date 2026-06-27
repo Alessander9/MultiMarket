@@ -1,5 +1,7 @@
 package com.multimarket.controllers;
 
+import com.multimarket.dto.CompraAgrupadaPagoRequest;
+import com.multimarket.dto.CompraAgrupadaResponse;
 import com.multimarket.dto.PagoRequest;
 import com.multimarket.dto.PagoResponse;
 import com.multimarket.dto.SoapTransactionResponse;
@@ -30,6 +32,14 @@ public class PagoController {
         return ResponseEntity.ok(response);
     }
 
+    @PostMapping("/compra-agrupada")
+    public ResponseEntity<CompraAgrupadaResponse> procesarCompraAgrupada(
+            @Valid @RequestBody CompraAgrupadaPagoRequest request,
+            @AuthenticationPrincipal UserDetails userDetails) {
+        CompraAgrupadaResponse response = pagoService.procesarCompraAgrupada(userDetails.getUsername(), request);
+        return ResponseEntity.ok(response);
+    }
+
     @GetMapping("/{id}")
     public ResponseEntity<PagoResponse> consultarPago(
             @PathVariable Long id,
@@ -42,6 +52,12 @@ public class PagoController {
     @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<List<PagoResponse>> listarPagos() {
         return ResponseEntity.ok(pagoService.listarPagos());
+    }
+
+    @GetMapping("/mi-historial")
+    @PreAuthorize("hasRole('VENDEDOR')")
+    public ResponseEntity<List<PagoResponse>> listarPagosPorVendedor(@AuthenticationPrincipal UserDetails userDetails) {
+        return ResponseEntity.ok(pagoService.listarPagosPorVendedor(userDetails.getUsername()));
     }
 
     @GetMapping("/soap")

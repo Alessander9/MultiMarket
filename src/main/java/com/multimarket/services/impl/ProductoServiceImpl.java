@@ -52,7 +52,7 @@ public class ProductoServiceImpl implements ProductoService {
                     .orElseThrow(() -> new IllegalArgumentException("Vendedor no encontrado"));
         } else {
             tienda = vendedorRepository.findByUsuarioId(usuario.getId())
-                    .orElseThrow(() -> new IllegalStateException("Debes registrar una tienda antes de publicar productos."));
+                    .orElseThrow(() -> new IllegalArgumentException("Debes registrar una tienda antes de publicar productos."));
         }
 
         Categoria categoria = categoriaRepository.findById(request.getCategoriaId())

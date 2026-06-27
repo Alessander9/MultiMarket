@@ -69,4 +69,12 @@ public class AuthController {
         UserProfileResponse profile = authService.getProfile(userDetails.getUsername());
         return ResponseEntity.ok(profile);
     }
+
+    @PutMapping("/profile")
+    public ResponseEntity<UserProfileResponse> updateProfile(
+            @Valid @RequestBody UpdateProfileRequest request,
+            @AuthenticationPrincipal UserDetails userDetails) {
+        UserProfileResponse profile = authService.updateProfile(userDetails.getUsername(), request);
+        return ResponseEntity.ok(profile);
+    }
 }

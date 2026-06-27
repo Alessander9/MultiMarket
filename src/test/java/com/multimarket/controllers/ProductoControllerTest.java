@@ -63,4 +63,14 @@ class ProductoControllerTest {
         assertEquals("img.png", result.getBody().getUrl());
         assertEquals(true, result.getBody().getPrincipal());
     }
+
+    @Test
+    void deactivateProductShouldReturnNoContent() {
+        ProductoController controller = new ProductoController(productoService);
+        UserDetails admin = new User("admin@test.com", "x", Set.of(new SimpleGrantedAuthority("ROLE_ADMIN")));
+
+        var result = controller.desactivarProducto(77L, admin);
+
+        assertEquals(204, result.getStatusCode().value());
+    }
 }

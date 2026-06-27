@@ -14,6 +14,7 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
+import java.util.concurrent.atomic.AtomicReference;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
@@ -82,18 +83,17 @@ class ExportacionServiceImplTest {
         when(exportacionRepository.save(any(ExportacionCatalogo.class))).thenAnswer(inv -> {
             ExportacionCatalogo e = inv.getArgument(0);
             e.setId(nextId++);
+            export.setId(e.getId());
             return e;
         });
-        when(exportacionRepository.findById(any())).thenAnswer(inv -> {
-            Long id = inv.getArgument(0);
-            return id != null && id.equals(1L) ? Optional.of(export) : Optional.empty();
-        });
+        AtomicReference<ExportacionCatalogo> savedExport = new AtomicReference<>();
+        when(exportacionRepository.findById(any())).thenAnswer(inv -> Optional.ofNullable(savedExport.get()));
         when(productoRepository.findAll()).thenReturn(List.of(producto));
 
         var result = service.programarExportacion(FormatoExportacion.XML);
+        savedExport.set(export);
 
         assertEquals(EstadoExportacion.PENDIENTE, result.getEstado());
-        Thread.sleep(800);
-        verify(kafkaProducer, atLeastOnce()).sendLogEvent(any());
+        verify(kafkaProducer, timeout(5000).atLeastOnce()).sendLogEvent(any());
     }
 }

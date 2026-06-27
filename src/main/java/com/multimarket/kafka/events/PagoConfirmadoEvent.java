@@ -5,6 +5,8 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 public class PagoConfirmadoEvent implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     private Long pagoId;
     private Long pedidoId;
     private BigDecimal monto;

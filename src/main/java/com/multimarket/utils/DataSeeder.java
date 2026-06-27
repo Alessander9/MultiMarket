@@ -17,7 +17,6 @@ public class DataSeeder implements CommandLineRunner {
 
     private final UsuarioRepository usuarioRepository;
     private final RolRepository rolRepository;
-    private final PerfilRepository perfilRepository;
     private final PasswordEncoder passwordEncoder;
     private final CategoriaRepository categoriaRepository;
     private final VendedorRepository vendedorRepository;
@@ -25,12 +24,11 @@ public class DataSeeder implements CommandLineRunner {
     private final InventarioRepository inventarioRepository;
 
     public DataSeeder(UsuarioRepository usuarioRepository, RolRepository rolRepository,
-                      PerfilRepository perfilRepository, PasswordEncoder passwordEncoder,
-                      CategoriaRepository categoriaRepository, VendedorRepository vendedorRepository,
-                      ProductoRepository productoRepository, InventarioRepository inventarioRepository) {
+                      PasswordEncoder passwordEncoder, CategoriaRepository categoriaRepository,
+                      VendedorRepository vendedorRepository, ProductoRepository productoRepository,
+                      InventarioRepository inventarioRepository) {
         this.usuarioRepository = usuarioRepository;
         this.rolRepository = rolRepository;
-        this.perfilRepository = perfilRepository;
         this.passwordEncoder = passwordEncoder;
         this.categoriaRepository = categoriaRepository;
         this.vendedorRepository = vendedorRepository;

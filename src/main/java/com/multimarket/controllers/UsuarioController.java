@@ -1,15 +1,15 @@
 package com.multimarket.controllers;
 
+import com.multimarket.dto.AdminCreateUserRequest;
 import com.multimarket.dto.AdminUserResponse;
 import com.multimarket.models.Usuario;
 import com.multimarket.services.Interfaces.AuthService;
 import com.multimarket.repositories.UsuarioRepository;
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Comparator;
 import java.util.List;
@@ -20,9 +20,11 @@ import java.util.stream.Collectors;
 public class UsuarioController {
 
     private final UsuarioRepository usuarioRepository;
+    private final AuthService authService;
 
-    public UsuarioController(UsuarioRepository usuarioRepository) {
+    public UsuarioController(UsuarioRepository usuarioRepository, AuthService authService) {
         this.usuarioRepository = usuarioRepository;
+        this.authService = authService;
     }
 
     @GetMapping
@@ -50,5 +52,11 @@ public class UsuarioController {
                 ))
                 .toList();
         return ResponseEntity.ok(response);
+    }
+
+    @PostMapping
+    @PreAuthorize("hasRole('ADMIN')")
+    public ResponseEntity<AdminUserResponse> crearUsuario(@Valid @RequestBody AdminCreateUserRequest request) {
+        return ResponseEntity.ok(authService.createAdminUser(request));
     }
 }

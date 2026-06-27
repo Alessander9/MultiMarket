@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 
 public class UsuarioRegistradoEvent implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     private Long usuarioId;
     private String correo;
     private String nombres;
